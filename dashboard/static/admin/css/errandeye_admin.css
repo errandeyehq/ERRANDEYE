@@ -1,0 +1,162 @@
+/* ============================================================
+   ERRAND EYE ADMIN THEME
+   Overrides Django admin's default CSS variables to match the
+   marketing site's brand (charcoal / cream / green-blue gradient).
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&display=swap');
+
+:root,
+html[data-theme="light"] {
+  --primary: #12181A;
+  --secondary: #1B2224;
+  --accent: #12C168;
+  --primary-fg: #FAFAF7;
+
+  --body-fg: #12181A;
+  --body-bg: #FAFAF7;
+  --body-quiet-color: #6b6f70;
+  --body-loud-color: #12181A;
+
+  --header-color: #FAFAF7;
+  --header-branding-color: #12C168;
+  --header-bg: #12181A;
+  --header-link-color: #FAFAF7;
+
+  --breadcrumbs-fg: rgba(250, 250, 247, 0.7);
+  --breadcrumbs-link-fg: #FAFAF7;
+  --breadcrumbs-bg: #1B2224;
+
+  --link-fg: #0B84B0;
+  --link-hover-color: #0EA55A;
+  --link-selected-fg: #0EA55A;
+
+  --hairline-color: #DAD7CF;
+  --border-color: #DAD7CF;
+
+  --error-fg: #c0392b;
+
+  --message-success-bg: #e6f7ee;
+  --message-warning-bg: #fff8e1;
+  --message-error-bg: #fdecea;
+
+  --darkened-bg: #F3F2ED;
+  --selected-bg: #E9F8EF;
+  --selected-row: #FFF8E1;
+
+  --button-fg: #fff;
+  --button-bg: #0EA55A;
+  --button-hover-bg: #0B84B0;
+  --default-button-bg: #12181A;
+  --default-button-hover-bg: #1B2224;
+  --close-button-bg: #747474;
+  --close-button-hover-bg: #333;
+  --delete-button-bg: #c0392b;
+  --delete-button-hover-bg: #a5281c;
+
+  --object-tools-bg: #0B84B0;
+  --object-tools-hover-bg: #0EA55A;
+
+  --font-family-primary: 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+#header {
+  background: linear-gradient(100deg, #12181A 0%, #1B2224 100%);
+}
+
+#branding #site-name,
+#branding #site-name a:link,
+#branding #site-name a:visited {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#branding #site-name::before {
+  content: "";
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  background: url("../img/logo-mark.png") no-repeat center / contain;
+}
+
+div.breadcrumbs {
+  font-family: 'Manrope', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.module h2,
+.module caption,
+.inline-group h2 {
+  background: #12181A;
+  font-family: 'Manrope', sans-serif;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+a:link,
+a:visited {
+  color: var(--link-fg);
+}
+
+.button,
+input[type="submit"],
+input[type="button"],
+.submit-row input,
+a.button {
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.button:hover,
+input[type="submit"]:hover,
+.submit-row input:hover {
+  transform: translateY(-1px);
+}
+
+.selector-chosen h2,
+.calendar caption,
+.calendar th {
+  background: #12181A;
+}
+
+body.login {
+  background: radial-gradient(ellipse 60% 50% at 20% 15%, rgba(14,165,90,0.18), transparent 60%),
+              radial-gradient(ellipse 70% 60% at 85% 75%, rgba(11,132,176,0.2), transparent 60%),
+              #12181A;
+}
+
+.login #container {
+  border-radius: 18px;
+  box-shadow: 0 30px 80px -30px rgba(0,0,0,0.5);
+  overflow: hidden;
+}
+
+.login #header {
+  background: #12181A;
+  justify-content: center;
+}
+
+.login .form-row label {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+}
+
+.login .submit-row {
+  text-align: center;
+}
+
+.login .submit-row input {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(90deg, #0EA55A, #0B84B0);
+}
