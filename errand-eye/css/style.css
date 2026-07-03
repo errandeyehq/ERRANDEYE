@@ -650,6 +650,32 @@ h3 {
   background: linear-gradient(90deg, transparent, rgba(250, 250, 247, 0.14) 50%, transparent);
 }
 
+.footer-credit {
+  color: rgba(250, 250, 247, 0.68);
+  font-size: 13px;
+  letter-spacing: 0.02em;
+}
+.footer-credit-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(14, 165, 90, 0.14);
+  border: 1px solid rgba(14, 165, 90, 0.22);
+  color: var(--eye-cream);
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+.footer-credit-link:hover,
+.footer-credit-link:focus-visible {
+  background: linear-gradient(135deg, rgba(18, 197, 115, 0.18), rgba(11, 132, 176, 0.18));
+  border-color: rgba(14, 165, 90, 0.42);
+  color: var(--eye-charcoal);
+  transform: translateY(-1px);
+}
+
 .back-to-top-btn {
   display: inline-flex;
   align-items: center;
