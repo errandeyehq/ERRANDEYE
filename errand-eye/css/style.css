@@ -68,6 +68,16 @@ h3 {
   color: transparent;
 }
 
+/* Higher-contrast variant for the brand mark when it sits over the
+   translucent nav glass, which otherwise washes the gradient out. */
+.text-gradient-brand-strong {
+  background: linear-gradient(100deg, #0B8A45 0%, #086C8C 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 1px 1px rgba(18, 24, 26, 0.15));
+}
+
 /* ---------------- Grain texture overlay ---------------- */
 .grain {
   position: relative;
@@ -84,7 +94,7 @@ h3 {
 
 /* ---------------- Glass navbar ---------------- */
 .nav-glass {
-  background: rgba(250, 250, 247, 0.65);
+  background: rgba(250, 250, 247, 0.78);
   backdrop-filter: blur(16px) saturate(160%);
   -webkit-backdrop-filter: blur(16px) saturate(160%);
   border-bottom: 1px solid rgba(18, 24, 26, 0.06);
