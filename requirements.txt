@@ -1,1 +1,11 @@
--r backend/requirements.txt
+asgiref==3.11.1
+Django==4.2.30
+django-cors-headers==4.9.0
+pillow==12.3.0
+PyMySQL==1.2.0
+python-dotenv==1.2.2
+dj-database-url==1.0.0
+whitenoise==6.12.0
+sqlparse==0.5.5
+tzdata==2026.2
+gunicorn==26.0.0
