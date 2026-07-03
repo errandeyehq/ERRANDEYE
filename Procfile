@@ -1,1 +1,1 @@
-web: gunicorn -w 2 -b 0.0.0.0:$PORT config.wsgi:application
+web: gunicorn -w 2 -b 0.0.0.0:$PORT backend.config.wsgi:application
