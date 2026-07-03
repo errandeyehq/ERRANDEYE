@@ -39,6 +39,35 @@ body {
   overflow-x: hidden;
 }
 
+/* ---------------- Smooth page-load fade-in ---------------- */
+.page-fade-in {
+  opacity: 0;
+  transition: opacity 0.6s var(--ease-signature);
+}
+.page-fade-in.page-fade-in-active {
+  opacity: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-fade-in { opacity: 1; transition: none; }
+}
+
+/* ---------------- Button ripple ---------------- */
+.btn-primary, .btn-ghost, .fab-btn {
+  position: relative;
+  overflow: hidden;
+}
+.btn-ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  transform: scale(0);
+  pointer-events: none;
+  animation: btn-ripple-expand 0.7s var(--ease-signature) forwards;
+}
+@keyframes btn-ripple-expand {
+  to { transform: scale(1); opacity: 0; }
+}
+
 .font-display {
   font-family: 'Cormorant Garamond', serif;
   letter-spacing: 0;
@@ -112,6 +141,16 @@ h3 {
     radial-gradient(ellipse 60% 50% at 20% 15%, rgba(14,165,90,0.22), transparent 60%),
     radial-gradient(ellipse 70% 60% at 85% 75%, rgba(11,132,176,0.24), transparent 60%),
     linear-gradient(180deg, #0E1416 0%, #12181A 45%, #0E1416 100%);
+  background-size: 140% 140%, 140% 140%, 100% 100%;
+  animation: hero-gradient-drift 18s ease-in-out infinite;
+}
+@keyframes hero-gradient-drift {
+  0%   { background-position: 20% 15%, 85% 75%, center; }
+  50%  { background-position: 30% 25%, 70% 65%, center; }
+  100% { background-position: 20% 15%, 85% 75%, center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-canvas { animation: none; }
 }
 
 .hero-image-stack {
@@ -204,12 +243,12 @@ h3 {
 .hero-headline .word {
   display: inline-block;
   opacity: 0;
-  transform: translateY(0.5em) rotate(1deg);
-  filter: blur(6px);
-  animation: word-reveal 1s var(--ease-signature) forwards;
+  transform: translateY(0.6em) scale(0.96) rotate(1deg);
+  filter: blur(8px);
+  animation: word-reveal 1.3s var(--ease-signature) forwards;
 }
 @keyframes word-reveal {
-  to { opacity: 1; transform: translateY(0) rotate(0deg); filter: blur(0); }
+  to { opacity: 1; transform: translateY(0) scale(1) rotate(0deg); filter: blur(0); }
 }
 
 .hero-eyeline {
@@ -273,16 +312,32 @@ h3 {
 
 /* ---------------- Buttons ---------------- */
 .btn-primary {
+  position: relative;
+  overflow: hidden;
   background: linear-gradient(90deg, var(--eye-green) 0%, var(--eye-blue) 100%);
   background-size: 140% 100%;
   color: var(--eye-cream);
   transition: transform 0.35s var(--ease-signature), box-shadow 0.35s var(--ease-signature), background-position 0.35s;
   box-shadow: 0 12px 28px -14px rgba(14,165,90,0.65), inset 0 1px 0 rgba(250,250,247,0.35);
 }
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 30%, rgba(255,255,255,0.35) 50%, transparent 70%);
+  transform: translateX(-120%);
+  transition: transform 0.7s var(--ease-signature);
+}
 .btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 18px 36px -14px rgba(11,132,176,0.55), inset 0 1px 0 rgba(250,250,247,0.45);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 20px 44px -14px rgba(11,132,176,0.6), inset 0 1px 0 rgba(250,250,247,0.45);
   background-position: 100% 0;
+}
+.btn-primary:hover::after {
+  transform: translateX(120%);
+}
+.btn-primary:active {
+  transform: translateY(-1px) scale(0.99);
 }
 .btn-ghost {
   border: 1px solid rgba(250,250,247,0.35);
@@ -313,15 +368,33 @@ h3 {
 }
 .fab-btn:hover { transform: translateY(-3px) scale(1.03); }
 
-/* ---------------- Service cards ---------------- */
+/* ---------------- Services ambient backdrop (glass context) ---------------- */
+.services-ambient { background: var(--eye-cream); }
+.services-glow {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(70px);
+  opacity: 0.35;
+}
+.services-glow-a {
+  width: 32rem; height: 32rem;
+  top: -8rem; left: -6rem;
+  background: radial-gradient(circle, var(--eye-green-light), transparent 70%);
+}
+.services-glow-b {
+  width: 30rem; height: 30rem;
+  bottom: -10rem; right: -8rem;
+  background: radial-gradient(circle, var(--eye-blue-light), transparent 70%);
+}
+
 .service-card {
-  transition: transform 0.5s var(--ease-signature), box-shadow 0.5s var(--ease-signature), border-color 0.5s;
-  border: 1px solid var(--eye-gray-line);
+  transition: transform 0.5s var(--ease-signature), box-shadow 0.5s var(--ease-signature), border-color 0.5s, background 0.5s;
   box-shadow: 0 1px 2px rgba(18,24,26,0.04), 0 24px 40px -34px rgba(18,24,26,0.18);
 }
 .service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 32px 64px -32px rgba(18,24,26,0.25);
+  transform: translateY(-10px);
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 40px 70px -32px rgba(18,24,26,0.28), 0 0 0 1px rgba(255,255,255,0.9) inset;
   border-color: transparent;
 }
 .service-card::before {
@@ -338,10 +411,12 @@ h3 {
   transform: scaleX(1);
 }
 .service-card .icon-badge {
-  transition: transform 0.5s var(--ease-signature);
+  position: relative;
+  transition: transform 0.5s var(--ease-signature), box-shadow 0.5s var(--ease-signature);
 }
 .service-card:hover .icon-badge {
-  transform: scale(1.08) rotate(-4deg);
+  transform: scale(1.1) rotate(-6deg);
+  box-shadow: 0 0 0 6px rgba(14,165,90,0.12), 0 0 24px rgba(11,132,176,0.35);
 }
 
 /* ---------------- Service detail cards (services.html) ---------------- */
@@ -373,6 +448,31 @@ h3 {
 }
 .service-detail-card:hover .icon-badge {
   transform: scale(1.08) rotate(-4deg);
+}
+
+/* ---------------- Award cards ---------------- */
+.award-card {
+  transition: transform 0.5s var(--ease-signature), box-shadow 0.5s var(--ease-signature);
+  box-shadow: 0 1px 2px rgba(18,24,26,0.04), 0 24px 40px -34px rgba(18,24,26,0.18);
+}
+.award-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 32px 64px -32px rgba(18,24,26,0.22);
+}
+.award-card-icon {
+  transition: transform 0.5s var(--ease-signature);
+}
+.award-card:hover .award-card-icon {
+  transform: scale(1.08) rotate(-4deg);
+}
+
+/* ---------------- About storytelling badge ---------------- */
+.about-story-badge {
+  transition: transform 0.5s var(--ease-signature), box-shadow 0.5s var(--ease-signature);
+}
+.about-story-badge:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 28px 48px -24px rgba(18,24,26,0.28);
 }
 
 /* ---------------- Stat counters ---------------- */
@@ -422,6 +522,62 @@ h3 {
   transition: opacity 0.6s;
 }
 .gallery-item:hover .gallery-veil { opacity: 0.15; }
+
+/* Caption scrim + label, revealed on hover for an editorial/luxury feel */
+.gallery-item::before {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 55%;
+  background: linear-gradient(180deg, transparent, rgba(18,24,26,0.82));
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.5s var(--ease-signature), transform 0.5s var(--ease-signature);
+  pointer-events: none;
+}
+.gallery-item::after {
+  content: attr(data-caption);
+  position: absolute;
+  left: 1.25rem;
+  right: 1.25rem;
+  bottom: 1.1rem;
+  color: var(--eye-cream);
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.5s var(--ease-signature) 0.05s, transform 0.5s var(--ease-signature) 0.05s;
+  pointer-events: none;
+}
+.gallery-item:hover::before,
+.gallery-item:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Expand affordance in the corner, appears on hover */
+.gallery-item .gallery-expand {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  height: 2.25rem;
+  width: 2.25rem;
+  border-radius: 999px;
+  background: rgba(250,250,247,0.92);
+  color: var(--eye-charcoal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity 0.4s var(--ease-signature), transform 0.4s var(--ease-signature);
+}
+.gallery-item:hover .gallery-expand {
+  opacity: 1;
+  transform: scale(1);
+}
 
 /* ---------------- Process timeline ---------------- */
 .process-line {
@@ -656,24 +812,17 @@ h3 {
   letter-spacing: 0.02em;
 }
 .footer-credit-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.35rem 0.8rem;
-  border-radius: 999px;
-  background: rgba(14, 165, 90, 0.14);
-  border: 1px solid rgba(14, 165, 90, 0.22);
-  color: var(--eye-cream);
-  font-weight: 700;
+  color: rgba(250, 250, 247, 0.75);
+  font-weight: 600;
   text-decoration: none;
-  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  border-bottom: 1px solid rgba(250, 250, 247, 0.25);
+  padding-bottom: 1px;
+  transition: color 0.3s ease, border-color 0.3s ease;
 }
 .footer-credit-link:hover,
 .footer-credit-link:focus-visible {
-  background: linear-gradient(135deg, rgba(18, 197, 115, 0.18), rgba(11, 132, 176, 0.18));
-  border-color: rgba(14, 165, 90, 0.42);
-  color: var(--eye-charcoal);
-  transform: translateY(-1px);
+  color: var(--eye-cream);
+  border-color: rgba(250, 250, 247, 0.6);
 }
 
 .back-to-top-btn {

@@ -118,6 +118,25 @@
     if (!items || !items.length) return;
     document.querySelectorAll('[data-dynamic="awards-track"]').forEach((track) => {
       const style = track.dataset.awardStyle || 'plain';
+
+      if (style === 'card') {
+        track.innerHTML = items.map((a, i) => {
+          const meta = [a.issuer, a.year].filter(Boolean).join(' · ');
+          return `
+            <article class="award-card relative rounded-3xl bg-white p-9">
+              <span class="absolute top-7 right-7 font-mono text-[11px] text-eye-charcoal/25 tracking-widest">${String(i + 1).padStart(2, '0')}</span>
+              <div class="award-card-icon h-14 w-14 rounded-full p-[2px] bg-gradient-to-br from-eye-green-light to-eye-blue-light mb-7">
+                <div class="h-full w-full rounded-full bg-white flex items-center justify-center">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0EA55A" stroke-width="1.4"><circle cx="12" cy="8" r="6"/><path d="M8.5 13.2L7 22l5-2.6 5 2.6-1.5-8.8"/></svg>
+                </div>
+              </div>
+              <p class="font-display text-2xl leading-snug mb-2">${escapeHtml(a.title)}</p>
+              <p class="font-mono text-[11px] uppercase tracking-[0.14em] text-eye-charcoal/45">${escapeHtml(meta)}</p>
+            </article>`;
+        }).join('');
+        return;
+      }
+
       const group = items.map((a) => {
         const meta = [a.issuer, a.year].filter(Boolean).join(' · ');
         if (style === 'icon') {

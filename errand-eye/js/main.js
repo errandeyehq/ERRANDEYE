@@ -5,6 +5,25 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  /* ---------------- Smooth page-load fade-in ---------------- */
+  document.body.classList.add('page-fade-in');
+  requestAnimationFrame(() => document.body.classList.add('page-fade-in-active'));
+
+  /* ---------------- Button ripple on click ---------------- */
+  document.querySelectorAll('.btn-primary, .btn-ghost, .fab-btn').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      const rect = btn.getBoundingClientRect();
+      const ripple = document.createElement('span');
+      const size = Math.max(rect.width, rect.height) * 1.6;
+      ripple.className = 'btn-ripple';
+      ripple.style.width = ripple.style.height = `${size}px`;
+      ripple.style.left = `${e.clientX - rect.left - size / 2}px`;
+      ripple.style.top = `${e.clientY - rect.top - size / 2}px`;
+      btn.appendChild(ripple);
+      ripple.addEventListener('animationend', () => ripple.remove());
+    });
+  });
+
   /* ---------------- Footer year ---------------- */
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -226,13 +245,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------------- Subtle hero parallax on pointer move (desktop only) ---------------- */
   const heroLayer = document.getElementById('hero-parallax');
+  const heroSection = document.getElementById('hero');
+  let heroPointerX = 0;
+  let heroPointerY = 0;
+  let heroScrollY = 0;
+
+  const applyHeroTransform = () => {
+    if (!heroLayer) return;
+    heroLayer.style.transform = `translate(${heroPointerX}px, ${heroPointerY + heroScrollY}px) scale(1.06)`;
+  };
+
   if (heroLayer && window.matchMedia('(pointer: fine)').matches) {
-    document.getElementById('hero')?.addEventListener('mousemove', (e) => {
+    heroSection?.addEventListener('mousemove', (e) => {
       const { innerWidth, innerHeight } = window;
-      const x = (e.clientX / innerWidth - 0.5) * 14;
-      const y = (e.clientY / innerHeight - 0.5) * 14;
-      heroLayer.style.transform = `translate(${x}px, ${y}px) scale(1.01)`;
+      heroPointerX = (e.clientX / innerWidth - 0.5) * 14;
+      heroPointerY = (e.clientY / innerHeight - 0.5) * 14;
+      applyHeroTransform();
     });
+  }
+
+  /* ---------------- Subtle scroll parallax on hero imagery ---------------- */
+  if (heroLayer && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    window.addEventListener('scroll', () => {
+      const rect = heroSection.getBoundingClientRect();
+      if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+      heroScrollY = window.scrollY * 0.12;
+      applyHeroTransform();
+    }, { passive: true });
   }
 
 });

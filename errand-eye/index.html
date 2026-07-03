@@ -145,14 +145,14 @@
       <span class="word text-gradient-brand italic" style="animation-delay:0.38s">ask.</span>
     </h1>
 
-    <p class="hero-headline mt-8 max-w-xl text-lg sm:text-xl text-eye-cream/75 leading-relaxed word" style="animation-delay:0.55s">
+    <p class="hero-headline mt-10 sm:mt-12 max-w-xl text-lg sm:text-xl text-eye-cream/75 leading-[1.7] font-light word" style="animation-delay:0.55s">
       Errand Eye is the partner behind seamless travel, hospitality, and logistics for corporates, travelers, and businesses across Africa. One message in, and it is handled.
     </p>
 
     <div class="hero-headline mt-9 sm:mt-10 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 word" style="animation-delay:0.68s">
-      <a href="#contact" class="inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 text-[15px] font-medium btn-primary">
+      <a href="#contact" class="group inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 text-[15px] font-medium btn-primary">
         Request a Quote
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" class="transition-transform duration-300 group-hover:translate-x-1"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
       </a>
       <a href="#services" class="inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 text-[15px] font-medium btn-ghost">
         Explore Services
@@ -185,7 +185,7 @@
 <!-- ============================================================
      STATS
      ============================================================ -->
-<section id="stats" class="bg-eye-charcoal text-eye-cream py-16 lg:py-20">
+<section id="stats" class="bg-eye-charcoal text-eye-cream py-20 lg:py-24">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
     <div class="reveal-stagger grid grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-6 text-center lg:text-left">
       <div>
@@ -211,16 +211,20 @@
 <!-- ============================================================
      SERVICES OVERVIEW
      ============================================================ -->
-<section id="services" class="py-28 lg:py-36">
-  <div class="max-w-7xl mx-auto px-6 lg:px-10">
-    <div class="reveal flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
+<section id="services" class="services-ambient relative py-32 lg:py-44 overflow-hidden">
+  <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+    <div class="services-glow services-glow-a"></div>
+    <div class="services-glow services-glow-b"></div>
+  </div>
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="reveal flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-20">
       <div class="max-w-2xl">
         <p class="font-mono text-[12px] uppercase tracking-[0.2em] text-eye-blue mb-4">What We Handle</p>
-        <h2 class="font-display text-4xl sm:text-5xl leading-[1.05] tracking-tight">
+        <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.12] tracking-tight">
           Nine service lines. <span class="italic text-eye-green">One point of contact.</span>
         </h2>
       </div>
-      <p class="max-w-sm text-eye-charcoal/60 leading-relaxed">
+      <p class="max-w-sm text-eye-charcoal/55 leading-[1.75]">
         Every request, however small or complex, moves through the same trusted channel. You ask once. We coordinate everything else.
       </p>
     </div>
@@ -228,90 +232,90 @@
     <div class="reveal-stagger grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
       <!-- Card 1 -->
-      <article class="service-card group relative overflow-hidden rounded-2xl bg-white p-9 flex flex-col">
+      <article class="service-card group relative overflow-hidden rounded-2xl bg-white/70 backdrop-blur-xl border border-white/70 p-9 flex flex-col">
         <span class="absolute top-7 right-7 font-mono text-[11px] text-eye-charcoal/25 tracking-widest">01</span>
         <div class="icon-badge h-14 w-14 rounded-full p-[2px] bg-gradient-to-br from-eye-green-light to-eye-blue-light mb-7">
           <div class="h-full w-full rounded-full bg-white flex items-center justify-center">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0EA55A" stroke-width="1.5"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="9"/></svg>
           </div>
         </div>
-        <h3 class="font-display text-2xl tracking-tight mb-2.5">Tours &amp; Travel</h3>
-        <p class="text-sm text-eye-charcoal/60 leading-relaxed flex-1">Personalized itineraries and curated excursions built around how you actually want to travel.</p>
+        <h3 class="font-display text-2xl sm:text-[28px] tracking-tight mb-3">Tours &amp; Travel</h3>
+        <p class="text-[14.5px] text-eye-charcoal/55 leading-[1.75] flex-1">Personalized itineraries and curated excursions built around how you actually want to travel.</p>
         <a href="services.html" class="mt-7 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.14em] text-eye-charcoal group-hover:gap-3 transition-all w-fit">
           Learn More <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
         </a>
       </article>
 
       <!-- Card 2 -->
-      <article class="service-card group relative overflow-hidden rounded-2xl bg-white p-9 flex flex-col">
+      <article class="service-card group relative overflow-hidden rounded-2xl bg-white/70 backdrop-blur-xl border border-white/70 p-9 flex flex-col">
         <span class="absolute top-7 right-7 font-mono text-[11px] text-eye-charcoal/25 tracking-widest">02</span>
         <div class="icon-badge h-14 w-14 rounded-full p-[2px] bg-gradient-to-br from-eye-blue-light to-eye-green-light mb-7">
           <div class="h-full w-full rounded-full bg-white flex items-center justify-center">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0B84B0" stroke-width="1.5"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-8h6v8"/></svg>
           </div>
         </div>
-        <h3 class="font-display text-2xl tracking-tight mb-2.5">Hospitality Support</h3>
-        <p class="text-sm text-eye-charcoal/60 leading-relaxed flex-1">Hotel bookings, restaurant reservations, and guest experiences handled with genuine care.</p>
+        <h3 class="font-display text-2xl sm:text-[28px] tracking-tight mb-3">Hospitality Support</h3>
+        <p class="text-[14.5px] text-eye-charcoal/55 leading-[1.75] flex-1">Hotel bookings, restaurant reservations, and guest experiences handled with genuine care.</p>
         <a href="services.html" class="mt-7 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.14em] text-eye-charcoal group-hover:gap-3 transition-all w-fit">
           Learn More <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
         </a>
       </article>
 
       <!-- Card 3 -->
-      <article class="service-card group relative overflow-hidden rounded-2xl bg-white p-9 flex flex-col">
+      <article class="service-card group relative overflow-hidden rounded-2xl bg-white/70 backdrop-blur-xl border border-white/70 p-9 flex flex-col">
         <span class="absolute top-7 right-7 font-mono text-[11px] text-eye-charcoal/25 tracking-widest">03</span>
         <div class="icon-badge h-14 w-14 rounded-full p-[2px] bg-gradient-to-br from-eye-green-light to-eye-blue-light mb-7">
           <div class="h-full w-full rounded-full bg-white flex items-center justify-center">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0EA55A" stroke-width="1.5"><path d="M3 12h4l2-8 4 16 2-8h6"/></svg>
           </div>
         </div>
-        <h3 class="font-display text-2xl tracking-tight mb-2.5">Airport Transfers</h3>
-        <p class="text-sm text-eye-charcoal/60 leading-relaxed flex-1">Reliable, comfortable pickups and drop-offs timed precisely around your itinerary.</p>
+        <h3 class="font-display text-2xl sm:text-[28px] tracking-tight mb-3">Airport Transfers</h3>
+        <p class="text-[14.5px] text-eye-charcoal/55 leading-[1.75] flex-1">Reliable, comfortable pickups and drop-offs timed precisely around your itinerary.</p>
         <a href="services.html" class="mt-7 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.14em] text-eye-charcoal group-hover:gap-3 transition-all w-fit">
           Learn More <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
         </a>
       </article>
 
       <!-- Card 4 -->
-      <article class="service-card group relative overflow-hidden rounded-2xl bg-white p-9 flex flex-col">
+      <article class="service-card group relative overflow-hidden rounded-2xl bg-white/70 backdrop-blur-xl border border-white/70 p-9 flex flex-col">
         <span class="absolute top-7 right-7 font-mono text-[11px] text-eye-charcoal/25 tracking-widest">04</span>
         <div class="icon-badge h-14 w-14 rounded-full p-[2px] bg-gradient-to-br from-eye-blue-light to-eye-green-light mb-7">
           <div class="h-full w-full rounded-full bg-white flex items-center justify-center">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0B84B0" stroke-width="1.5"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h4"/></svg>
           </div>
         </div>
-        <h3 class="font-display text-2xl tracking-tight mb-2.5">Visa Assistance</h3>
-        <p class="text-sm text-eye-charcoal/60 leading-relaxed flex-1">Documentation and application support that removes the guesswork from crossing borders.</p>
+        <h3 class="font-display text-2xl sm:text-[28px] tracking-tight mb-3">Visa Assistance</h3>
+        <p class="text-[14.5px] text-eye-charcoal/55 leading-[1.75] flex-1">Documentation and application support that removes the guesswork from crossing borders.</p>
         <a href="services.html" class="mt-7 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.14em] text-eye-charcoal group-hover:gap-3 transition-all w-fit">
           Learn More <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
         </a>
       </article>
 
       <!-- Card 5 -->
-      <article class="service-card group relative overflow-hidden rounded-2xl bg-white p-9 flex flex-col">
+      <article class="service-card group relative overflow-hidden rounded-2xl bg-white/70 backdrop-blur-xl border border-white/70 p-9 flex flex-col">
         <span class="absolute top-7 right-7 font-mono text-[11px] text-eye-charcoal/25 tracking-widest">05</span>
         <div class="icon-badge h-14 w-14 rounded-full p-[2px] bg-gradient-to-br from-eye-green-light to-eye-blue-light mb-7">
           <div class="h-full w-full rounded-full bg-white flex items-center justify-center">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0EA55A" stroke-width="1.5"><rect x="2" y="7" width="20" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
           </div>
         </div>
-        <h3 class="font-display text-2xl tracking-tight mb-2.5">Corporate Travel</h3>
-        <p class="text-sm text-eye-charcoal/60 leading-relaxed flex-1">Coordinated travel programs for teams that need consistency across every trip.</p>
+        <h3 class="font-display text-2xl sm:text-[28px] tracking-tight mb-3">Corporate Travel</h3>
+        <p class="text-[14.5px] text-eye-charcoal/55 leading-[1.75] flex-1">Coordinated travel programs for teams that need consistency across every trip.</p>
         <a href="services.html" class="mt-7 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.14em] text-eye-charcoal group-hover:gap-3 transition-all w-fit">
           Learn More <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
         </a>
       </article>
 
       <!-- Card 6 -->
-      <article class="service-card group relative overflow-hidden rounded-2xl bg-white p-9 flex flex-col">
+      <article class="service-card group relative overflow-hidden rounded-2xl bg-white/70 backdrop-blur-xl border border-white/70 p-9 flex flex-col">
         <span class="absolute top-7 right-7 font-mono text-[11px] text-eye-charcoal/25 tracking-widest">06</span>
         <div class="icon-badge h-14 w-14 rounded-full p-[2px] bg-gradient-to-br from-eye-blue-light to-eye-green-light mb-7">
           <div class="h-full w-full rounded-full bg-white flex items-center justify-center">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0B84B0" stroke-width="1.5"><rect x="1" y="7" width="15" height="10" rx="1.5"/><path d="M16 10h4l3 3v4h-7z"/><circle cx="6" cy="19" r="1.6"/><circle cx="18" cy="19" r="1.6"/></svg>
           </div>
         </div>
-        <h3 class="font-display text-2xl tracking-tight mb-2.5">Logistics &amp; Errands</h3>
-        <p class="text-sm text-eye-charcoal/60 leading-relaxed flex-1">Courier services, pick-ups, bill payments, and the everyday tasks that eat your calendar.</p>
+        <h3 class="font-display text-2xl sm:text-[28px] tracking-tight mb-3">Logistics &amp; Errands</h3>
+        <p class="text-[14.5px] text-eye-charcoal/55 leading-[1.75] flex-1">Courier services, pick-ups, bill payments, and the everyday tasks that eat your calendar.</p>
         <a href="services.html" class="mt-7 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.14em] text-eye-charcoal group-hover:gap-3 transition-all w-fit">
           Learn More <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
         </a>
@@ -330,12 +334,12 @@
 <!-- ============================================================
      WHY CHOOSE US - signature route map
      ============================================================ -->
-<section class="py-28 lg:py-36 bg-eye-charcoal-soft text-eye-cream relative overflow-hidden">
+<section class="py-32 lg:py-44 bg-eye-charcoal-soft text-eye-cream relative overflow-hidden">
   <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-16 items-center">
 
     <div class="reveal">
       <p class="font-mono text-[12px] uppercase tracking-[0.2em] text-eye-green-light mb-4">Why Choose Us</p>
-      <h2 class="font-display text-4xl sm:text-5xl leading-[1.05] tracking-tight mb-10">
+      <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.12] tracking-tight mb-14">
         We watch the details<br><span class="italic text-eye-blue-light">so you don't have to.</span>
       </h2>
 
@@ -406,11 +410,11 @@
 <!-- ============================================================
      OUR PROCESS
      ============================================================ -->
-<section id="process" class="py-28 lg:py-36">
+<section id="process" class="py-32 lg:py-44">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
     <div class="reveal max-w-2xl mb-20">
       <p class="font-mono text-[12px] uppercase tracking-[0.2em] text-eye-green mb-4">How It Works</p>
-      <h2 class="font-display text-4xl sm:text-5xl leading-[1.05] tracking-tight">
+      <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.12] tracking-tight">
         A process built on <span class="italic text-eye-blue">accountability</span>, start to finish.
       </h2>
     </div>
@@ -421,32 +425,32 @@
       <div class="relative">
         <div class="h-12 w-12 rounded-full bg-eye-charcoal text-eye-cream font-display text-lg flex items-center justify-center relative z-10">1</div>
         <h3 class="font-display text-base mt-5 mb-1.5">Needs Assessment</h3>
-        <p class="text-[13px] text-eye-charcoal/60 leading-relaxed">We start by understanding your objectives and preferences directly.</p>
+        <p class="text-[13.5px] text-eye-charcoal/55 leading-[1.75]">We start by understanding your objectives and preferences directly.</p>
       </div>
       <div class="relative">
         <div class="h-12 w-12 rounded-full bg-eye-charcoal text-eye-cream font-display text-lg flex items-center justify-center relative z-10">2</div>
         <h3 class="font-display text-base mt-5 mb-1.5">Custom Planning</h3>
-        <p class="text-[13px] text-eye-charcoal/60 leading-relaxed">A tailored package with clear communication before anything moves.</p>
+        <p class="text-[13.5px] text-eye-charcoal/55 leading-[1.75]">A tailored package with clear communication before anything moves.</p>
       </div>
       <div class="relative">
         <div class="h-12 w-12 rounded-full bg-eye-charcoal text-eye-cream font-display text-lg flex items-center justify-center relative z-10">3</div>
         <h3 class="font-display text-base mt-5 mb-1.5">Resource Coordination</h3>
-        <p class="text-[13px] text-eye-charcoal/60 leading-relaxed">We organize every partner and provider your request requires.</p>
+        <p class="text-[13.5px] text-eye-charcoal/55 leading-[1.75]">We organize every partner and provider your request requires.</p>
       </div>
       <div class="relative">
         <div class="h-12 w-12 rounded-full bg-eye-charcoal text-eye-cream font-display text-lg flex items-center justify-center relative z-10">4</div>
         <h3 class="font-display text-base mt-5 mb-1.5">Execution</h3>
-        <p class="text-[13px] text-eye-charcoal/60 leading-relaxed">Delivered with professionalism and updates the whole way through.</p>
+        <p class="text-[13.5px] text-eye-charcoal/55 leading-[1.75]">Delivered with professionalism and updates the whole way through.</p>
       </div>
       <div class="relative">
         <div class="h-12 w-12 rounded-full bg-eye-charcoal text-eye-cream font-display text-lg flex items-center justify-center relative z-10">5</div>
         <h3 class="font-display text-base mt-5 mb-1.5">Feedback Loop</h3>
-        <p class="text-[13px] text-eye-charcoal/60 leading-relaxed">Post-service evaluation helps us refine every future request.</p>
+        <p class="text-[13.5px] text-eye-charcoal/55 leading-[1.75]">Post-service evaluation helps us refine every future request.</p>
       </div>
       <div class="relative">
         <div class="h-12 w-12 rounded-full bg-eye-charcoal text-eye-cream font-display text-lg flex items-center justify-center relative z-10">6</div>
         <h3 class="font-display text-base mt-5 mb-1.5">Ongoing Support</h3>
-        <p class="text-[13px] text-eye-charcoal/60 leading-relaxed">Scalable, consistent service for one-time or recurring needs.</p>
+        <p class="text-[13.5px] text-eye-charcoal/55 leading-[1.75]">Scalable, consistent service for one-time or recurring needs.</p>
       </div>
     </div>
   </div>
@@ -455,12 +459,12 @@
 <!-- ============================================================
      GALLERY PREVIEW
      ============================================================ -->
-<section id="gallery" class="py-28 lg:py-36 bg-eye-gray/40">
+<section id="gallery" class="py-32 lg:py-44 bg-eye-gray/40">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
     <div class="reveal flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-14">
       <div>
         <p class="font-mono text-[12px] uppercase tracking-[0.2em] text-eye-blue mb-4">In the Field</p>
-        <h2 class="font-display text-4xl sm:text-5xl leading-[1.05] tracking-tight">A glimpse of the work.</h2>
+        <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.12] tracking-tight">A glimpse of the work.</h2>
       </div>
       <a href="gallery.html" class="font-mono text-[13px] uppercase tracking-[0.15em] border-b border-eye-charcoal/30 pb-1 hover:border-eye-charcoal transition-colors w-fit">
         View Full Gallery
@@ -471,26 +475,32 @@
       <div class="gallery-item relative rounded-2xl overflow-hidden cursor-pointer lg:row-span-2" data-lightbox data-caption="Airport transfer, Nairobi">
         <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&amp;w=900&amp;auto=format&amp;fit=crop" alt="Airport transfer service" class="w-full h-full object-cover">
         <div class="gallery-veil absolute inset-0"></div>
+        <span class="gallery-expand" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3H3v6M15 3h6v6M9 21H3v-6M15 21h6v-6"/></svg></span>
       </div>
       <div class="gallery-item relative rounded-2xl overflow-hidden cursor-pointer" data-lightbox data-caption="Hospitality coordination, Cape Town">
         <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&amp;w=900&amp;auto=format&amp;fit=crop" alt="Hospitality coordination" class="w-full h-full object-cover">
         <div class="gallery-veil absolute inset-0"></div>
+        <span class="gallery-expand" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3H3v6M15 3h6v6M9 21H3v-6M15 21h6v-6"/></svg></span>
       </div>
       <div class="gallery-item relative rounded-2xl overflow-hidden cursor-pointer" data-lightbox data-caption="Curated excursion, Lagos">
         <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?q=80&amp;w=900&amp;auto=format&amp;fit=crop" alt="Curated travel excursion" class="w-full h-full object-cover">
         <div class="gallery-veil absolute inset-0"></div>
+        <span class="gallery-expand" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3H3v6M15 3h6v6M9 21H3v-6M15 21h6v-6"/></svg></span>
       </div>
       <div class="gallery-item relative rounded-2xl overflow-hidden cursor-pointer lg:row-span-2" data-lightbox data-caption="Logistics coordination in transit">
         <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&amp;w=900&amp;auto=format&amp;fit=crop" alt="Logistics and courier services" class="w-full h-full object-cover">
         <div class="gallery-veil absolute inset-0"></div>
+        <span class="gallery-expand" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3H3v6M15 3h6v6M9 21H3v-6M15 21h6v-6"/></svg></span>
       </div>
       <div class="gallery-item relative rounded-2xl overflow-hidden cursor-pointer" data-lightbox data-caption="Corporate travel briefing">
         <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&amp;w=900&amp;auto=format&amp;fit=crop" alt="Corporate travel support" class="w-full h-full object-cover">
         <div class="gallery-veil absolute inset-0"></div>
+        <span class="gallery-expand" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3H3v6M15 3h6v6M9 21H3v-6M15 21h6v-6"/></svg></span>
       </div>
       <div class="gallery-item relative rounded-2xl overflow-hidden cursor-pointer" data-lightbox data-caption="Team retreat support">
         <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?q=80&amp;w=900&amp;auto=format&amp;fit=crop" alt="Team retreat and event support" class="w-full h-full object-cover">
         <div class="gallery-veil absolute inset-0"></div>
+        <span class="gallery-expand" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3H3v6M15 3h6v6M9 21H3v-6M15 21h6v-6"/></svg></span>
       </div>
     </div>
     <p class="mt-6 text-xs text-eye-charcoal/40 font-mono">Editorial imagery shown above. Swap for real Errand Eye photography before launch.</p>
@@ -500,64 +510,46 @@
 <!-- ============================================================
      AWARDS & RECOGNITION
      ============================================================ -->
-<section id="awards" class="py-24 bg-eye-gray/60 border-y border-eye-gray-line overflow-hidden">
-  <div class="max-w-7xl mx-auto px-6 lg:px-10 mb-12">
-    <p class="reveal font-mono text-[12px] uppercase tracking-[0.2em] text-eye-green text-center">Awards &amp; Recognition</p>
-  </div>
+<section id="awards" class="py-28 lg:py-36 bg-eye-gray/60 border-y border-eye-gray-line">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="reveal text-center max-w-2xl mx-auto mb-16">
+      <p class="font-mono text-[12px] uppercase tracking-[0.2em] text-eye-green mb-4">Awards &amp; Recognition</p>
+      <h2 class="font-display text-4xl sm:text-5xl leading-[1.1] tracking-tight">Recognized for Excellence.</h2>
+    </div>
 
-  <div class="marquee-mask relative">
-    <div class="marquee-track flex gap-16 w-max" data-dynamic="awards-track" data-award-style="icon">
-      <div class="flex items-center gap-16 pr-16">
-        <div class="award-item flex items-center gap-4">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#0EA55A" stroke-width="1.3" class="shrink-0 opacity-70"><circle cx="12" cy="8" r="6"/><path d="M8.5 13.2L7 22l5-2.6 5 2.6-1.5-8.8"/></svg>
-          <div class="text-left">
-            <p class="font-display text-2xl mb-1">Distinguished Award of Excellence</p>
-            <p class="font-mono text-xs uppercase tracking-wider text-eye-charcoal/50">Logistics &amp; Travel Services · 2025</p>
+    <div class="reveal-stagger grid sm:grid-cols-2 lg:grid-cols-3 gap-6" data-dynamic="awards-track" data-award-style="card">
+      <article class="award-card relative rounded-3xl bg-white p-9">
+        <span class="absolute top-7 right-7 font-mono text-[11px] text-eye-charcoal/25 tracking-widest">01</span>
+        <div class="award-card-icon h-14 w-14 rounded-full p-[2px] bg-gradient-to-br from-eye-green-light to-eye-blue-light mb-7">
+          <div class="h-full w-full rounded-full bg-white flex items-center justify-center">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0EA55A" stroke-width="1.4"><circle cx="12" cy="8" r="6"/><path d="M8.5 13.2L7 22l5-2.6 5 2.6-1.5-8.8"/></svg>
           </div>
         </div>
-        <div class="h-10 w-px bg-eye-gray-line"></div>
-        <div class="award-item flex items-center gap-4">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#0B84B0" stroke-width="1.3" class="shrink-0 opacity-70"><circle cx="12" cy="8" r="6"/><path d="M8.5 13.2L7 22l5-2.6 5 2.6-1.5-8.8"/></svg>
-          <div class="text-left">
-            <p class="font-display text-2xl mb-1">Africa's Under 40 CEO Awards</p>
-            <p class="font-mono text-xs uppercase tracking-wider text-eye-charcoal/50">2024</p>
+        <p class="font-display text-2xl leading-snug mb-2">Distinguished Award of Excellence</p>
+        <p class="font-mono text-[11px] uppercase tracking-[0.14em] text-eye-charcoal/45">Logistics &amp; Travel Services · 2025</p>
+      </article>
+
+      <article class="award-card relative rounded-3xl bg-white p-9">
+        <span class="absolute top-7 right-7 font-mono text-[11px] text-eye-charcoal/25 tracking-widest">02</span>
+        <div class="award-card-icon h-14 w-14 rounded-full p-[2px] bg-gradient-to-br from-eye-blue-light to-eye-green-light mb-7">
+          <div class="h-full w-full rounded-full bg-white flex items-center justify-center">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B84B0" stroke-width="1.4"><circle cx="12" cy="8" r="6"/><path d="M8.5 13.2L7 22l5-2.6 5 2.6-1.5-8.8"/></svg>
           </div>
         </div>
-        <div class="h-10 w-px bg-eye-gray-line"></div>
-        <div class="award-item flex items-center gap-4">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#0EA55A" stroke-width="1.3" class="shrink-0 opacity-70"><circle cx="12" cy="8" r="6"/><path d="M8.5 13.2L7 22l5-2.6 5 2.6-1.5-8.8"/></svg>
-          <div class="text-left">
-            <p class="font-display text-2xl mb-1">Women in Business, Nominee</p>
-            <p class="font-mono text-xs uppercase tracking-wider text-eye-charcoal/50">Startup Achievement of the Year · 2023</p>
+        <p class="font-display text-2xl leading-snug mb-2">Africa's Under 40 CEO Awards</p>
+        <p class="font-mono text-[11px] uppercase tracking-[0.14em] text-eye-charcoal/45">2024</p>
+      </article>
+
+      <article class="award-card relative rounded-3xl bg-white p-9 sm:col-span-2 lg:col-span-1">
+        <span class="absolute top-7 right-7 font-mono text-[11px] text-eye-charcoal/25 tracking-widest">03</span>
+        <div class="award-card-icon h-14 w-14 rounded-full p-[2px] bg-gradient-to-br from-eye-green-light to-eye-blue-light mb-7">
+          <div class="h-full w-full rounded-full bg-white flex items-center justify-center">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0EA55A" stroke-width="1.4"><circle cx="12" cy="8" r="6"/><path d="M8.5 13.2L7 22l5-2.6 5 2.6-1.5-8.8"/></svg>
           </div>
         </div>
-      </div>
-      <!-- duplicate for seamless marquee loop -->
-      <div class="flex items-center gap-16 pr-16" aria-hidden="true">
-        <div class="award-item flex items-center gap-4">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#0EA55A" stroke-width="1.3" class="shrink-0 opacity-70"><circle cx="12" cy="8" r="6"/><path d="M8.5 13.2L7 22l5-2.6 5 2.6-1.5-8.8"/></svg>
-          <div class="text-left">
-            <p class="font-display text-2xl mb-1">Distinguished Award of Excellence</p>
-            <p class="font-mono text-xs uppercase tracking-wider text-eye-charcoal/50">Logistics &amp; Travel Services · 2025</p>
-          </div>
-        </div>
-        <div class="h-10 w-px bg-eye-gray-line"></div>
-        <div class="award-item flex items-center gap-4">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#0B84B0" stroke-width="1.3" class="shrink-0 opacity-70"><circle cx="12" cy="8" r="6"/><path d="M8.5 13.2L7 22l5-2.6 5 2.6-1.5-8.8"/></svg>
-          <div class="text-left">
-            <p class="font-display text-2xl mb-1">Africa's Under 40 CEO Awards</p>
-            <p class="font-mono text-xs uppercase tracking-wider text-eye-charcoal/50">2024</p>
-          </div>
-        </div>
-        <div class="h-10 w-px bg-eye-gray-line"></div>
-        <div class="award-item flex items-center gap-4">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#0EA55A" stroke-width="1.3" class="shrink-0 opacity-70"><circle cx="12" cy="8" r="6"/><path d="M8.5 13.2L7 22l5-2.6 5 2.6-1.5-8.8"/></svg>
-          <div class="text-left">
-            <p class="font-display text-2xl mb-1">Women in Business, Nominee</p>
-            <p class="font-mono text-xs uppercase tracking-wider text-eye-charcoal/50">Startup Achievement of the Year · 2023</p>
-          </div>
-        </div>
-      </div>
+        <p class="font-display text-2xl leading-snug mb-2">Women in Business, Nominee</p>
+        <p class="font-mono text-[11px] uppercase tracking-[0.14em] text-eye-charcoal/45">Startup Achievement of the Year · 2023</p>
+      </article>
     </div>
   </div>
 </section>
@@ -565,7 +557,7 @@
 <!-- ============================================================
      TESTIMONIALS
      ============================================================ -->
-<section class="py-28 lg:py-36 bg-eye-charcoal text-eye-cream">
+<section class="py-32 lg:py-44 bg-eye-charcoal text-eye-cream">
   <div class="max-w-4xl mx-auto px-6 lg:px-10 text-center">
     <p class="reveal font-mono text-[12px] uppercase tracking-[0.2em] text-eye-blue-light mb-4">Client Voices</p>
     <h2 class="reveal font-display text-3xl sm:text-4xl leading-tight mb-14">What it feels like to work with us.</h2>
@@ -611,11 +603,11 @@
 <!-- ============================================================
      HOW TO BOOK
      ============================================================ -->
-<section class="py-24 lg:py-32 bg-eye-gray/40">
+<section class="py-32 lg:py-44 bg-eye-gray/40">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
     <div class="reveal max-w-2xl mb-14">
       <p class="font-mono text-[12px] uppercase tracking-[0.2em] text-eye-blue mb-4">How to Book</p>
-      <h2 class="font-display text-4xl sm:text-5xl leading-[1.05] tracking-tight">From message to delivery in five simple steps.</h2>
+      <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.12] tracking-tight">From message to delivery in five simple steps.</h2>
     </div>
 
     <div class="reveal-stagger grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
@@ -624,35 +616,35 @@
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0EA55A" stroke-width="1.8"><path d="M5 13l4 4L19 7"/></svg>
         </div>
         <h3 class="font-display text-lg">Call, WhatsApp, DM, or email us</h3>
-        <p class="text-sm text-eye-charcoal/60 leading-relaxed">Reach out on whichever channel works for you; we respond on all of them.</p>
+        <p class="text-[14.5px] text-eye-charcoal/55 leading-[1.75]">Reach out on whichever channel works for you; we respond on all of them.</p>
       </div>
       <div class="flex flex-col gap-3">
         <div class="h-10 w-10 rounded-full bg-white border border-eye-gray-line flex items-center justify-center shrink-0">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0B84B0" stroke-width="1.8"><path d="M5 13l4 4L19 7"/></svg>
         </div>
         <h3 class="font-display text-lg">Agree on the service</h3>
-        <p class="text-sm text-eye-charcoal/60 leading-relaxed">We confirm the details, scope, and timeline together before anything moves.</p>
+        <p class="text-[14.5px] text-eye-charcoal/55 leading-[1.75]">We confirm the details, scope, and timeline together before anything moves.</p>
       </div>
       <div class="flex flex-col gap-3">
         <div class="h-10 w-10 rounded-full bg-white border border-eye-gray-line flex items-center justify-center shrink-0">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0EA55A" stroke-width="1.8"><path d="M5 13l4 4L19 7"/></svg>
         </div>
         <h3 class="font-display text-lg">Receive your invoice</h3>
-        <p class="text-sm text-eye-charcoal/60 leading-relaxed">A clear, itemized quotation with no hidden costs or surprise add-ons.</p>
+        <p class="text-[14.5px] text-eye-charcoal/55 leading-[1.75]">A clear, itemized quotation with no hidden costs or surprise add-ons.</p>
       </div>
       <div class="flex flex-col gap-3">
         <div class="h-10 w-10 rounded-full bg-white border border-eye-gray-line flex items-center justify-center shrink-0">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0B84B0" stroke-width="1.8"><path d="M5 13l4 4L19 7"/></svg>
         </div>
         <h3 class="font-display text-lg">Make payment</h3>
-        <p class="text-sm text-eye-charcoal/60 leading-relaxed">Secure payment via your preferred method, confirmed before execution.</p>
+        <p class="text-[14.5px] text-eye-charcoal/55 leading-[1.75]">Secure payment via your preferred method, confirmed before execution.</p>
       </div>
       <div class="flex flex-col gap-3">
         <div class="h-10 w-10 rounded-full bg-white border border-eye-gray-line flex items-center justify-center shrink-0">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0EA55A" stroke-width="1.8"><path d="M5 13l4 4L19 7"/></svg>
         </div>
         <h3 class="font-display text-lg">Receive your service</h3>
-        <p class="text-sm text-eye-charcoal/60 leading-relaxed">Delivered with updates along the way, start to finish.</p>
+        <p class="text-[14.5px] text-eye-charcoal/55 leading-[1.75]">Delivered with updates along the way, start to finish.</p>
       </div>
     </div>
   </div>
@@ -661,7 +653,7 @@
 <!-- ============================================================
      FINAL CTA
      ============================================================ -->
-<section id="contact" class="relative py-28 lg:py-40 overflow-hidden">
+<section id="contact" class="relative py-32 lg:py-44 overflow-hidden">
   <div class="absolute inset-0 hero-canvas grain"></div>
   <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-10 text-center text-eye-cream">
     <p class="reveal font-mono text-[12px] uppercase tracking-[0.2em] text-eye-green-light mb-6">Let's Get Started</p>
@@ -782,8 +774,8 @@
 <footer class="footer-premium grain relative text-eye-cream overflow-hidden">
   <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-eye-green-light/60 to-transparent"></div>
 
-  <div class="relative max-w-7xl mx-auto px-6 lg:px-10 pt-24 pb-10">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-x-8 gap-y-14 pb-16">
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-10 pt-28 lg:pt-32 pb-12">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-x-10 gap-y-16 pb-20">
 
       <!-- Company -->
       <div class="sm:col-span-2 lg:col-span-4">
@@ -872,7 +864,7 @@
 
     <div class="footer-divider"></div>
 
-    <div class="pt-8 flex flex-col lg:flex-row items-center justify-between gap-6 text-xs text-eye-cream/45 font-mono">
+    <div class="pt-10 flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8 text-xs text-eye-cream/45 font-mono">
       <p>&copy; <span id="year"></span> Errand Eye Limited. All rights reserved.</p>
       <div class="flex flex-wrap items-center justify-center gap-6">
         <a href="#" class="hover:text-eye-cream transition-colors">Privacy Policy</a>
@@ -890,14 +882,14 @@
 <!-- ============================================================
      STICKY ACTION BUTTONS
      ============================================================ -->
-<div id="fab-stack" class="fab-stack fab-hidden fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3">
-  <a href="#contact" class="fab-btn inline-flex items-center gap-2 rounded-full px-5 py-3.5 bg-eye-charcoal/90 text-eye-cream text-sm font-medium">
+<div id="fab-stack" class="fab-stack fab-hidden fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex flex-col items-end gap-2.5 sm:gap-3">
+  <a href="#contact" class="fab-btn inline-flex items-center justify-center gap-2 rounded-full h-11 w-11 sm:h-auto sm:w-auto sm:px-5 sm:py-3.5 bg-eye-charcoal/90 text-eye-cream text-sm font-medium">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16v12H7l-3 3z"/></svg>
-    Request Quote
+    <span class="hidden sm:inline">Request Quote</span>
   </a>
-  <a href="https://wa.me/2348164766193" data-contact="whatsapp-link" target="_blank" rel="noopener" class="fab-btn inline-flex items-center gap-2 rounded-full px-5 py-3.5 bg-eye-green text-white text-sm font-medium">
+  <a href="https://wa.me/2348164766193" data-contact="whatsapp-link" target="_blank" rel="noopener" class="fab-btn inline-flex items-center justify-center gap-2 rounded-full h-11 w-11 sm:h-auto sm:w-auto sm:px-5 sm:py-3.5 bg-eye-green text-white text-sm font-medium">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.5 0-10 4.5-10 10 0 1.77.46 3.44 1.27 4.89L2 22l5.25-1.28A9.96 9.96 0 0 0 12.04 22c5.5 0 10-4.5 10-10s-4.5-10-10-10zm5.7 14.2c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.13.11-1.83-.12-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.8-4.16-4.94-4.35-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.29.58-.36.78-.36h.56c.18 0 .42-.02.65.5.24.53.8 1.87.87 2 .07.14.11.3.02.48-.09.19-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.06.95 1.96 1.24 2.24 1.38.28.14.44.12.6-.07.16-.19.7-.82.89-1.1.19-.28.37-.23.62-.14.25.09 1.6.75 1.87.89.28.14.46.21.53.32.07.12.07.65-.17 1.32z"/></svg>
-    WhatsApp
+    <span class="hidden sm:inline">WhatsApp</span>
   </a>
 </div>
 

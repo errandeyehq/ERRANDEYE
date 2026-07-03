@@ -119,20 +119,30 @@
 <!-- ============================================================
      COMPANY OVERVIEW
      ============================================================ -->
-<section class="py-28 lg:py-36">
-  <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-16 items-center">
-    <div class="reveal">
-      <p class="font-mono text-[12px] uppercase tracking-[0.2em] text-eye-blue mb-4">About Us</p>
-      <h2 class="font-display text-4xl sm:text-5xl leading-[1.05] tracking-tight mb-6">We redefine convenience by bridging the gap between time, trust, and tasks.</h2>
-      <div class="space-y-5 text-eye-charcoal/75 leading-relaxed">
-        <p>At Errand Eye, we are a multi-service brand rooted in Tours & Travel, Hospitality Support, and Logistics. We serve individuals and businesses that need reliability, professionalism, and solutions tailored to how they work.</p>
-        <p>What began as a simple vision, to make everyday responsibilities easier, has grown into a reputable brand serving corporates, international clients, tourists, busy professionals, and solo travelers across Kenya, Nigeria, South Africa, and beyond.</p>
+<section class="py-32 lg:py-44 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+    <div class="reveal lg:col-span-6 lg:order-2">
+      <p class="font-mono text-[12px] uppercase tracking-[0.2em] text-eye-blue mb-4">Our Story</p>
+      <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.1] tracking-tight mb-8">We redefine convenience by bridging the gap between time, trust, and tasks.</h2>
+      <p class="font-display italic text-xl sm:text-2xl leading-[1.5] text-eye-charcoal/85 mb-8 max-w-lg">
+        What began as a simple vision, to make everyday responsibilities easier, has grown into a reputable brand serving clients across three countries.
+      </p>
+      <div class="space-y-6 text-eye-charcoal/60 leading-[1.8] max-w-lg border-t border-eye-gray-line pt-8">
+        <p>At Errand Eye, we are a multi-service brand rooted in Tours &amp; Travel, Hospitality Support, and Logistics. We serve individuals and businesses that need reliability, professionalism, and solutions tailored to how they work.</p>
         <p>Our approach is simple but powerful: listen, customize, and deliver. From crafting seamless travel itineraries and managing guest services, to handling errands and logistical operations with precision, Errand Eye steps in when excellence is not optional.</p>
         <p>We are more than a service provider; we are an extension of your priorities. With a deep understanding of customer needs and a commitment to excellence, we live our promise: <span class="font-semibold text-eye-green">“Any task, just ask.”</span></p>
       </div>
     </div>
-    <div class="reveal relative aspect-[4/5] rounded-2xl overflow-hidden">
-      <img src="assets/images/hero/hero-terminal.jpg" alt="Traveler moving through a modern airport terminal" class="w-full h-full object-cover" style="object-position: center 30%;">
+    <div class="reveal lg:col-span-6 lg:order-1 relative">
+      <div class="relative aspect-[3/4] lg:aspect-[4/5] rounded-3xl overflow-hidden">
+        <img src="assets/images/hero/hero-terminal.jpg" alt="Traveler moving through a modern airport terminal" class="w-full h-full object-cover" style="object-position: center 30%;">
+        <div class="absolute inset-0 bg-gradient-to-t from-eye-charcoal/40 via-transparent to-transparent"></div>
+      </div>
+      <div class="about-story-badge absolute -bottom-6 -right-4 sm:-right-8 rounded-2xl bg-white px-6 py-5 shadow-xl border border-eye-gray-line max-w-[13rem]">
+        <p class="font-display text-3xl leading-none text-gradient-brand-strong mb-1">3</p>
+        <p class="font-mono text-[10px] uppercase tracking-[0.14em] text-eye-charcoal/55">Countries served, one point of contact</p>
+      </div>
+      <div class="absolute -top-5 -left-5 h-24 w-24 rounded-2xl border border-eye-green-light/30 hidden lg:block" aria-hidden="true"></div>
     </div>
   </div>
 </section>
@@ -532,8 +542,8 @@
 <footer class="footer-premium grain relative text-eye-cream overflow-hidden">
   <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-eye-green-light/60 to-transparent"></div>
 
-  <div class="relative max-w-7xl mx-auto px-6 lg:px-10 pt-24 pb-10">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-x-8 gap-y-14 pb-16">
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-10 pt-28 lg:pt-32 pb-12">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-x-10 gap-y-16 pb-20">
 
       <!-- Company -->
       <div class="sm:col-span-2 lg:col-span-4">
@@ -622,7 +632,7 @@
 
     <div class="footer-divider"></div>
 
-    <div class="pt-8 flex flex-col lg:flex-row items-center justify-between gap-6 text-xs text-eye-cream/45 font-mono">
+    <div class="pt-10 flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8 text-xs text-eye-cream/45 font-mono">
       <p>&copy; <span id="year"></span> Errand Eye Limited. All rights reserved.</p>
       <div class="flex flex-wrap items-center justify-center gap-6">
         <a href="#" class="hover:text-eye-cream transition-colors">Privacy Policy</a>
@@ -640,14 +650,14 @@
 <!-- ============================================================
      STICKY ACTION BUTTONS
      ============================================================ -->
-<div id="fab-stack" class="fab-stack fab-hidden fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3">
-  <a href="#contact" class="fab-btn inline-flex items-center gap-2 rounded-full px-5 py-3.5 bg-eye-charcoal/90 text-eye-cream text-sm font-medium">
+<div id="fab-stack" class="fab-stack fab-hidden fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex flex-col items-end gap-2.5 sm:gap-3">
+  <a href="#contact" class="fab-btn inline-flex items-center justify-center gap-2 rounded-full h-11 w-11 sm:h-auto sm:w-auto sm:px-5 sm:py-3.5 bg-eye-charcoal/90 text-eye-cream text-sm font-medium">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16v12H7l-3 3z"/></svg>
-    Request Quote
+    <span class="hidden sm:inline">Request Quote</span>
   </a>
-  <a href="https://wa.me/2348164766193" data-contact="whatsapp-link" target="_blank" rel="noopener" class="fab-btn inline-flex items-center gap-2 rounded-full px-5 py-3.5 bg-eye-green text-white text-sm font-medium">
+  <a href="https://wa.me/2348164766193" data-contact="whatsapp-link" target="_blank" rel="noopener" class="fab-btn inline-flex items-center justify-center gap-2 rounded-full h-11 w-11 sm:h-auto sm:w-auto sm:px-5 sm:py-3.5 bg-eye-green text-white text-sm font-medium">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.5 0-10 4.5-10 10 0 1.77.46 3.44 1.27 4.89L2 22l5.25-1.28A9.96 9.96 0 0 0 12.04 22c5.5 0 10-4.5 10-10s-4.5-10-10-10zm5.7 14.2c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.13.11-1.83-.12-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.8-4.16-4.94-4.35-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.29.58-.36.78-.36h.56c.18 0 .42-.02.65.5.24.53.8 1.87.87 2 .07.14.11.3.02.48-.09.19-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.06.95 1.96 1.24 2.24 1.38.28.14.44.12.6-.07.16-.19.7-.82.89-1.1.19-.28.37-.23.62-.14.25.09 1.6.75 1.87.89.28.14.46.21.53.32.07.12.07.65-.17 1.32z"/></svg>
-    WhatsApp
+    <span class="hidden sm:inline">WhatsApp</span>
   </a>
 </div>
 
