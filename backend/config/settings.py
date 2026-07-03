@@ -3,6 +3,7 @@ Django settings for config project.
 """
 
 from pathlib import Path
+import inspect
 import os
 from dotenv import load_dotenv
 import dj_database_url
@@ -95,9 +96,14 @@ DATABASES = {
     'default': dj_database_url.parse(
         DATABASE_URL,
         conn_max_age=600,
-        conn_health_checks=True,
     ) if DATABASE_URL else DEFAULT_DATABASE,
 }
+
+# Older dj-database-url versions do not support conn_health_checks.
+if DATABASE_URL and 'CONN_HEALTH_CHECKS' in os.environ:
+    parsed_db = dj_database_url.parse(DATABASE_URL, conn_max_age=600)
+    parsed_db['CONN_HEALTH_CHECKS'] = True
+    DATABASES['default'] = parsed_db
 
 
 # Password validation
