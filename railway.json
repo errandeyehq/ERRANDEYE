@@ -1,6 +1,9 @@
 {
+  "$schema": "https://railway.com/railway.schema.json",
   "build": {
-    "builder": "herokuish"
+    "builder": "RAILPACK"
   },
-  "start": "cd backend && gunicorn -w 2 -b 0.0.0.0:$PORT config.wsgi:application"
+  "deploy": {
+    "startCommand": "cd backend && gunicorn -w 2 -b 0.0.0.0:$PORT config.wsgi:application"
+  }
 }
