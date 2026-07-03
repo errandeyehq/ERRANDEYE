@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Errand Eye Limited | Tours, Hospitality &amp; Logistics Across Africa</title>
+<meta name="description" content="Errand Eye is a premium concierge partner for tours &amp; travel, hospitality support, and logistics across Kenya, Nigeria, and South Africa. Any task, just ask.">
+<meta name="keywords" content="Errand Eye, concierge Africa, tours and travel Kenya, logistics Nigeria, hospitality support South Africa, corporate travel Africa">
+<meta property="og:title" content="Errand Eye Limited | Any Task. Just Ask.">
+<meta property="og:description" content="A premium concierge partner for tours &amp; travel, hospitality, and logistics across Africa.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/images/logo-lockup.png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="assets/images/logo-mark.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Tailwind (CDN, no build step) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          'eye-green': '#0EA55A',
+          'eye-green-light': '#12C168',
+          'eye-blue': '#0B84B0',
+          'eye-blue-light': '#0BA5D6',
+          'eye-charcoal': '#12181A',
+          'eye-charcoal-soft': '#1B2224',
+          'eye-cream': '#FAFAF7',
+          'eye-gray': '#E9E7E2',
+          'eye-gray-line': '#DAD7CF',
+        },
+        fontFamily: {
+          display: ['Cormorant Garamond', 'serif'],
+          sans: ['Manrope', 'sans-serif'],
+          mono: ['Manrope', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-eye-cream text-eye-charcoal antialiased">
+
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-eye-charcoal focus:text-eye-cream focus:px-4 focus:py-2 focus:rounded-full">Skip to content</a>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<header id="site-nav" class="nav-glass fixed top-0 inset-x-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+    <div class="flex items-center justify-between h-16 lg:h-20">
+      <a href="#hero" class="flex items-center gap-2.5 sm:gap-3 group">
+        <img src="assets/images/logo-mark.png" alt="Errand Eye" class="h-7 sm:h-8 w-auto transition-transform duration-500 group-hover:scale-105">
+        <span class="flex flex-col leading-tight">
+          <span class="font-sans font-semibold text-[14px] sm:text-[15px] tracking-wide text-gradient-brand">ERRAND EYE</span>
+          <span class="font-sans text-[9px] sm:text-[10px] tracking-wide text-eye-charcoal/45 mt-0.5">Any Task. Just Ask.</span>
+        </span>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-10 font-mono text-[13px] uppercase tracking-wider text-eye-charcoal/70">
+        <a href="#services" class="hover:text-eye-charcoal transition-colors">Services</a>
+        <a href="#process" class="hover:text-eye-charcoal transition-colors">Process</a>
+        <a href="#gallery" class="hover:text-eye-charcoal transition-colors">Gallery</a>
+        <a href="#awards" class="hover:text-eye-charcoal transition-colors">Awards</a>
+        <a href="#contact" class="hover:text-eye-charcoal transition-colors">Contact</a>
+      </nav>
+
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="#contact" class="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium btn-primary">
+          Request a Quote
+        </a>
+      </div>
+
+      <button id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" class="lg:hidden relative h-9 w-9 -mr-2">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="mobile-menu lg:hidden px-4 sm:px-6 pb-8 font-mono text-sm uppercase tracking-wider bg-eye-cream/98 backdrop-blur-md border-t border-eye-gray-line shadow-xl">
+    <a href="#services" class="mobile-menu-link">Services<svg class="menu-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+    <a href="#process" class="mobile-menu-link">Process<svg class="menu-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+    <a href="#gallery" class="mobile-menu-link">Gallery<svg class="menu-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+    <a href="#awards" class="mobile-menu-link">Awards<svg class="menu-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+    <a href="#contact" class="mobile-menu-link">Contact<svg class="menu-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+    <a href="#contact" class="mobile-menu-cta mt-5 inline-flex justify-center items-center gap-2 rounded-full px-5 py-3 text-sm font-medium normal-case tracking-normal btn-primary">Request a Quote</a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="hero" class="hero-canvas grain relative min-h-screen flex items-end overflow-hidden text-eye-cream">
+
+  <div id="hero-parallax" class="hero-image-stack absolute inset-0" aria-hidden="true">
+    <img class="hero-slide is-active" src="assets/images/hero/hero-aircraft-sunset.jpg" alt="" style="object-position: center 60%;">
+
+    <img class="hero-slide" src="assets/images/hero/hero-terminal.jpg" alt="" style="object-position: center 30%;">
+
+    <img class="hero-slide" src="assets/images/hero/hero-chauffeur.jpg" alt="" style="object-position: center 40%;">
+
+    <img class="hero-slide" src="assets/images/hero/hero-passport-window.jpg" alt="" style="object-position: center 55%;">
+  </div>
+  <div class="absolute inset-0 bg-gradient-to-t from-eye-charcoal via-eye-charcoal/60 to-eye-charcoal/35"></div>
+  <div class="absolute inset-0 bg-eye-charcoal/25"></div>
+  <div class="hero-sheen absolute inset-x-0 top-0 h-40" aria-hidden="true"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 pt-32 pb-24 lg:pb-28 w-full">
+    <div class="mb-8 flex flex-col gap-2.5 sm:gap-2 sm:block">
+      <div class="flex flex-wrap items-center gap-x-2 gap-y-1.5 font-mono text-[11px] sm:text-[13px] uppercase tracking-[0.16em] sm:tracking-[0.2em] text-eye-cream/70">
+        <span>Tours &amp; Travel</span>
+        <span class="text-eye-cream/30">·</span>
+        <span>Hospitality</span>
+        <span class="text-eye-cream/30">·</span>
+        <span>Logistics</span>
+        <span class="text-eye-cream/30">·</span>
+        <span>Concierge</span>
+      </div>
+      <div class="flex flex-wrap items-center gap-x-2 gap-y-1.5 font-mono text-[11px] sm:text-[13px] uppercase tracking-[0.16em] sm:tracking-[0.2em]">
+        <span class="text-eye-green-light">Kenya</span>
+        <span class="text-eye-cream/30">·</span>
+        <span class="text-eye-blue-light">Nigeria</span>
+        <span class="text-eye-cream/30">·</span>
+        <span class="text-eye-green-light">South Africa</span>
+      </div>
+    </div>
+
+    <h1 class="hero-headline font-display font-normal leading-[0.98] text-[15vw] sm:text-[9vw] lg:text-[6.4vw] tracking-tight max-w-5xl">
+      <span class="word" style="animation-delay:0.05s">Any</span>
+      <span class="word" style="animation-delay:0.15s">task.</span>
+      <span class="word text-gradient-brand italic" style="animation-delay:0.28s">Just</span>
+      <span class="word text-gradient-brand italic" style="animation-delay:0.38s">ask.</span>
+    </h1>
+
+    <p class="hero-headline mt-8 max-w-xl text-lg sm:text-xl text-eye-cream/75 leading-relaxed word" style="animation-delay:0.55s">
+      Errand Eye is the partner behind seamless travel, hospitality, and logistics for corporates, travelers, and businesses across Africa. One message in, and it is handled.
+    </p>
+
+    <div class="hero-headline mt-9 sm:mt-10 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 word" style="animation-delay:0.68s">
+      <a href="#contact" class="inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 text-[15px] font-medium btn-primary">
+        Request a Quote
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+      <a href="#services" class="inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 text-[15px] font-medium btn-ghost">
+        Explore Services
+      </a>
+    </div>
+
+    <div class="hero-headline mt-8 sm:mt-12 pt-6 sm:pt-0 border-t border-eye-cream/10 sm:border-0 flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-3 word" style="animation-delay:0.8s">
+      <span class="font-mono text-[11px] uppercase tracking-[0.18em] text-eye-cream/50 sm:mr-1">For</span>
+      <div class="flex flex-wrap gap-2.5 sm:gap-3">
+        <span class="hero-chip">Corporate teams</span>
+        <span class="hero-chip">Travelers</span>
+        <span class="hero-chip">Busy professionals</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="hero-dots" class="absolute bottom-9 left-6 lg:left-10 z-10 flex items-center gap-2" aria-label="Hero image slides">
+    <button class="hero-dot is-active" type="button" data-slide="0" aria-label="Show hero image 1"></button>
+    <button class="hero-dot" type="button" data-slide="1" aria-label="Show hero image 2"></button>
+    <button class="hero-dot" type="button" data-slide="2" aria-label="Show hero image 3"></button>
+    <button class="hero-dot" type="button" data-slide="3" aria-label="Show hero image 4"></button>
+  </div>
+
+  <a href="#stats" class="scroll-indicator absolute bottom-8 right-6 lg:right-10 z-10 hidden sm:flex flex-col items-center gap-3 text-eye-cream/55" aria-label="Scroll to explore">
+    <span class="font-mono text-[10px] uppercase tracking-[0.28em] [writing-mode:vertical-rl]">Scroll</span>
+    <span class="h-12 w-px bg-gradient-to-b from-eye-cream/60 to-transparent"></span>
+  </a>
+</section>
+
+<!-- ============================================================
+     STATS
+     ============================================================ -->
+<section id="stats" class="bg-eye-charcoal text-eye-cream py-16 lg:py-20">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="reveal-stagger grid grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-6 text-center lg:text-left">
+      <div>
+        <p class="font-display text-4xl lg:text-5xl"><span class="stat-num" data-count="3">0</span></p>
+        <p class="font-mono text-[11px] uppercase tracking-[0.15em] text-eye-cream/55 mt-2">Countries Served</p>
+      </div>
+      <div>
+        <p class="font-display text-4xl lg:text-5xl"><span class="stat-num" data-count="9">0</span></p>
+        <p class="font-mono text-[11px] uppercase tracking-[0.15em] text-eye-cream/55 mt-2">Core Service Lines</p>
+      </div>
+      <div>
+        <p class="font-display text-4xl lg:text-5xl"><span class="stat-num" data-count="100" data-suffix="%">0%</span></p>
+        <p class="font-mono text-[11px] uppercase tracking-[0.15em] text-eye-cream/55 mt-2">Confidential Handling</p>
+      </div>
+      <div>
+        <p class="font-display text-4xl lg:text-5xl"><span class="stat-num" data-count="1">0</span></p>
+        <p class="font-mono text-[11px] uppercase tracking-[0.15em] text-eye-cream/55 mt-2">Message to Get Started</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SERVICES OVERVIEW
+     ============================================================ -->
+<section id="services" class="py-28 lg:py-36">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="reveal flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
+      <div class="max-w-2xl">
+        <p class="font-mono text-[12px] uppercase tracking-[0.2em] text-eye-blue mb-4">What We Handle</p>
+        <h2 class="font-display text-4xl sm:text-5xl leading-[1.05] tracking-tight">
+          Nine service lines. <span class="italic text-eye-green">One point of contact.</span>
+        </h2>
+      </div>
+      <p class="max-w-sm text-eye-charcoal/60 leading-relaxed">
+        Every request, however small or complex, moves through the same trusted channel. You ask once. We coordinate everything else.
+      </p>
+    </div>
+
+    <div class="reveal-stagger grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Card 1 -->
+      <article class="service-card group relative overflow-hidden rounded-2xl bg-white p-9 flex flex-col">
+        <span class="absolute top-7 right-7 font-mono text-[11px] text-eye-charcoal/25 tracking-widest">01</span>
+        <div class="icon-badge h-14 w-14 rounded-full p-[2px] bg-gradient-to-br from-eye-green-light to-eye-blue-light mb-7">
+          <div class="h-full w-full rounded-full bg-white flex items-center justify-center">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0EA55A" stroke-width="1.5"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="9"/></svg>
+          </div>
+        </div>
+        <h3 class="font-display text-2xl tracking-tight mb-2.5">Tours &amp; Travel</h3>
+        <p class="text-sm text-eye-charcoal/60 leading-relaxed flex-1">Personalized itineraries and curated excursions built around how you actually want to travel.</p>
+        <a href="services.html" class="mt-7 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.14em] text-eye-charcoal group-hover:gap-3 transition-all w-fit">
+          Learn More <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="service-card group relative overflow-hidden rounded-2xl bg-white p-9 flex flex-col">
+        <span class="absolute top-7 right-7 font-mono text-[11px] text-eye-charcoal/25 tracking-widest">02</span>
+        <div class="icon-badge h-14 w-14 rounded-full p-[2px] bg-gradient-to-br from-eye-blue-light to-eye-green-light mb-7">
+          <div class="h-full w-full rounded-full bg-white flex items-center justify-center">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0B84B0" stroke-width="1.5"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-8h6v8"/></svg>
+          </div>
+        </div>
+        <h3 class="font-display text-2xl tracking-tight mb-2.5">Hospitality Support</h3>
+        <p class="text-sm text-eye-charcoal/60 leading-relaxed flex-1">Hotel bookings, restaurant reservations, and guest experiences handled with genuine care.</p>
+        <a href="services.html" class="mt-7 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.14em] text-eye-charcoal group-hover:gap-3 transition-all w-fit">
+          Learn More <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="service-card group relative overflow-hidden rounded-2xl bg-white p-9 flex flex-col">
+        <span class="absolute top-7 right-7 font-mono text-[11px] text-eye-charcoal/25 tracking-widest">03</span>
+        <div class="icon-badge h-14 w-14 rounded-full p-[2px] bg-gradient-to-br from-eye-green-light to-eye-blue-light mb-7">
+          <div class="h-full w-full rounded-full bg-white flex items-center justify-center">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0EA55A" stroke-width="1.5"><path d="M3 12h4l2-8 4 16 2-8h6"/></svg>
+          </div>
+        </div>
+        <h3 class="font-display text-2xl tracking-tight mb-2.5">Airport Transfers</h3>
+        <p class="text-sm text-eye-charcoal/60 leading-relaxed flex-1">Reliable, comfortable pickups and drop-offs timed precisely around your itinerary.</p>
+        <a href="services.html" class="mt-7 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.14em] text-eye-charcoal group-hover:gap-3 transition-all w-fit">
+          Learn More <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="service-card group relative overflow-hidden rounded-2xl bg-white p-9 flex flex-col">
+        <span class="absolute top-7 right-7 font-mono text-[11px] text-eye-charcoal/25 tracking-widest">04</span>
+        <div class="icon-badge h-14 w-14 rounded-full p-[2px] bg-gradient-to-br from-eye-blue-light to-eye-green-light mb-7">
+          <div class="h-full w-full rounded-full bg-white flex items-center justify-center">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0B84B0" stroke-width="1.5"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h4"/></svg>
+          </div>
+        </div>
+        <h3 class="font-display text-2xl tracking-tight mb-2.5">Visa Assistance</h3>
+        <p class="text-sm text-eye-charcoal/60 leading-relaxed flex-1">Documentation and application support that removes the guesswork from crossing borders.</p>
+        <a href="services.html" class="mt-7 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.14em] text-eye-charcoal group-hover:gap-3 transition-all w-fit">
+          Learn More <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="service-card group relative overflow-hidden rounded-2xl bg-white p-9 flex flex-col">
+        <span class="absolute top-7 right-7 font-mono text-[11px] text-eye-charcoal/25 tracking-widest">05</span>
+        <div class="icon-badge h-14 w-14 rounded-full p-[2px] bg-gradient-to-br from-eye-green-light to-eye-blue-light mb-7">
+          <div class="h-full w-full rounded-full bg-white flex items-center justify-center">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0EA55A" stroke-width="1.5"><rect x="2" y="7" width="20" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+          </div>
+        </div>
+        <h3 class="font-display text-2xl tracking-tight mb-2.5">Corporate Travel</h3>
+        <p class="text-sm text-eye-charcoal/60 leading-relaxed flex-1">Coordinated travel programs for teams that need consistency across every trip.</p>
+        <a href="services.html" class="mt-7 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.14em] text-eye-charcoal group-hover:gap-3 transition-all w-fit">
+          Learn More <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="service-card group relative overflow-hidden rounded-2xl bg-white p-9 flex flex-col">
+        <span class="absolute top-7 right-7 font-mono text-[11px] text-eye-charcoal/25 tracking-widest">06</span>
+        <div class="icon-badge h-14 w-14 rounded-full p-[2px] bg-gradient-to-br from-eye-blue-light to-eye-green-light mb-7">
+          <div class="h-full w-full rounded-full bg-white flex items-center justify-center">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0B84B0" stroke-width="1.5"><rect x="1" y="7" width="15" height="10" rx="1.5"/><path d="M16 10h4l3 3v4h-7z"/><circle cx="6" cy="19" r="1.6"/><circle cx="18" cy="19" r="1.6"/></svg>
+          </div>
+        </div>
+        <h3 class="font-display text-2xl tracking-tight mb-2.5">Logistics &amp; Errands</h3>
+        <p class="text-sm text-eye-charcoal/60 leading-relaxed flex-1">Courier services, pick-ups, bill payments, and the everyday tasks that eat your calendar.</p>
+        <a href="services.html" class="mt-7 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.14em] text-eye-charcoal group-hover:gap-3 transition-all w-fit">
+          Learn More <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </article>
+
+    </div>
+
+    <div class="reveal mt-12 text-center">
+      <a href="services.html" class="inline-flex items-center gap-2 font-mono text-[13px] uppercase tracking-[0.15em] border-b border-eye-charcoal/30 pb-1 hover:border-eye-charcoal transition-colors">
+        View All Services
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WHY CHOOSE US - signature route map
+     ============================================================ -->
+<section class="py-28 lg:py-36 bg-eye-charcoal-soft text-eye-cream relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-16 items-center">
+
+    <div class="reveal">
+      <p class="font-mono text-[12px] uppercase tracking-[0.2em] text-eye-green-light mb-4">Why Choose Us</p>
+      <h2 class="font-display text-4xl sm:text-5xl leading-[1.05] tracking-tight mb-10">
+        We watch the details<br><span class="italic text-eye-blue-light">so you don't have to.</span>
+      </h2>
+
+      <div class="space-y-7">
+        <div class="flex gap-5">
+          <span class="font-mono text-xs text-eye-cream/40 pt-1">01</span>
+          <div>
+            <h3 class="font-display text-lg mb-1">One-stop convenience</h3>
+            <p class="text-sm text-eye-cream/60 leading-relaxed">Travel, hospitality, and logistics under a single reliable point of contact, not three separate vendors.</p>
+          </div>
+        </div>
+        <div class="flex gap-5">
+          <span class="font-mono text-xs text-eye-cream/40 pt-1">02</span>
+          <div>
+            <h3 class="font-display text-lg mb-1">Local expertise, global reach</h3>
+            <p class="text-sm text-eye-cream/60 leading-relaxed">Operating across Kenya, Nigeria, and South Africa, with partnerships that extend further.</p>
+          </div>
+        </div>
+        <div class="flex gap-5">
+          <span class="font-mono text-xs text-eye-cream/40 pt-1">03</span>
+          <div>
+            <h3 class="font-display text-lg mb-1">Professionalism and discretion</h3>
+            <p class="text-sm text-eye-cream/60 leading-relaxed">Client data and requests are handled with confidentiality at every stage.</p>
+          </div>
+        </div>
+        <div class="flex gap-5">
+          <span class="font-mono text-xs text-eye-cream/40 pt-1">04</span>
+          <div>
+            <h3 class="font-display text-lg mb-1">Built to scale with you</h3>
+            <p class="text-sm text-eye-cream/60 leading-relaxed">From a single one-time errand to ongoing corporate support, the service adapts to your pace.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Signature route map -->
+    <div class="reveal relative aspect-square max-w-lg mx-auto w-full">
+      <svg viewBox="0 0 400 400" class="w-full h-full" aria-hidden="true">
+        <circle cx="200" cy="200" r="180" stroke="rgba(250,250,247,0.08)" stroke-width="1" fill="none"/>
+        <circle cx="200" cy="200" r="130" stroke="rgba(250,250,247,0.08)" stroke-width="1" fill="none"/>
+        <circle cx="200" cy="200" r="80" stroke="rgba(250,250,247,0.08)" stroke-width="1" fill="none"/>
+
+        <path class="route-path" d="M 110 300 Q 200 120 300 260" stroke="#12C168" stroke-width="1.4" fill="none" opacity="0.7"/>
+        <path class="route-path" d="M 300 260 Q 340 150 200 90" stroke="#0BA5D6" stroke-width="1.4" fill="none" opacity="0.7" style="animation-delay:-6s"/>
+        <path class="route-path" d="M 200 90 Q 100 130 110 300" stroke="#12C168" stroke-width="1.4" fill="none" opacity="0.7" style="animation-delay:-12s"/>
+
+        <g>
+          <circle class="route-pulse" cx="110" cy="300" r="6" fill="none" stroke="#12C168" stroke-width="1.5"/>
+          <circle class="route-dot" cx="110" cy="300" r="5" fill="#12C168"/>
+          <text x="122" y="304" fill="#FAFAF7" opacity="0.7" font-family="IBM Plex Mono" font-size="11">NAIROBI</text>
+        </g>
+        <g>
+          <circle class="route-pulse" cx="300" cy="260" r="6" fill="none" stroke="#0BA5D6" stroke-width="1.5" style="animation-delay:-1s"/>
+          <circle class="route-dot" cx="300" cy="260" r="5" fill="#0BA5D6"/>
+          <text x="220" y="278" fill="#FAFAF7" opacity="0.7" font-family="IBM Plex Mono" font-size="11">JOHANNESBURG</text>
+        </g>
+        <g>
+          <circle class="route-pulse" cx="200" cy="90" r="6" fill="none" stroke="#12C168" stroke-width="1.5" style="animation-delay:-2s"/>
+          <circle class="route-dot" cx="200" cy="90" r="5" fill="#12C168"/>
+          <text x="150" y="78" fill="#FAFAF7" opacity="0.7" font-family="IBM Plex Mono" font-size="11">LAGOS</text>
+        </g>
+      </svg>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     OUR PROCESS
+     ============================================================ -->
+<section id="process" class="py-28 lg:py-36">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="reveal max-w-2xl mb-20">
+      <p class="font-mono text-[12px] uppercase tracking-[0.2em] text-eye-green mb-4">How It Works</p>
+      <h2 class="font-display text-4xl sm:text-5xl leading-[1.05] tracking-tight">
+        A process built on <span class="italic text-eye-blue">accountability</span>, start to finish.
+      </h2>
+    </div>
+
+    <div class="reveal-stagger relative grid lg:grid-cols-6 gap-8 lg:gap-4">
+      <div class="hidden lg:block process-line absolute top-6 left-[8%] right-[8%] h-[1.5px]"></div>
+
+      <div class="relative">
+        <div class="h-12 w-12 rounded-full bg-eye-charcoal text-eye-cream font-display text-lg flex items-center justify-center relative z-10">1</div>
+        <h3 class="font-display text-base mt-5 mb-1.5">Needs Assessment</h3>
+        <p class="text-[13px] text-eye-charcoal/60 leading-relaxed">We start by understanding your objectives and preferences directly.</p>
+      </div>
+      <div class="relative">
+        <div class="h-12 w-12 rounded-full bg-eye-charcoal text-eye-cream font-display text-lg flex items-center justify-center relative z-10">2</div>
+        <h3 class="font-display text-base mt-5 mb-1.5">Custom Planning</h3>
+        <p class="text-[13px] text-eye-charcoal/60 leading-relaxed">A tailored package with clear communication before anything moves.</p>
+      </div>
+      <div class="relative">
+        <div class="h-12 w-12 rounded-full bg-eye-charcoal text-eye-cream font-display text-lg flex items-center justify-center relative z-10">3</div>
+        <h3 class="font-display text-base mt-5 mb-1.5">Resource Coordination</h3>
+        <p class="text-[13px] text-eye-charcoal/60 leading-relaxed">We organize every partner and provider your request requires.</p>
+      </div>
+      <div class="relative">
+        <div class="h-12 w-12 rounded-full bg-eye-charcoal text-eye-cream font-display text-lg flex items-center justify-center relative z-10">4</div>
+        <h3 class="font-display text-base mt-5 mb-1.5">Execution</h3>
+        <p class="text-[13px] text-eye-charcoal/60 leading-relaxed">Delivered with professionalism and updates the whole way through.</p>
+      </div>
+      <div class="relative">
+        <div class="h-12 w-12 rounded-full bg-eye-charcoal text-eye-cream font-display text-lg flex items-center justify-center relative z-10">5</div>
+        <h3 class="font-display text-base mt-5 mb-1.5">Feedback Loop</h3>
+        <p class="text-[13px] text-eye-charcoal/60 leading-relaxed">Post-service evaluation helps us refine every future request.</p>
+      </div>
+      <div class="relative">
+        <div class="h-12 w-12 rounded-full bg-eye-charcoal text-eye-cream font-display text-lg flex items-center justify-center relative z-10">6</div>
+        <h3 class="font-display text-base mt-5 mb-1.5">Ongoing Support</h3>
+        <p class="text-[13px] text-eye-charcoal/60 leading-relaxed">Scalable, consistent service for one-time or recurring needs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     GALLERY PREVIEW
+     ============================================================ -->
+<section id="gallery" class="py-28 lg:py-36 bg-eye-gray/40">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="reveal flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-14">
+      <div>
+        <p class="font-mono text-[12px] uppercase tracking-[0.2em] text-eye-blue mb-4">In the Field</p>
+        <h2 class="font-display text-4xl sm:text-5xl leading-[1.05] tracking-tight">A glimpse of the work.</h2>
+      </div>
+      <a href="gallery.html" class="font-mono text-[13px] uppercase tracking-[0.15em] border-b border-eye-charcoal/30 pb-1 hover:border-eye-charcoal transition-colors w-fit">
+        View Full Gallery
+      </a>
+    </div>
+
+    <div class="reveal-stagger grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
+      <div class="gallery-item relative rounded-2xl overflow-hidden cursor-pointer lg:row-span-2" data-lightbox data-caption="Airport transfer, Nairobi">
+        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&amp;w=900&amp;auto=format&amp;fit=crop" alt="Airport transfer service" class="w-full h-full object-cover">
+        <div class="gallery-veil absolute inset-0"></div>
+      </div>
+      <div class="gallery-item relative rounded-2xl overflow-hidden cursor-pointer" data-lightbox data-caption="Hospitality coordination, Cape Town">
+        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&amp;w=900&amp;auto=format&amp;fit=crop" alt="Hospitality coordination" class="w-full h-full object-cover">
+        <div class="gallery-veil absolute inset-0"></div>
+      </div>
+      <div class="gallery-item relative rounded-2xl overflow-hidden cursor-pointer" data-lightbox data-caption="Curated excursion, Lagos">
+        <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?q=80&amp;w=900&amp;auto=format&amp;fit=crop" alt="Curated travel excursion" class="w-full h-full object-cover">
+        <div class="gallery-veil absolute inset-0"></div>
+      </div>
+      <div class="gallery-item relative rounded-2xl overflow-hidden cursor-pointer lg:row-span-2" data-lightbox data-caption="Logistics coordination in transit">
+        <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&amp;w=900&amp;auto=format&amp;fit=crop" alt="Logistics and courier services" class="w-full h-full object-cover">
+        <div class="gallery-veil absolute inset-0"></div>
+      </div>
+      <div class="gallery-item relative rounded-2xl overflow-hidden cursor-pointer" data-lightbox data-caption="Corporate travel briefing">
+        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&amp;w=900&amp;auto=format&amp;fit=crop" alt="Corporate travel support" class="w-full h-full object-cover">
+        <div class="gallery-veil absolute inset-0"></div>
+      </div>
+      <div class="gallery-item relative rounded-2xl overflow-hidden cursor-pointer" data-lightbox data-caption="Team retreat support">
+        <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?q=80&amp;w=900&amp;auto=format&amp;fit=crop" alt="Team retreat and event support" class="w-full h-full object-cover">
+        <div class="gallery-veil absolute inset-0"></div>
+      </div>
+    </div>
+    <p class="mt-6 text-xs text-eye-charcoal/40 font-mono">Editorial imagery shown above. Swap for real Errand Eye photography before launch.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     AWARDS & RECOGNITION
+     ============================================================ -->
+<section id="awards" class="py-24 bg-eye-gray/60 border-y border-eye-gray-line overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 mb-12">
+    <p class="reveal font-mono text-[12px] uppercase tracking-[0.2em] text-eye-green text-center">Awards &amp; Recognition</p>
+  </div>
+
+  <div class="marquee-mask relative">
+    <div class="marquee-track flex gap-16 w-max" data-dynamic="awards-track" data-award-style="icon">
+      <div class="flex items-center gap-16 pr-16">
+        <div class="award-item flex items-center gap-4">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#0EA55A" stroke-width="1.3" class="shrink-0 opacity-70"><circle cx="12" cy="8" r="6"/><path d="M8.5 13.2L7 22l5-2.6 5 2.6-1.5-8.8"/></svg>
+          <div class="text-left">
+            <p class="font-display text-2xl mb-1">Distinguished Award of Excellence</p>
+            <p class="font-mono text-xs uppercase tracking-wider text-eye-charcoal/50">Logistics &amp; Travel Services · 2025</p>
+          </div>
+        </div>
+        <div class="h-10 w-px bg-eye-gray-line"></div>
+        <div class="award-item flex items-center gap-4">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#0B84B0" stroke-width="1.3" class="shrink-0 opacity-70"><circle cx="12" cy="8" r="6"/><path d="M8.5 13.2L7 22l5-2.6 5 2.6-1.5-8.8"/></svg>
+          <div class="text-left">
+            <p class="font-display text-2xl mb-1">Africa's Under 40 CEO Awards</p>
+            <p class="font-mono text-xs uppercase tracking-wider text-eye-charcoal/50">2024</p>
+          </div>
+        </div>
+        <div class="h-10 w-px bg-eye-gray-line"></div>
+        <div class="award-item flex items-center gap-4">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#0EA55A" stroke-width="1.3" class="shrink-0 opacity-70"><circle cx="12" cy="8" r="6"/><path d="M8.5 13.2L7 22l5-2.6 5 2.6-1.5-8.8"/></svg>
+          <div class="text-left">
+            <p class="font-display text-2xl mb-1">Women in Business, Nominee</p>
+            <p class="font-mono text-xs uppercase tracking-wider text-eye-charcoal/50">Startup Achievement of the Year · 2023</p>
+          </div>
+        </div>
+      </div>
+      <!-- duplicate for seamless marquee loop -->
+      <div class="flex items-center gap-16 pr-16" aria-hidden="true">
+        <div class="award-item flex items-center gap-4">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#0EA55A" stroke-width="1.3" class="shrink-0 opacity-70"><circle cx="12" cy="8" r="6"/><path d="M8.5 13.2L7 22l5-2.6 5 2.6-1.5-8.8"/></svg>
+          <div class="text-left">
+            <p class="font-display text-2xl mb-1">Distinguished Award of Excellence</p>
+            <p class="font-mono text-xs uppercase tracking-wider text-eye-charcoal/50">Logistics &amp; Travel Services · 2025</p>
+          </div>
+        </div>
+        <div class="h-10 w-px bg-eye-gray-line"></div>
+        <div class="award-item flex items-center gap-4">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#0B84B0" stroke-width="1.3" class="shrink-0 opacity-70"><circle cx="12" cy="8" r="6"/><path d="M8.5 13.2L7 22l5-2.6 5 2.6-1.5-8.8"/></svg>
+          <div class="text-left">
+            <p class="font-display text-2xl mb-1">Africa's Under 40 CEO Awards</p>
+            <p class="font-mono text-xs uppercase tracking-wider text-eye-charcoal/50">2024</p>
+          </div>
+        </div>
+        <div class="h-10 w-px bg-eye-gray-line"></div>
+        <div class="award-item flex items-center gap-4">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#0EA55A" stroke-width="1.3" class="shrink-0 opacity-70"><circle cx="12" cy="8" r="6"/><path d="M8.5 13.2L7 22l5-2.6 5 2.6-1.5-8.8"/></svg>
+          <div class="text-left">
+            <p class="font-display text-2xl mb-1">Women in Business, Nominee</p>
+            <p class="font-mono text-xs uppercase tracking-wider text-eye-charcoal/50">Startup Achievement of the Year · 2023</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TESTIMONIALS
+     ============================================================ -->
+<section class="py-28 lg:py-36 bg-eye-charcoal text-eye-cream">
+  <div class="max-w-4xl mx-auto px-6 lg:px-10 text-center">
+    <p class="reveal font-mono text-[12px] uppercase tracking-[0.2em] text-eye-blue-light mb-4">Client Voices</p>
+    <h2 class="reveal font-display text-3xl sm:text-4xl leading-tight mb-14">What it feels like to work with us.</h2>
+
+    <div class="testimonial-wrap reveal relative overflow-hidden">
+      <div id="testimonial-track" class="flex transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]">
+        <div class="w-full flex-shrink-0 px-4">
+          <svg width="28" height="20" viewBox="0 0 28 20" fill="none" class="mx-auto mb-6 opacity-40"><path d="M0 20V11.4C0 4.2 4.4 0 11 0v4.5C7.5 4.5 5 6.8 5 11h6v9H0zm17 0V11.4C17 4.2 21.4 0 28 0v4.5c-3.5 0-6 2.3-6 6.5h6v9H17z" fill="#FAFAF7"/></svg>
+          <p class="font-display text-xl sm:text-2xl italic leading-relaxed text-eye-cream/90">
+            "We had a leadership team of eleven flying into Lagos from three different countries, and Errand Eye ran every transfer, hotel, and dinner reservation from one WhatsApp thread. Nobody on our end had to make a single call."
+          </p>
+          <p class="mt-6 font-mono text-xs uppercase tracking-wider text-eye-cream/50">Adaeze O. · Operations Lead, Fintech Firm, Lagos</p>
+        </div>
+        <div class="w-full flex-shrink-0 px-4">
+          <svg width="28" height="20" viewBox="0 0 28 20" fill="none" class="mx-auto mb-6 opacity-40"><path d="M0 20V11.4C0 4.2 4.4 0 11 0v4.5C7.5 4.5 5 6.8 5 11h6v9H0zm17 0V11.4C17 4.2 21.4 0 28 0v4.5c-3.5 0-6 2.3-6 6.5h6v9H17z" fill="#FAFAF7"/></svg>
+          <p class="font-display text-xl sm:text-2xl italic leading-relaxed text-eye-cream/90">
+            "Our Nairobi hotel cancelled on us two days before a client visit. One message to Errand Eye and we had a comparable property confirmed within the hour, plus airport pickup rearranged without us even asking."
+          </p>
+          <p class="mt-6 font-mono text-xs uppercase tracking-wider text-eye-cream/50">Michael T. · Regional Manager, Logistics Company, Nairobi</p>
+        </div>
+        <div class="w-full flex-shrink-0 px-4">
+          <svg width="28" height="20" viewBox="0 0 28 20" fill="none" class="mx-auto mb-6 opacity-40"><path d="M0 20V11.4C0 4.2 4.4 0 11 0v4.5C7.5 4.5 5 6.8 5 11h6v9H0zm17 0V11.4C17 4.2 21.4 0 28 0v4.5c-3.5 0-6 2.3-6 6.5h6v9H17z" fill="#FAFAF7"/></svg>
+          <p class="font-display text-xl sm:text-2xl italic leading-relaxed text-eye-cream/90">
+            "I was traveling solo through Cape Town and asked for a driver, a restaurant recommendation, and help finding a lost bag, all in one day. Errand Eye handled it like it was nothing. It felt like having a friend on the ground."
+          </p>
+          <p class="mt-6 font-mono text-xs uppercase tracking-wider text-eye-cream/50">Sarah K. · Independent Traveler, Cape Town</p>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-center gap-6 mt-10">
+        <button id="testimonial-prev" aria-label="Previous testimonial" class="h-10 w-10 rounded-full border border-eye-cream/20 flex items-center justify-center hover:bg-eye-cream/10 transition-colors">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M13 8H3M7 4L3 8l4 4"/></svg>
+        </button>
+        <div id="testimonial-dots" class="flex items-center gap-2"></div>
+        <button id="testimonial-next" aria-label="Next testimonial" class="h-10 w-10 rounded-full border border-eye-cream/20 flex items-center justify-center hover:bg-eye-cream/10 transition-colors">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     HOW TO BOOK
+     ============================================================ -->
+<section class="py-24 lg:py-32 bg-eye-gray/40">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="reveal max-w-2xl mb-14">
+      <p class="font-mono text-[12px] uppercase tracking-[0.2em] text-eye-blue mb-4">How to Book</p>
+      <h2 class="font-display text-4xl sm:text-5xl leading-[1.05] tracking-tight">From message to delivery in five simple steps.</h2>
+    </div>
+
+    <div class="reveal-stagger grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+      <div class="flex flex-col gap-3">
+        <div class="h-10 w-10 rounded-full bg-white border border-eye-gray-line flex items-center justify-center shrink-0">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0EA55A" stroke-width="1.8"><path d="M5 13l4 4L19 7"/></svg>
+        </div>
+        <h3 class="font-display text-lg">Call, WhatsApp, DM, or email us</h3>
+        <p class="text-sm text-eye-charcoal/60 leading-relaxed">Reach out on whichever channel works for you; we respond on all of them.</p>
+      </div>
+      <div class="flex flex-col gap-3">
+        <div class="h-10 w-10 rounded-full bg-white border border-eye-gray-line flex items-center justify-center shrink-0">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0B84B0" stroke-width="1.8"><path d="M5 13l4 4L19 7"/></svg>
+        </div>
+        <h3 class="font-display text-lg">Agree on the service</h3>
+        <p class="text-sm text-eye-charcoal/60 leading-relaxed">We confirm the details, scope, and timeline together before anything moves.</p>
+      </div>
+      <div class="flex flex-col gap-3">
+        <div class="h-10 w-10 rounded-full bg-white border border-eye-gray-line flex items-center justify-center shrink-0">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0EA55A" stroke-width="1.8"><path d="M5 13l4 4L19 7"/></svg>
+        </div>
+        <h3 class="font-display text-lg">Receive your invoice</h3>
+        <p class="text-sm text-eye-charcoal/60 leading-relaxed">A clear, itemized quotation with no hidden costs or surprise add-ons.</p>
+      </div>
+      <div class="flex flex-col gap-3">
+        <div class="h-10 w-10 rounded-full bg-white border border-eye-gray-line flex items-center justify-center shrink-0">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0B84B0" stroke-width="1.8"><path d="M5 13l4 4L19 7"/></svg>
+        </div>
+        <h3 class="font-display text-lg">Make payment</h3>
+        <p class="text-sm text-eye-charcoal/60 leading-relaxed">Secure payment via your preferred method, confirmed before execution.</p>
+      </div>
+      <div class="flex flex-col gap-3">
+        <div class="h-10 w-10 rounded-full bg-white border border-eye-gray-line flex items-center justify-center shrink-0">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0EA55A" stroke-width="1.8"><path d="M5 13l4 4L19 7"/></svg>
+        </div>
+        <h3 class="font-display text-lg">Receive your service</h3>
+        <p class="text-sm text-eye-charcoal/60 leading-relaxed">Delivered with updates along the way, start to finish.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FINAL CTA
+     ============================================================ -->
+<section id="contact" class="relative py-28 lg:py-40 overflow-hidden">
+  <div class="absolute inset-0 hero-canvas grain"></div>
+  <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-10 text-center text-eye-cream">
+    <p class="reveal font-mono text-[12px] uppercase tracking-[0.2em] text-eye-green-light mb-6">Let's Get Started</p>
+    <h2 class="reveal font-display text-4xl sm:text-6xl leading-[1.02] tracking-tight mb-8">
+      Whatever it is,<br><span class="italic text-gradient-brand">just ask.</span>
+    </h2>
+    <p class="reveal max-w-xl mx-auto text-eye-cream/70 leading-relaxed mb-12">
+      Reach out today to request a custom quotation or book a consultation. We're only one message away.
+    </p>
+
+    <div class="reveal flex flex-wrap items-center justify-center gap-4 mb-16">
+      <a href="https://wa.me/2348164766193" data-contact="whatsapp-link" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full px-8 py-4 text-[15px] font-medium btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.5 0-10 4.5-10 10 0 1.77.46 3.44 1.27 4.89L2 22l5.25-1.28A9.96 9.96 0 0 0 12.04 22c5.5 0 10-4.5 10-10s-4.5-10-10-10zm5.7 14.2c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.13.11-1.83-.12-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.8-4.16-4.94-4.35-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.29.58-.36.78-.36h.56c.18 0 .42-.02.65.5.24.53.8 1.87.87 2 .07.14.11.3.02.48-.09.19-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.06.95 1.96 1.24 2.24 1.38.28.14.44.12.6-.07.16-.19.7-.82.89-1.1.19-.28.37-.23.62-.14.25.09 1.6.75 1.87.89.28.14.46.21.53.32.07.12.07.65-.17 1.32z"/></svg>
+        Chat on WhatsApp
+      </a>
+      <button type="button" id="lead-form-toggle" class="inline-flex items-center gap-2 rounded-full px-8 py-4 text-[15px] font-medium btn-ghost" aria-expanded="false" aria-controls="lead-form-wrap">
+        Request a Quote
+      </button>
+    </div>
+
+    <div id="lead-form-wrap" class="lead-form-wrap max-w-xl mx-auto text-left mb-16">
+      <form id="lead-form" class="lead-form" novalidate>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div class="lead-field">
+            <label for="lead-name">Name</label>
+            <input type="text" id="lead-name" name="name" required autocomplete="name" placeholder="Your name">
+          </div>
+          <div class="lead-field">
+            <label for="lead-phone">Phone</label>
+            <input type="tel" id="lead-phone" name="phone" autocomplete="tel" placeholder="+234...">
+          </div>
+          <div class="lead-field">
+            <label for="lead-email">Email</label>
+            <input type="email" id="lead-email" name="email" autocomplete="email" placeholder="you@example.com">
+          </div>
+          <div class="lead-field">
+            <label for="lead-service">Service</label>
+            <select id="lead-service" name="service">
+              <option value="">Select a service</option>
+              <option>Tours &amp; Travel</option>
+              <option>Hospitality Support</option>
+              <option>Airport Transfers</option>
+              <option>Visa Assistance</option>
+              <option>Corporate Travel</option>
+              <option>Logistics &amp; Errands</option>
+              <option>Event Planning</option>
+              <option>Concierge Shopping &amp; Personal Errands</option>
+              <option>Relocation &amp; Settling-In Support</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="lead-field mt-4">
+          <label for="lead-message">Message</label>
+          <textarea id="lead-message" name="message" rows="4" required placeholder="Tell us what you need..."></textarea>
+        </div>
+        <button type="submit" id="lead-form-submit" class="mt-5 inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-[15px] font-medium btn-primary w-full sm:w-auto">
+          <span class="lead-submit-label">Send Request</span>
+        </button>
+        <p id="lead-form-status" class="mt-4 text-sm" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+
+    <div class="reveal grid sm:grid-cols-2 gap-5 pt-12 border-t border-eye-cream/10 text-left max-w-3xl mx-auto">
+      <div class="contact-info-card">
+        <span class="contact-info-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+        <div>
+          <p class="contact-info-label">Phone</p>
+          <div class="contact-info-value">
+            <a href="tel:+2348164766193" data-contact="phone-primary">+234 816 476 6193 <span class="text-eye-cream/40">(NG)</span></a>
+            <a href="tel:+254701840462" data-contact="phone-secondary">+254 701 840 462 <span class="text-eye-cream/40">(KE)</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="contact-info-card">
+        <span class="contact-info-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+        <div>
+          <p class="contact-info-label">Email</p>
+          <div class="contact-info-value"><a href="mailto:info@errandeye.com" data-contact="email">info@errandeye.com</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal mt-10 pt-10 border-t border-eye-cream/10 max-w-3xl mx-auto text-left">
+      <p class="font-mono text-[11px] uppercase tracking-wider text-eye-cream/40 mb-5">Where We Operate</p>
+      <div class="grid sm:grid-cols-3 gap-5">
+        <div class="location-pin flex items-center gap-3 rounded-xl border border-eye-cream/10 px-4 py-3.5">
+          <span class="h-2 w-2 rounded-full bg-eye-green-light shrink-0"></span>
+          <div>
+            <p class="text-eye-cream/90 text-sm font-medium">Nairobi</p>
+            <p class="font-mono text-[10px] tracking-wider text-eye-cream/40">KENYA · 1.28°S, 36.82°E</p>
+          </div>
+        </div>
+        <div class="location-pin flex items-center gap-3 rounded-xl border border-eye-cream/10 px-4 py-3.5">
+          <span class="h-2 w-2 rounded-full bg-eye-blue-light shrink-0"></span>
+          <div>
+            <p class="text-eye-cream/90 text-sm font-medium">Lagos</p>
+            <p class="font-mono text-[10px] tracking-wider text-eye-cream/40">NIGERIA · 6.52°N, 3.38°E</p>
+          </div>
+        </div>
+        <div class="location-pin flex items-center gap-3 rounded-xl border border-eye-cream/10 px-4 py-3.5">
+          <span class="h-2 w-2 rounded-full bg-eye-green-light shrink-0"></span>
+          <div>
+            <p class="text-eye-cream/90 text-sm font-medium">Cape Town</p>
+            <p class="font-mono text-[10px] tracking-wider text-eye-cream/40">SOUTH AFRICA · 33.92°S, 18.42°E</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer-premium grain relative text-eye-cream overflow-hidden">
+  <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-eye-green-light/60 to-transparent"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-10 pt-24 pb-10">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-x-8 gap-y-14 pb-16">
+
+      <!-- Company -->
+      <div class="sm:col-span-2 lg:col-span-4">
+        <a href="#hero" class="inline-flex items-center gap-3 mb-6">
+          <img src="assets/images/logo-mark.png" alt="Errand Eye" class="h-9 w-auto">
+          <span class="flex flex-col leading-tight">
+            <span class="font-sans font-semibold text-[16px] tracking-wide text-gradient-brand">ERRAND EYE</span>
+            <span class="font-mono text-[10px] uppercase tracking-[0.14em] text-eye-cream/45 mt-1">Any Task. Just Ask.</span>
+          </span>
+        </a>
+        <p class="text-[14.5px] text-eye-cream/55 leading-relaxed max-w-xs">
+          A premium concierge partner for the moments that need a trusted hand, coordinating travel, hospitality, and logistics across Africa from a single point of contact.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="lg:col-span-2">
+        <p class="footer-col-heading">Quick Links</p>
+        <ul class="space-y-2.5">
+          <li><a href="#hero" class="footer-link">Home<svg class="footer-link-arrow" width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></li>
+          <li><a href="about.html" class="footer-link">About<svg class="footer-link-arrow" width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></li>
+          <li><a href="services.html" class="footer-link">Services<svg class="footer-link-arrow" width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></li>
+          <li><a href="gallery.html" class="footer-link">Gallery<svg class="footer-link-arrow" width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></li>
+          <li><a href="#contact" class="footer-link">Contact<svg class="footer-link-arrow" width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div class="lg:col-span-2">
+        <p class="footer-col-heading">Services</p>
+        <ul class="space-y-2.5">
+          <li><a href="services.html" class="footer-link">Tours &amp; Travel</a></li>
+          <li><a href="services.html" class="footer-link">Hospitality Support</a></li>
+          <li><a href="services.html" class="footer-link">Logistics</a></li>
+          <li><a href="services.html" class="footer-link">Airport Transfers</a></li>
+          <li><a href="services.html" class="footer-link">Visa Assistance</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="lg:col-span-2">
+        <p class="footer-col-heading">Contact</p>
+        <div class="space-y-4">
+          <div class="footer-info-row">
+            <span class="footer-info-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+            <div>
+              <a href="tel:+2348164766193" data-contact="phone-primary" class="block hover:text-eye-cream transition-colors">+234 816 476 6193</a>
+              <a href="tel:+254701840462" data-contact="phone-secondary" class="block hover:text-eye-cream transition-colors">+254 701 840 462</a>
+            </div>
+          </div>
+          <div class="footer-info-row">
+            <span class="footer-info-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+            <a href="mailto:info@errandeye.com" data-contact="email" class="hover:text-eye-cream transition-colors">info@errandeye.com</a>
+          </div>
+          <div class="footer-info-row">
+            <span class="footer-info-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <span data-contact="offices">Nairobi &middot; Lagos &middot; Cape Town</span>
+          </div>
+          <div class="footer-info-row">
+            <span class="footer-info-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
+            <span data-contact="hours">Mon &ndash; Sat, 8am &ndash; 8pm</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social Media -->
+      <div class="lg:col-span-2">
+        <p class="footer-col-heading">Follow Us</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="https://www.facebook.com/share/1GK6BYEMKD/" target="_blank" rel="noopener" aria-label="Facebook" class="footer-social-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 8h2V5h-2a4 4 0 0 0-4 4v2H8v3h2v7h3v-7h2.5l.5-3H13V9a1 1 0 0 1 1-1z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/errandeye" target="_blank" rel="noopener" aria-label="Instagram" class="footer-social-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@errandeye" target="_blank" rel="noopener" aria-label="TikTok" class="footer-social-icon">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.82s.51.5 0 0A4.278 4.278 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 1 1-2.59-2.59c.29 0 .55.05.79.13V9.4a5.44 5.44 0 0 0-.79-.05A5.82 5.82 0 1 0 15.6 15.65V9.4a7.16 7.16 0 0 0 4.13 1.3V7.63a4.83 4.83 0 0 1-3.13-1.81z"/></svg>
+          </a>
+          <a href="https://wa.me/2348164766193" data-contact="whatsapp-link" target="_blank" rel="noopener" aria-label="WhatsApp" class="footer-social-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.5 0-10 4.5-10 10 0 1.77.46 3.44 1.27 4.89L2 22l5.25-1.28A9.96 9.96 0 0 0 12.04 22c5.5 0 10-4.5 10-10s-4.5-10-10-10zm5.7 14.2c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.13.11-1.83-.12-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.8-4.16-4.94-4.35-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.29.58-.36.78-.36h.56c.18 0 .42-.02.65.5.24.53.8 1.87.87 2 .07.14.11.3.02.48-.09.19-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.06.95 1.96 1.24 2.24 1.38.28.14.44.12.6-.07.16-.19.7-.82.89-1.1.19-.28.37-.23.62-.14.25.09 1.6.75 1.87.89.28.14.46.21.53.32.07.12.07.65-.17 1.32z"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <div class="pt-8 flex flex-col lg:flex-row items-center justify-between gap-6 text-xs text-eye-cream/45 font-mono">
+      <p>&copy; <span id="year"></span> Errand Eye Limited. All rights reserved.</p>
+      <div class="flex flex-wrap items-center justify-center gap-6">
+        <a href="#" class="hover:text-eye-cream transition-colors">Privacy Policy</a>
+        <a href="about.html#terms" class="hover:text-eye-cream transition-colors">Terms &amp; Conditions</a>
+        <span class="text-eye-cream/25">Designed by Errand Eye Studio</span>
+      </div>
+      <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top">
+        Top
+        <svg class="back-to-top-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      </button>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     STICKY ACTION BUTTONS
+     ============================================================ -->
+<div id="fab-stack" class="fab-stack fab-hidden fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3">
+  <a href="#contact" class="fab-btn inline-flex items-center gap-2 rounded-full px-5 py-3.5 bg-eye-charcoal/90 text-eye-cream text-sm font-medium">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16v12H7l-3 3z"/></svg>
+    Request Quote
+  </a>
+  <a href="https://wa.me/2348164766193" data-contact="whatsapp-link" target="_blank" rel="noopener" class="fab-btn inline-flex items-center gap-2 rounded-full px-5 py-3.5 bg-eye-green text-white text-sm font-medium">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.5 0-10 4.5-10 10 0 1.77.46 3.44 1.27 4.89L2 22l5.25-1.28A9.96 9.96 0 0 0 12.04 22c5.5 0 10-4.5 10-10s-4.5-10-10-10zm5.7 14.2c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.13.11-1.83-.12-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.8-4.16-4.94-4.35-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.29.58-.36.78-.36h.56c.18 0 .42-.02.65.5.24.53.8 1.87.87 2 .07.14.11.3.02.48-.09.19-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.06.95 1.96 1.24 2.24 1.38.28.14.44.12.6-.07.16-.19.7-.82.89-1.1.19-.28.37-.23.62-.14.25.09 1.6.75 1.87.89.28.14.46.21.53.32.07.12.07.65-.17 1.32z"/></svg>
+    WhatsApp
+  </a>
+</div>
+
+<!-- ============================================================
+     LIGHTBOX
+     ============================================================ -->
+<div id="lightbox" class="lightbox-overlay fixed inset-0 z-[60] bg-eye-charcoal/95 backdrop-blur-sm items-center justify-center p-6">
+  <button id="lightbox-close" aria-label="Close" class="absolute top-6 right-6 h-11 w-11 rounded-full border border-eye-cream/20 text-eye-cream flex items-center justify-center hover:bg-eye-cream/10 transition-colors">
+    <svg width="16" height="16" viewBox="0 0 16 16" stroke="currentColor" stroke-width="1.6"><path d="M2 2l12 12M14 2L2 14"/></svg>
+  </button>
+  <div class="max-w-4xl w-full">
+    <img id="lightbox-img" src="" alt="" class="w-full max-h-[80vh] object-contain rounded-lg">
+    <p id="lightbox-caption" class="text-center text-eye-cream/60 font-mono text-xs uppercase tracking-wider mt-4"></p>
+  </div>
+</div>
+
+<script src="js/api-config.js"></script>
+<script src="js/site-content.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
