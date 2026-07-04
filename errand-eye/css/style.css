@@ -176,10 +176,10 @@ h3 {
 }
 
 /* Phones have a much taller, narrower frame than these landscape photos were
-   shot for; a smaller zoom keeps object-fit:cover from cropping in too tight. */
+   shot for, so the hero should feel more intimate and detailed. */
 @media (max-width: 640px) {
-  .hero-slide { transform: scale(1.02); }
-  .hero-slide.is-active { transform: scale(1); }
+  .hero-slide { transform: scale(1.12); }
+  .hero-slide.is-active { transform: scale(1.05); }
 }
 
 /* Portrait-sourced hero photos: blurred full-bleed backdrop + fully-visible framed photo,
