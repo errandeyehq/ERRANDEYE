@@ -4,7 +4,6 @@
    overlays it onto the static markup (progressive enhancement:
    if the API is unreachable or a section is empty, the existing
    static HTML is left as-is).
-   Also wires the lead ("Request a Quote") form to POST /api/leads/.
    ============================================================ */
 
 (function () {
@@ -206,66 +205,7 @@
     });
   }
 
-  function wireLeadForm() {
-    const toggle = document.getElementById('lead-form-toggle');
-    const wrap = document.getElementById('lead-form-wrap');
-    if (toggle && wrap) {
-      toggle.addEventListener('click', () => {
-        const isOpen = wrap.classList.toggle('is-open');
-        toggle.setAttribute('aria-expanded', isOpen);
-        if (isOpen) {
-          wrap.querySelector('#lead-name')?.focus({ preventScroll: false });
-        }
-      });
-    }
-
-    const form = document.getElementById('lead-form');
-    if (!form) return;
-    const statusEl = document.getElementById('lead-form-status');
-    const submitBtn = document.getElementById('lead-form-submit');
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const payload = {
-        name: form.name.value.trim(),
-        phone: form.phone.value.trim(),
-        email: form.email.value.trim(),
-        service: form.service.value,
-        message: form.message.value.trim(),
-      };
-
-      if (!payload.name || !payload.message) {
-        statusEl.textContent = 'Please fill in your name and message.';
-        statusEl.className = 'mt-4 text-sm is-error';
-        return;
-      }
-
-      submitBtn.disabled = true;
-      statusEl.textContent = 'Sending...';
-      statusEl.className = 'mt-4 text-sm';
-
-      try {
-        const res = await fetch(`${API_BASE}/leads/`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload),
-        });
-        if (!res.ok) throw new Error('Request failed');
-        statusEl.textContent = "Thanks, we've got your request. We'll be in touch shortly.";
-        statusEl.className = 'mt-4 text-sm is-success';
-        form.reset();
-      } catch (err) {
-        statusEl.textContent = "Something went wrong sending that. Please try WhatsApp or email instead.";
-        statusEl.className = 'mt-4 text-sm is-error';
-      } finally {
-        submitBtn.disabled = false;
-      }
-    });
-  }
-
   async function init() {
-    wireLeadForm();
-
     if (!API_BASE) return;
     try {
       const res = await fetch(`${API_BASE}/site-content/`);

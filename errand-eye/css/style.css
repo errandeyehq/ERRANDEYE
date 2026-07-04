@@ -175,6 +175,13 @@ h3 {
   transform: scale(1);
 }
 
+/* Phones have a much taller, narrower frame than these landscape photos were
+   shot for; a smaller zoom keeps object-fit:cover from cropping in too tight. */
+@media (max-width: 640px) {
+  .hero-slide { transform: scale(1.02); }
+  .hero-slide.is-active { transform: scale(1); }
+}
+
 /* Portrait-sourced hero photos: blurred full-bleed backdrop + fully-visible framed photo,
    instead of object-fit:cover cropping them down to an unrecognizable sliver. */
 .hero-slide-frame {
@@ -421,7 +428,8 @@ h3 {
 
 /* ---------------- Service detail cards (services.html) ---------------- */
 .service-detail-card {
-  transition: transform 0.5s var(--ease-signature), box-shadow 0.5s var(--ease-signature), border-color 0.5s;
+  scroll-margin-top: 7rem;
+  transition: transform 0.5s var(--ease-signature), box-shadow 0.5s var(--ease-signature), border-color 0.5s, background 0.6s;
   border: 1px solid var(--eye-gray-line);
   box-shadow: 0 1px 2px rgba(18,24,26,0.04), 0 24px 40px -34px rgba(18,24,26,0.18);
 }
@@ -429,6 +437,21 @@ h3 {
   transform: translateY(-4px);
   box-shadow: 0 32px 64px -32px rgba(18,24,26,0.2);
   border-color: transparent;
+}
+
+/* Arriving via a direct "Learn More" link highlights that one service. */
+.service-detail-card:target {
+  border-color: transparent;
+  box-shadow: 0 0 0 2px var(--eye-green-light), 0 32px 64px -28px rgba(14,165,90,0.35);
+  background: linear-gradient(180deg, rgba(14,165,90,0.05), rgba(11,132,176,0.04));
+  animation: service-target-pulse 1.8s var(--ease-signature);
+}
+@keyframes service-target-pulse {
+  0% { box-shadow: 0 0 0 2px var(--eye-green-light), 0 0 0 10px rgba(14,165,90,0.18); }
+  100% { box-shadow: 0 0 0 2px var(--eye-green-light), 0 32px 64px -28px rgba(14,165,90,0.35); }
+}
+.service-detail-card:target::before {
+  transform: scaleX(1);
 }
 .service-detail-card::before {
   content: "";

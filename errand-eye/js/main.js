@@ -250,9 +250,10 @@ document.addEventListener('DOMContentLoaded', () => {
   let heroPointerY = 0;
   let heroScrollY = 0;
 
+  const heroParallaxScale = window.matchMedia('(max-width: 640px)').matches ? 1.02 : 1.06;
   const applyHeroTransform = () => {
     if (!heroLayer) return;
-    heroLayer.style.transform = `translate(${heroPointerX}px, ${heroPointerY + heroScrollY}px) scale(1.06)`;
+    heroLayer.style.transform = `translate(${heroPointerX}px, ${heroPointerY + heroScrollY}px) scale(${heroParallaxScale})`;
   };
 
   if (heroLayer && window.matchMedia('(pointer: fine)').matches) {
