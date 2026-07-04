@@ -33,6 +33,12 @@ CSRF_TRUSTED_ORIGINS = env_list(
     'https://127.0.0.1,https://localhost,https://errandeye-production.up.railway.app',
 )
 
+# Railway (and most PaaS hosts) terminate TLS at the edge and forward to the
+# app over plain HTTP, adding this header to say the original request was
+# secure. Without it, request.build_absolute_uri() and is_secure() report
+# http instead of https, producing mixed-content URLs (e.g. media links).
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
 
 # Application definition
 
