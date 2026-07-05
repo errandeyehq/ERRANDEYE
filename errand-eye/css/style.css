@@ -557,6 +557,110 @@ h3 {
   flex-shrink: 0;
 }
 
+@media (max-width: 1023px) {
+  .services-overview-section {
+    padding-top: 4.5rem;
+    padding-bottom: 5.5rem;
+  }
+
+  .services-overview-section h2 {
+    font-size: clamp(2.2rem, 13vw, 3.25rem);
+    line-height: 0.98;
+  }
+
+  .service-interactive-grid {
+    margin-top: 2.5rem;
+  }
+
+  .service-selector-list {
+    gap: 0.7rem;
+  }
+
+  .service-option {
+    min-height: 4.2rem;
+    padding: 0.86rem 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px -24px rgba(18,24,26,0.32);
+  }
+
+  .service-option::after {
+    content: "";
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-right: 1.5px solid rgba(18,24,26,0.48);
+    border-bottom: 1.5px solid rgba(18,24,26,0.48);
+    transform: translateY(-64%) rotate(45deg);
+    transition: transform 0.3s var(--ease-signature), border-color 0.3s;
+  }
+
+  .service-option.is-active::after {
+    border-color: var(--eye-green);
+    transform: translateY(-36%) rotate(225deg);
+  }
+
+  .service-option .font-display {
+    max-width: calc(100% - 4.25rem);
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.91rem;
+    font-weight: 800;
+    line-height: 1.25;
+  }
+
+  .service-option-icon {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  .service-detail-panels {
+    width: 100%;
+    margin: -0.15rem 0 0.55rem;
+    border-radius: 1rem;
+    padding: 1.25rem;
+    box-shadow: 0 20px 44px -32px rgba(18,24,26,0.4);
+  }
+
+  .service-detail-panels.is-collapsed {
+    display: none;
+  }
+
+  .service-detail-panel {
+    transform: translateY(8px);
+  }
+
+  .service-detail-panel h3 {
+    font-size: clamp(1.75rem, 8vw, 2.25rem);
+    line-height: 1;
+    margin-bottom: 0.9rem;
+  }
+
+  .service-detail-panel p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  .service-detail-panel p:nth-of-type(3) {
+    display: none;
+  }
+
+  .service-detail-panel ul {
+    margin-bottom: 1.35rem;
+  }
+
+  .service-detail-panel li {
+    font-size: 0.83rem;
+    line-height: 1.55;
+  }
+
+  .service-detail-panel .btn-primary {
+    width: 100%;
+    justify-content: center;
+    border-radius: 999px;
+  }
+}
+
 /* ---------------- Award cards ---------------- */
 .award-card {
   transition: transform 0.5s var(--ease-signature), box-shadow 0.5s var(--ease-signature);

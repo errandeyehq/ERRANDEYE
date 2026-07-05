@@ -123,7 +123,7 @@
 <!-- ============================================================
      SERVICES OVERVIEW - interactive selector
      ============================================================ -->
-<section class="py-28 lg:py-32">
+<section class="services-overview-section py-28 lg:py-32">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
     <div class="max-w-2xl">
       <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-eye-blue mb-4">Our Services</p>
@@ -131,52 +131,52 @@
       <p class="mt-5 text-eye-charcoal/70 leading-relaxed">Select a service to see exactly what it covers, how it works, and how to get started.</p>
     </div>
 
-    <div class="mt-16 grid lg:grid-cols-[320px_1fr] gap-6 lg:gap-10 items-start">
+    <div class="service-interactive-grid mt-16 grid lg:grid-cols-[320px_1fr] gap-6 lg:gap-10 items-start">
 
       <!-- Service selector list -->
-      <div class="flex lg:flex-col gap-2.5 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0 -mx-6 px-6 lg:mx-0 lg:px-0" role="tablist" aria-label="Service selector">
+      <div class="service-selector-list flex flex-col gap-2.5" role="tablist" aria-label="Service selector">
 
-        <button type="button" class="service-option is-active flex items-center gap-3 rounded-2xl border border-eye-gray-line bg-white px-5 py-4 text-left transition flex-shrink-0 w-[240px] lg:w-full" id="tours-travel" data-service="tours-travel" role="tab" aria-selected="true" aria-controls="service-panel-tours-travel">
+        <button type="button" class="service-option is-active flex items-center gap-3 rounded-2xl border border-eye-gray-line bg-white px-5 py-4 text-left transition w-full" id="tours-travel" data-service="tours-travel" role="tab" aria-selected="true" aria-controls="service-panel-tours-travel">
           <span class="service-option-icon h-10 w-10 rounded-full bg-eye-gray flex items-center justify-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0EA55A" stroke-width="1.5"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="9"/></svg></span>
           <span class="font-display text-[15px] text-eye-charcoal">Tours &amp; Travel</span>
         </button>
 
-        <button type="button" class="service-option flex items-center gap-3 rounded-2xl border border-eye-gray-line bg-white px-5 py-4 text-left transition flex-shrink-0 w-[240px] lg:w-full" id="hospitality-support" data-service="hospitality-support" role="tab" aria-selected="false" aria-controls="service-panel-hospitality-support">
+        <button type="button" class="service-option flex items-center gap-3 rounded-2xl border border-eye-gray-line bg-white px-5 py-4 text-left transition w-full" id="hospitality-support" data-service="hospitality-support" role="tab" aria-selected="false" aria-controls="service-panel-hospitality-support">
           <span class="service-option-icon h-10 w-10 rounded-full bg-eye-gray flex items-center justify-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B84B0" stroke-width="1.5"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-8h6v8"/></svg></span>
           <span class="font-display text-[15px] text-eye-charcoal">Hospitality Support</span>
         </button>
 
-        <button type="button" class="service-option flex items-center gap-3 rounded-2xl border border-eye-gray-line bg-white px-5 py-4 text-left transition flex-shrink-0 w-[240px] lg:w-full" id="airport-transfers" data-service="airport-transfers" role="tab" aria-selected="false" aria-controls="service-panel-airport-transfers">
+        <button type="button" class="service-option flex items-center gap-3 rounded-2xl border border-eye-gray-line bg-white px-5 py-4 text-left transition w-full" id="airport-transfers" data-service="airport-transfers" role="tab" aria-selected="false" aria-controls="service-panel-airport-transfers">
           <span class="service-option-icon h-10 w-10 rounded-full bg-eye-gray flex items-center justify-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0EA55A" stroke-width="1.5"><path d="M3 12h4l2-8 4 16 2-8h6"/></svg></span>
           <span class="font-display text-[15px] text-eye-charcoal">Airport Transfers</span>
         </button>
 
-        <button type="button" class="service-option flex items-center gap-3 rounded-2xl border border-eye-gray-line bg-white px-5 py-4 text-left transition flex-shrink-0 w-[240px] lg:w-full" id="visa-assistance" data-service="visa-assistance" role="tab" aria-selected="false" aria-controls="service-panel-visa-assistance">
+        <button type="button" class="service-option flex items-center gap-3 rounded-2xl border border-eye-gray-line bg-white px-5 py-4 text-left transition w-full" id="visa-assistance" data-service="visa-assistance" role="tab" aria-selected="false" aria-controls="service-panel-visa-assistance">
           <span class="service-option-icon h-10 w-10 rounded-full bg-eye-gray flex items-center justify-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B84B0" stroke-width="1.5"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h4"/></svg></span>
           <span class="font-display text-[15px] text-eye-charcoal">Visa Assistance</span>
         </button>
 
-        <button type="button" class="service-option flex items-center gap-3 rounded-2xl border border-eye-gray-line bg-white px-5 py-4 text-left transition flex-shrink-0 w-[240px] lg:w-full" id="corporate-travel" data-service="corporate-travel" role="tab" aria-selected="false" aria-controls="service-panel-corporate-travel">
+        <button type="button" class="service-option flex items-center gap-3 rounded-2xl border border-eye-gray-line bg-white px-5 py-4 text-left transition w-full" id="corporate-travel" data-service="corporate-travel" role="tab" aria-selected="false" aria-controls="service-panel-corporate-travel">
           <span class="service-option-icon h-10 w-10 rounded-full bg-eye-gray flex items-center justify-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0EA55A" stroke-width="1.5"><rect x="2" y="7" width="20" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></span>
           <span class="font-display text-[15px] text-eye-charcoal">Corporate Travel</span>
         </button>
 
-        <button type="button" class="service-option flex items-center gap-3 rounded-2xl border border-eye-gray-line bg-white px-5 py-4 text-left transition flex-shrink-0 w-[240px] lg:w-full" id="logistics-errands" data-service="logistics-errands" role="tab" aria-selected="false" aria-controls="service-panel-logistics-errands">
+        <button type="button" class="service-option flex items-center gap-3 rounded-2xl border border-eye-gray-line bg-white px-5 py-4 text-left transition w-full" id="logistics-errands" data-service="logistics-errands" role="tab" aria-selected="false" aria-controls="service-panel-logistics-errands">
           <span class="service-option-icon h-10 w-10 rounded-full bg-eye-gray flex items-center justify-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B84B0" stroke-width="1.5"><rect x="1" y="7" width="15" height="10" rx="1.5"/><path d="M16 10h4l3 3v4h-7z"/><circle cx="6" cy="19" r="1.6"/><circle cx="18" cy="19" r="1.6"/></svg></span>
           <span class="font-display text-[15px] text-eye-charcoal">Logistics &amp; Errands</span>
         </button>
 
-        <button type="button" class="service-option flex items-center gap-3 rounded-2xl border border-eye-gray-line bg-white px-5 py-4 text-left transition flex-shrink-0 w-[240px] lg:w-full" id="event-retreat-planning" data-service="event-retreat-planning" role="tab" aria-selected="false" aria-controls="service-panel-event-retreat-planning">
+        <button type="button" class="service-option flex items-center gap-3 rounded-2xl border border-eye-gray-line bg-white px-5 py-4 text-left transition w-full" id="event-retreat-planning" data-service="event-retreat-planning" role="tab" aria-selected="false" aria-controls="service-panel-event-retreat-planning">
           <span class="service-option-icon h-10 w-10 rounded-full bg-eye-gray flex items-center justify-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0EA55A" stroke-width="1.5"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></span>
           <span class="font-display text-[15px] text-eye-charcoal">Event &amp; Retreat Planning</span>
         </button>
 
-        <button type="button" class="service-option flex items-center gap-3 rounded-2xl border border-eye-gray-line bg-white px-5 py-4 text-left transition flex-shrink-0 w-[240px] lg:w-full" id="concierge-shopping" data-service="concierge-shopping" role="tab" aria-selected="false" aria-controls="service-panel-concierge-shopping">
+        <button type="button" class="service-option flex items-center gap-3 rounded-2xl border border-eye-gray-line bg-white px-5 py-4 text-left transition w-full" id="concierge-shopping" data-service="concierge-shopping" role="tab" aria-selected="false" aria-controls="service-panel-concierge-shopping">
           <span class="service-option-icon h-10 w-10 rounded-full bg-eye-gray flex items-center justify-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B84B0" stroke-width="1.5"><path d="M6 8V6a6 6 0 0 1 12 0v2"/><rect x="3" y="8" width="18" height="13" rx="2"/></svg></span>
           <span class="font-display text-[15px] text-eye-charcoal">Concierge Shopping</span>
         </button>
 
-        <button type="button" class="service-option flex items-center gap-3 rounded-2xl border border-eye-gray-line bg-white px-5 py-4 text-left transition flex-shrink-0 w-[240px] lg:w-full" id="relocation-support" data-service="relocation-support" role="tab" aria-selected="false" aria-controls="service-panel-relocation-support">
+        <button type="button" class="service-option flex items-center gap-3 rounded-2xl border border-eye-gray-line bg-white px-5 py-4 text-left transition w-full" id="relocation-support" data-service="relocation-support" role="tab" aria-selected="false" aria-controls="service-panel-relocation-support">
           <span class="service-option-icon h-10 w-10 rounded-full bg-eye-gray flex items-center justify-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0EA55A" stroke-width="1.5"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></span>
           <span class="font-display text-[15px] text-eye-charcoal">Relocation Support</span>
         </button>

@@ -105,8 +105,47 @@ document.addEventListener('DOMContentLoaded', () => {
   const servicePanels = document.querySelectorAll('.service-detail-panel');
 
   if (serviceButtons.length && servicePanels.length) {
+    const servicePanelWrap = document.querySelector('.service-detail-panels');
+    const servicePanelHome = servicePanelWrap ? document.createComment('service-detail-home') : null;
+    const mobileServicesQuery = window.matchMedia('(max-width: 1023px)');
+
+    if (servicePanelWrap && servicePanelHome) {
+      servicePanelWrap.parentNode.insertBefore(servicePanelHome, servicePanelWrap);
+    }
+
+    const placeServicePanel = (button) => {
+      if (!servicePanelWrap || !servicePanelHome) return;
+
+      if (mobileServicesQuery.matches) {
+        button.insertAdjacentElement('afterend', servicePanelWrap);
+      } else if (servicePanelHome.parentNode) {
+        servicePanelHome.parentNode.insertBefore(servicePanelWrap, servicePanelHome.nextSibling);
+      }
+    };
+
+    const collapseService = () => {
+      serviceButtons.forEach((item) => {
+        item.classList.remove('is-active');
+        item.setAttribute('aria-selected', 'false');
+      });
+
+      servicePanels.forEach((panel) => {
+        panel.classList.remove('is-active', 'is-visible');
+        panel.setAttribute('aria-hidden', 'true');
+      });
+
+      if (servicePanelWrap) {
+        servicePanelWrap.classList.add('is-collapsed');
+      }
+    };
+
     const activateService = (button) => {
       const target = button.dataset.service;
+      placeServicePanel(button);
+
+      if (servicePanelWrap) {
+        servicePanelWrap.classList.remove('is-collapsed');
+      }
 
       serviceButtons.forEach((item) => {
         const isActive = item === button;
@@ -131,8 +170,39 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     serviceButtons.forEach((button) => {
-      button.addEventListener('click', () => activateService(button));
+      button.addEventListener('click', () => {
+        const isOpenMobileItem = mobileServicesQuery.matches
+          && button.classList.contains('is-active')
+          && servicePanelWrap
+          && !servicePanelWrap.classList.contains('is-collapsed');
+
+        if (isOpenMobileItem) {
+          collapseService();
+        } else {
+          activateService(button);
+        }
+      });
     });
+
+    const handleServiceLayoutChange = () => {
+      const activeButton = document.querySelector('.service-option.is-active');
+
+      if (mobileServicesQuery.matches) {
+        if (activeButton && servicePanelWrap && !servicePanelWrap.classList.contains('is-collapsed')) {
+          placeServicePanel(activeButton);
+        } else {
+          collapseService();
+        }
+      } else {
+        activateService(activeButton || serviceButtons[0]);
+      }
+    };
+
+    if (mobileServicesQuery.addEventListener) {
+      mobileServicesQuery.addEventListener('change', handleServiceLayoutChange);
+    } else {
+      mobileServicesQuery.addListener(handleServiceLayoutChange);
+    }
 
     const hashTarget = window.location.hash.replace('#', '');
     const hashButton = hashTarget && Array.from(serviceButtons).find((item) => item.dataset.service === hashTarget);
@@ -141,6 +211,10 @@ document.addEventListener('DOMContentLoaded', () => {
       window.requestAnimationFrame(() => {
         hashButton.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
+    } else if (mobileServicesQuery.matches) {
+      collapseService();
+    } else {
+      placeServicePanel(document.querySelector('.service-option.is-active') || serviceButtons[0]);
     }
   }
 
