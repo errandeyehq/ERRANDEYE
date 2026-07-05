@@ -108,7 +108,7 @@
     nodes.forEach((el, i) => {
       const stat = items[i];
       el.dataset.count = stat.value;
-      if (stat.suffix) el.dataset.suffix = stat.suffix;
+      el.dataset.suffix = stat.suffix || '';
       el.textContent = stat.value + (stat.suffix || '');
     });
   }

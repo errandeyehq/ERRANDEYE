@@ -13,6 +13,7 @@
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="assets/images/logo-mark.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+<link rel="preload" as="image" href="assets/images/hero/hero-passport-window.jpg" fetchpriority="high">
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -67,10 +68,10 @@
       </a>
 
       <nav class="hidden lg:flex items-center gap-10 font-mono text-[13px] uppercase tracking-wider text-eye-charcoal/70">
+        <a href="about.html" class="hover:text-eye-charcoal transition-colors">About</a>
         <a href="services.html" class="hover:text-eye-charcoal transition-colors">Services</a>
         <a href="index.html#process" class="hover:text-eye-charcoal transition-colors">Process</a>
         <a href="gallery.html" class="text-eye-charcoal transition-colors" aria-current="page">Gallery</a>
-        <a href="index.html#awards" class="hover:text-eye-charcoal transition-colors">Awards</a>
         <a href="#contact" class="hover:text-eye-charcoal transition-colors">Contact</a>
       </nav>
 
@@ -89,10 +90,10 @@
   </div>
 
   <div id="mobile-menu" class="mobile-menu lg:hidden px-4 sm:px-6 pb-8 font-mono text-sm uppercase tracking-wider bg-eye-cream/98 backdrop-blur-md border-t border-eye-gray-line shadow-xl">
+    <a href="about.html" class="mobile-menu-link">About<svg class="menu-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
     <a href="services.html" class="mobile-menu-link">Services<svg class="menu-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
     <a href="index.html#process" class="mobile-menu-link">Process<svg class="menu-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
     <a href="gallery.html" class="mobile-menu-link">Gallery<svg class="menu-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
-    <a href="index.html#awards" class="mobile-menu-link">Awards<svg class="menu-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
     <a href="#contact" class="mobile-menu-link">Contact<svg class="menu-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
     <a href="#contact" class="mobile-menu-cta mt-5 inline-flex justify-center items-center gap-2 rounded-full px-5 py-3 text-sm font-medium normal-case tracking-normal btn-primary">Request a Quote</a>
   </div>
@@ -105,7 +106,7 @@
      ============================================================ -->
 <section class="hero-canvas grain relative overflow-hidden text-eye-cream pt-28 pb-20 lg:pt-48 lg:pb-28">
   <div class="absolute inset-0" aria-hidden="true">
-    <img src="assets/images/hero/hero-passport-window.jpg" alt="" class="w-full h-full object-cover" style="object-position: center 55%;">
+    <img src="assets/images/hero/4e3902952d2e7a61c5bd49ea150e6012.jpg" alt="A polished travel and concierge experience" class="w-full h-full object-cover" style="object-position: center 55%;" fetchpriority="high">
   </div>
   <div class="absolute inset-0 bg-gradient-to-t from-eye-charcoal via-eye-charcoal/70 to-eye-charcoal/45"></div>
   <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
@@ -123,54 +124,84 @@
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
 
     <div class="reveal-stagger grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5" data-dynamic="gallery">
-      <div class="gallery-item relative rounded-2xl overflow-hidden cursor-pointer lg:row-span-2" data-lightbox data-caption="Aircraft departing at sunset">
-        <img src="assets/images/hero/hero-aircraft-sunset.jpg" alt="Aircraft departing at sunset" class="w-full h-full object-cover">
+      <div class="gallery-item relative rounded-2xl overflow-hidden cursor-pointer lg:row-span-2" data-lightbox data-caption="Seamless airport arrivals curated with calm professionalism and refined timing.">
+        <img src="assets/images/hero/hero-aircraft-sunset.jpg" alt="Premium airport arrival support at sunset" class="w-full h-full object-cover">
         <div class="gallery-veil absolute inset-0"></div>
+        <div class="absolute inset-x-0 bottom-0 p-4 sm:p-5 bg-gradient-to-t from-eye-charcoal/90 via-eye-charcoal/45 to-transparent">
+          <p class="text-sm font-medium text-eye-cream">Seamless arrivals with calm, polished coordination.</p>
+        </div>
         <span class="gallery-expand" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3H3v6M15 3h6v6M9 21H3v-6M15 21h6v-6"/></svg></span>
       </div>
-      <div class="gallery-item relative rounded-2xl overflow-hidden cursor-pointer" data-lightbox data-caption="Airport transfer, Nairobi">
-        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&amp;w=900&amp;auto=format&amp;fit=crop" alt="Airport transfer service" class="w-full h-full object-cover">
+      <div class="gallery-item relative rounded-2xl overflow-hidden cursor-pointer" data-lightbox data-caption="Thoughtful travel logistics designed to keep every movement effortless and precise.">
+        <img src="assets/images/hero/0da077556d9c6a3a051782d8f7d0fadb.jpg" alt="Travel logistics support with professional execution" class="w-full h-full object-cover" loading="lazy">
         <div class="gallery-veil absolute inset-0"></div>
+        <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-eye-charcoal/90 via-eye-charcoal/45 to-transparent">
+          <p class="text-sm font-medium text-eye-cream">Effortless logistics for busy travel schedules.</p>
+        </div>
         <span class="gallery-expand" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3H3v6M15 3h6v6M9 21H3v-6M15 21h6v-6"/></svg></span>
       </div>
-      <div class="gallery-item relative rounded-2xl overflow-hidden cursor-pointer" data-lightbox data-caption="Hospitality coordination, Cape Town">
-        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&amp;w=900&amp;auto=format&amp;fit=crop" alt="Hospitality coordination" class="w-full h-full object-cover">
+      <div class="gallery-item relative rounded-2xl overflow-hidden cursor-pointer" data-lightbox data-caption="Hospitality support arranged with care, discretion, and guest-first attention.">
+        <img src="assets/images/hero/1ee9c1e7c32af2b642f038b9e7885226.jpg" alt="Luxury hospitality coordination for guests and executives" class="w-full h-full object-cover" loading="lazy">
         <div class="gallery-veil absolute inset-0"></div>
+        <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-eye-charcoal/90 via-eye-charcoal/45 to-transparent">
+          <p class="text-sm font-medium text-eye-cream">Guest-ready hospitality handled with genuine care.</p>
+        </div>
         <span class="gallery-expand" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3H3v6M15 3h6v6M9 21H3v-6M15 21h6v-6"/></svg></span>
       </div>
-      <div class="gallery-item relative rounded-2xl overflow-hidden cursor-pointer lg:row-span-2" data-lightbox data-caption="Chauffeur-coordinated pickup">
-        <img src="assets/images/hero/hero-chauffeur.jpg" alt="Chauffeur-coordinated pickup" class="w-full h-full object-cover">
+      <div class="gallery-item relative rounded-2xl overflow-hidden cursor-pointer lg:row-span-2" data-lightbox data-caption="Executive transfer service delivered with punctuality, comfort, and discretion.">
+        <img src="assets/images/hero/39be13a46c0e4d7d2a5b0ee116c44946.jpg" alt="Executive chauffeur transfer support" class="w-full h-full object-cover">
         <div class="gallery-veil absolute inset-0"></div>
+        <div class="absolute inset-x-0 bottom-0 p-4 sm:p-5 bg-gradient-to-t from-eye-charcoal/90 via-eye-charcoal/45 to-transparent">
+          <p class="text-sm font-medium text-eye-cream">Executive travel support that feels effortless and refined.</p>
+        </div>
         <span class="gallery-expand" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3H3v6M15 3h6v6M9 21H3v-6M15 21h6v-6"/></svg></span>
       </div>
-      <div class="gallery-item relative rounded-2xl overflow-hidden cursor-pointer" data-lightbox data-caption="Curated excursion, Lagos">
-        <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?q=80&amp;w=900&amp;auto=format&amp;fit=crop" alt="Curated travel excursion" class="w-full h-full object-cover">
+      <div class="gallery-item relative rounded-2xl overflow-hidden cursor-pointer" data-lightbox data-caption="Curated travel experiences shaped around detail, comfort, and confidence.">
+        <img src="assets/images/hero/4e3902952d2e7a61c5bd49ea150e6012.jpg" alt="A polished journey from departure to arrival" class="w-full h-full object-cover" loading="lazy">
         <div class="gallery-veil absolute inset-0"></div>
+        <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-eye-charcoal/90 via-eye-charcoal/45 to-transparent">
+          <p class="text-sm font-medium text-eye-cream">Curated journeys built around comfort and detail.</p>
+        </div>
         <span class="gallery-expand" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3H3v6M15 3h6v6M9 21H3v-6M15 21h6v-6"/></svg></span>
       </div>
-      <div class="gallery-item relative rounded-2xl overflow-hidden cursor-pointer" data-lightbox data-caption="Logistics coordination in transit">
-        <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&amp;w=900&amp;auto=format&amp;fit=crop" alt="Logistics and courier services" class="w-full h-full object-cover">
+      <div class="gallery-item relative rounded-2xl overflow-hidden cursor-pointer" data-lightbox data-caption="Reliable transit support that keeps every handoff sharp, organized, and seamless.">
+        <img src="assets/images/hero/8235d4a43c9114977b927d2c83873611.jpg" alt="Reliable transit and logistics coordination" class="w-full h-full object-cover" loading="lazy">
         <div class="gallery-veil absolute inset-0"></div>
+        <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-eye-charcoal/90 via-eye-charcoal/45 to-transparent">
+          <p class="text-sm font-medium text-eye-cream">Reliable transit support when timing matters most.</p>
+        </div>
         <span class="gallery-expand" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3H3v6M15 3h6v6M9 21H3v-6M15 21h6v-6"/></svg></span>
       </div>
-      <div class="gallery-item relative rounded-2xl overflow-hidden cursor-pointer lg:row-span-2" data-lightbox data-caption="Golden-hour terminal transit">
-        <img src="assets/images/hero/hero-terminal.jpg" alt="Travelers moving through a modern airport terminal" class="w-full h-full object-cover">
+      <div class="gallery-item relative rounded-2xl overflow-hidden cursor-pointer lg:row-span-2" data-lightbox data-caption="Professional terminal transitions handled with precision, clarity, and calm.">
+        <img src="assets/images/hero/hero-terminal.jpg" alt="Professional terminal transitions for travelers" class="w-full h-full object-cover">
         <div class="gallery-veil absolute inset-0"></div>
+        <div class="absolute inset-x-0 bottom-0 p-4 sm:p-5 bg-gradient-to-t from-eye-charcoal/90 via-eye-charcoal/45 to-transparent">
+          <p class="text-sm font-medium text-eye-cream">Professional terminal movement backed by attentive service.</p>
+        </div>
         <span class="gallery-expand" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3H3v6M15 3h6v6M9 21H3v-6M15 21h6v-6"/></svg></span>
       </div>
-      <div class="gallery-item relative rounded-2xl overflow-hidden cursor-pointer" data-lightbox data-caption="Corporate travel briefing">
-        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&amp;w=900&amp;auto=format&amp;fit=crop" alt="Corporate travel support" class="w-full h-full object-cover">
+      <div class="gallery-item relative rounded-2xl overflow-hidden cursor-pointer" data-lightbox data-caption="Sophisticated support for corporate travel, meetings, and high-stakes schedules.">
+        <img src="assets/images/hero/75caf9caaa17a0037e8edcb70b487ed7.jpg" alt="Corporate travel and hospitality support" class="w-full h-full object-cover" loading="lazy">
         <div class="gallery-veil absolute inset-0"></div>
+        <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-eye-charcoal/90 via-eye-charcoal/45 to-transparent">
+          <p class="text-sm font-medium text-eye-cream">Corporate-ready support for demanding itineraries.</p>
+        </div>
         <span class="gallery-expand" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3H3v6M15 3h6v6M9 21H3v-6M15 21h6v-6"/></svg></span>
       </div>
-      <div class="gallery-item relative rounded-2xl overflow-hidden cursor-pointer" data-lightbox data-caption="Team retreat support">
-        <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?q=80&amp;w=900&amp;auto=format&amp;fit=crop" alt="Team retreat and event support" class="w-full h-full object-cover">
+      <div class="gallery-item relative rounded-2xl overflow-hidden cursor-pointer" data-lightbox data-caption="Thoughtfully paced travel support that turns every journey into a polished experience.">
+        <img src="assets/images/hero/b75add541dd799171f7d412715b48057.jpg" alt="Thoughtfully paced travel and concierge support" class="w-full h-full object-cover" loading="lazy">
         <div class="gallery-veil absolute inset-0"></div>
+        <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-eye-charcoal/90 via-eye-charcoal/45 to-transparent">
+          <p class="text-sm font-medium text-eye-cream">Travel support shaped around elegance and ease.</p>
+        </div>
         <span class="gallery-expand" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3H3v6M15 3h6v6M9 21H3v-6M15 21h6v-6"/></svg></span>
       </div>
-      <div class="gallery-item relative rounded-2xl overflow-hidden cursor-pointer" data-lightbox data-caption="Passport, boarding pass, and a journey ahead">
-        <img src="assets/images/hero/hero-passport-window.jpg" alt="Passport and boarding pass beside an airplane window" class="w-full h-full object-cover">
+      <div class="gallery-item relative rounded-2xl overflow-hidden cursor-pointer" data-lightbox data-caption="Every detail handled with intention, from departure planning to final arrival.">
+        <img src="assets/images/hero/hero-passport-window.jpg" alt="Travel planning and passport support at the window" class="w-full h-full object-cover">
         <div class="gallery-veil absolute inset-0"></div>
+        <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-eye-charcoal/90 via-eye-charcoal/45 to-transparent">
+          <p class="text-sm font-medium text-eye-cream">Every detail handled with intention and care.</p>
+        </div>
         <span class="gallery-expand" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3H3v6M15 3h6v6M9 21H3v-6M15 21h6v-6"/></svg></span>
       </div>
     </div>
@@ -188,18 +219,24 @@
       Whatever it is,<br><span class="italic text-gradient-brand">just ask.</span>
     </h2>
     <p class="reveal max-w-xl mx-auto text-eye-cream/70 leading-relaxed mb-12">
-      Reach out today to request a custom quotation or book a consultation. We're only one message away.
+      Send the task, destination, date, and any must-haves. We usually respond within 18 minutes during business hours with the next best step.
     </p>
 
     <div class="reveal flex flex-wrap items-center justify-center gap-4 mb-16">
       <a href="https://wa.me/2348164766193" data-contact="whatsapp-link" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full px-8 py-4 text-[15px] font-medium btn-primary">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.5 0-10 4.5-10 10 0 1.77.46 3.44 1.27 4.89L2 22l5.25-1.28A9.96 9.96 0 0 0 12.04 22c5.5 0 10-4.5 10-10s-4.5-10-10-10zm5.7 14.2c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.13.11-1.83-.12-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.8-4.16-4.94-4.35-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.29.58-.36.78-.36h.56c.18 0 .42-.02.65.5.24.53.8 1.87.87 2 .07.14.11.3.02.48-.09.19-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.06.95 1.96 1.24 2.24 1.38.28.14.44.12.6-.07.16-.19.7-.82.89-1.1.19-.28.37-.23.62-.14.25.09 1.6.75 1.87.89.28.14.46.21.53.32.07.12.07.65-.17 1.32z"/></svg>
-        Chat on WhatsApp
+        Start on WhatsApp
       </a>
       <a href="mailto:info@errandeye.com?subject=Quote%20Request&body=Hi%20Errand%20Eye%2C%0A%0AI%27d%20like%20a%20quote%20for%3A%0A%0AService%20needed%3A%20%0ADetails%3A%20%0A%0AThanks!" class="inline-flex items-center gap-2 rounded-full px-8 py-4 text-[15px] font-medium btn-ghost">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-        Request a Quote
+        Email the Brief
       </a>
+    </div>
+
+    <div class="reveal cta-assurance mx-auto mb-14 max-w-3xl">
+      <span>Quote before payment</span>
+      <span>Confidential handling</span>
+      <span>Kenya, Nigeria &amp; South Africa</span>
     </div>
 
 
@@ -273,11 +310,11 @@
       <div class="lg:col-span-2">
         <p class="footer-col-heading">Services</p>
         <ul class="space-y-2.5">
-          <li><a href="services.html" class="footer-link">Tours &amp; Travel</a></li>
-          <li><a href="services.html" class="footer-link">Hospitality Support</a></li>
-          <li><a href="services.html" class="footer-link">Logistics</a></li>
-          <li><a href="services.html" class="footer-link">Airport Transfers</a></li>
-          <li><a href="services.html" class="footer-link">Visa Assistance</a></li>
+          <li><a href="services.html#tours-travel" class="footer-link">Tours &amp; Travel</a></li>
+          <li><a href="services.html#hospitality-support" class="footer-link">Hospitality Support</a></li>
+          <li><a href="services.html#logistics-errands" class="footer-link">Logistics</a></li>
+          <li><a href="services.html#airport-transfers" class="footer-link">Airport Transfers</a></li>
+          <li><a href="services.html#visa-assistance" class="footer-link">Visa Assistance</a></li>
         </ul>
       </div>
 
@@ -333,7 +370,7 @@
     <div class="pt-8 lg:pt-10 flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-8 text-xs text-eye-cream/45 font-mono text-center lg:text-left">
       <p>&copy; <span id="year"></span> Errand Eye Limited. All rights reserved.</p>
       <div class="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
-        <a href="#" class="hover:text-eye-cream transition-colors">Privacy Policy</a>
+        <a href="about.html#privacy" class="hover:text-eye-cream transition-colors">Privacy Policy</a>
         <a href="about.html#terms" class="hover:text-eye-cream transition-colors">Terms &amp; Conditions</a>
         <span class="footer-credit">Designed by <a href="https://tobyknows.github.io" target="_blank" rel="noopener noreferrer" class="footer-credit-link">TBKNS HUB</a></span>
       </div>

@@ -13,6 +13,7 @@
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="assets/images/logo-mark.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+<link rel="preload" as="image" href="assets/images/hero/hero-aircraft-sunset.jpg" fetchpriority="high">
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -67,10 +68,10 @@
       </a>
 
       <nav class="hidden lg:flex items-center gap-10 font-mono text-[13px] uppercase tracking-wider text-eye-charcoal/70">
+        <a href="about.html" class="text-eye-charcoal transition-colors" aria-current="page">About</a>
         <a href="services.html" class="hover:text-eye-charcoal transition-colors">Services</a>
         <a href="index.html#process" class="hover:text-eye-charcoal transition-colors">Process</a>
         <a href="gallery.html" class="hover:text-eye-charcoal transition-colors">Gallery</a>
-        <a href="index.html#awards" class="hover:text-eye-charcoal transition-colors">Awards</a>
         <a href="#contact" class="hover:text-eye-charcoal transition-colors">Contact</a>
       </nav>
 
@@ -89,10 +90,10 @@
   </div>
 
   <div id="mobile-menu" class="mobile-menu lg:hidden px-4 sm:px-6 pb-8 font-mono text-sm uppercase tracking-wider bg-eye-cream/98 backdrop-blur-md border-t border-eye-gray-line shadow-xl">
+    <a href="about.html" class="mobile-menu-link">About<svg class="menu-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
     <a href="services.html" class="mobile-menu-link">Services<svg class="menu-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
     <a href="index.html#process" class="mobile-menu-link">Process<svg class="menu-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
     <a href="gallery.html" class="mobile-menu-link">Gallery<svg class="menu-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
-    <a href="index.html#awards" class="mobile-menu-link">Awards<svg class="menu-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
     <a href="#contact" class="mobile-menu-link">Contact<svg class="menu-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
     <a href="#contact" class="mobile-menu-cta mt-5 inline-flex justify-center items-center gap-2 rounded-full px-5 py-3 text-sm font-medium normal-case tracking-normal btn-primary">Request a Quote</a>
   </div>
@@ -105,7 +106,7 @@
      ============================================================ -->
 <section class="hero-canvas grain relative overflow-hidden text-eye-cream pt-28 pb-20 lg:pt-48 lg:pb-28">
   <div class="absolute inset-0" aria-hidden="true">
-    <img src="assets/images/hero/hero-aircraft-sunset.jpg" alt="" class="w-full h-full object-cover" style="object-position: center 60%;">
+    <img src="assets/images/hero/75caf9caaa17a0037e8edcb70b487ed7.jpg" alt="Luxury travel and hospitality support in motion" class="w-full h-full object-cover" style="object-position: center 60%;" fetchpriority="high">
   </div>
   <div class="absolute inset-0 bg-gradient-to-t from-eye-charcoal via-eye-charcoal/70 to-eye-charcoal/45"></div>
   <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
@@ -439,6 +440,38 @@
 </section>
 
 <!-- ============================================================
+     PRIVACY POLICY
+     ============================================================ -->
+<section id="privacy" class="py-28 lg:py-36">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="reveal max-w-2xl mb-12">
+      <p class="font-mono text-[12px] uppercase tracking-[0.2em] text-eye-blue mb-4">Privacy Policy</p>
+      <h2 class="font-display text-4xl sm:text-5xl leading-[1.05] tracking-tight">Your requests, documents, and travel details are handled with care.</h2>
+      <p class="mt-5 text-eye-charcoal/65 leading-relaxed">Errand Eye only collects the information needed to confirm, quote, coordinate, and deliver requested services. Client details are not sold, rented, or shared for unrelated marketing.</p>
+    </div>
+
+    <div class="reveal-stagger grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="policy-card">
+        <p class="policy-card-kicker">Data We Use</p>
+        <p class="policy-card-copy">Contact details, service briefs, itinerary notes, documents, and payment confirmation where required.</p>
+      </div>
+      <div class="policy-card">
+        <p class="policy-card-kicker">Why We Use It</p>
+        <p class="policy-card-copy">To respond, prepare quotes, coordinate vendors, verify bookings, and provide service updates.</p>
+      </div>
+      <div class="policy-card">
+        <p class="policy-card-kicker">Who Sees It</p>
+        <p class="policy-card-copy">Only Errand Eye team members and verified delivery partners directly involved in the request.</p>
+      </div>
+      <div class="policy-card">
+        <p class="policy-card-kicker">Your Control</p>
+        <p class="policy-card-copy">You can request correction or deletion of your stored details by emailing info@errandeye.com.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
      FINAL CTA
      ============================================================ -->
 <section id="contact" class="relative py-28 lg:py-40 overflow-hidden">
@@ -449,18 +482,24 @@
       Whatever it is,<br><span class="italic text-gradient-brand">just ask.</span>
     </h2>
     <p class="reveal max-w-xl mx-auto text-eye-cream/70 leading-relaxed mb-12">
-      Reach out today to request a custom quotation or book a consultation. We're only one message away.
+      Send the task, destination, date, and any must-haves. We usually respond within 18 minutes during business hours with the next best step.
     </p>
 
     <div class="reveal flex flex-wrap items-center justify-center gap-4 mb-16">
       <a href="https://wa.me/2348164766193" data-contact="whatsapp-link" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full px-8 py-4 text-[15px] font-medium btn-primary">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.5 0-10 4.5-10 10 0 1.77.46 3.44 1.27 4.89L2 22l5.25-1.28A9.96 9.96 0 0 0 12.04 22c5.5 0 10-4.5 10-10s-4.5-10-10-10zm5.7 14.2c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.13.11-1.83-.12-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.8-4.16-4.94-4.35-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.29.58-.36.78-.36h.56c.18 0 .42-.02.65.5.24.53.8 1.87.87 2 .07.14.11.3.02.48-.09.19-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.06.95 1.96 1.24 2.24 1.38.28.14.44.12.6-.07.16-.19.7-.82.89-1.1.19-.28.37-.23.62-.14.25.09 1.6.75 1.87.89.28.14.46.21.53.32.07.12.07.65-.17 1.32z"/></svg>
-        Chat on WhatsApp
+        Start on WhatsApp
       </a>
       <a href="mailto:info@errandeye.com?subject=Quote%20Request&body=Hi%20Errand%20Eye%2C%0A%0AI%27d%20like%20a%20quote%20for%3A%0A%0AService%20needed%3A%20%0ADetails%3A%20%0A%0AThanks!" class="inline-flex items-center gap-2 rounded-full px-8 py-4 text-[15px] font-medium btn-ghost">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-        Request a Quote
+        Email the Brief
       </a>
+    </div>
+
+    <div class="reveal cta-assurance mx-auto mb-14 max-w-3xl">
+      <span>Quote before payment</span>
+      <span>Confidential handling</span>
+      <span>Kenya, Nigeria &amp; South Africa</span>
     </div>
 
 
@@ -534,11 +573,11 @@
       <div class="lg:col-span-2">
         <p class="footer-col-heading">Services</p>
         <ul class="space-y-2.5">
-          <li><a href="services.html" class="footer-link">Tours &amp; Travel</a></li>
-          <li><a href="services.html" class="footer-link">Hospitality Support</a></li>
-          <li><a href="services.html" class="footer-link">Logistics</a></li>
-          <li><a href="services.html" class="footer-link">Airport Transfers</a></li>
-          <li><a href="services.html" class="footer-link">Visa Assistance</a></li>
+          <li><a href="services.html#tours-travel" class="footer-link">Tours &amp; Travel</a></li>
+          <li><a href="services.html#hospitality-support" class="footer-link">Hospitality Support</a></li>
+          <li><a href="services.html#logistics-errands" class="footer-link">Logistics</a></li>
+          <li><a href="services.html#airport-transfers" class="footer-link">Airport Transfers</a></li>
+          <li><a href="services.html#visa-assistance" class="footer-link">Visa Assistance</a></li>
         </ul>
       </div>
 
@@ -594,7 +633,7 @@
     <div class="pt-8 lg:pt-10 flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-8 text-xs text-eye-cream/45 font-mono text-center lg:text-left">
       <p>&copy; <span id="year"></span> Errand Eye Limited. All rights reserved.</p>
       <div class="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
-        <a href="#" class="hover:text-eye-cream transition-colors">Privacy Policy</a>
+        <a href="#privacy" class="hover:text-eye-cream transition-colors">Privacy Policy</a>
         <a href="#terms" class="hover:text-eye-cream transition-colors">Terms &amp; Conditions</a>
         <span class="footer-credit">Designed by <a href="https://tobyknows.github.io" target="_blank" rel="noopener noreferrer" class="footer-credit-link">TBKNS HUB</a></span>
       </div>

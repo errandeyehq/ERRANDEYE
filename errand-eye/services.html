@@ -13,6 +13,7 @@
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="assets/images/logo-mark.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+<link rel="preload" as="image" href="assets/images/hero/hero-chauffeur.jpg" fetchpriority="high">
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -67,10 +68,10 @@
       </a>
 
       <nav class="hidden lg:flex items-center gap-10 font-mono text-[13px] uppercase tracking-wider text-eye-charcoal/70">
+        <a href="about.html" class="hover:text-eye-charcoal transition-colors">About</a>
         <a href="services.html" class="text-eye-charcoal transition-colors" aria-current="page">Services</a>
         <a href="index.html#process" class="hover:text-eye-charcoal transition-colors">Process</a>
         <a href="gallery.html" class="hover:text-eye-charcoal transition-colors">Gallery</a>
-        <a href="index.html#awards" class="hover:text-eye-charcoal transition-colors">Awards</a>
         <a href="#contact" class="hover:text-eye-charcoal transition-colors">Contact</a>
       </nav>
 
@@ -89,10 +90,10 @@
   </div>
 
   <div id="mobile-menu" class="mobile-menu lg:hidden px-4 sm:px-6 pb-8 font-mono text-sm uppercase tracking-wider bg-eye-cream/98 backdrop-blur-md border-t border-eye-gray-line shadow-xl">
+    <a href="about.html" class="mobile-menu-link">About<svg class="menu-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
     <a href="services.html" class="mobile-menu-link">Services<svg class="menu-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
     <a href="index.html#process" class="mobile-menu-link">Process<svg class="menu-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
     <a href="gallery.html" class="mobile-menu-link">Gallery<svg class="menu-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
-    <a href="index.html#awards" class="mobile-menu-link">Awards<svg class="menu-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
     <a href="#contact" class="mobile-menu-link">Contact<svg class="menu-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
     <a href="#contact" class="mobile-menu-cta mt-5 inline-flex justify-center items-center gap-2 rounded-full px-5 py-3 text-sm font-medium normal-case tracking-normal btn-primary">Request a Quote</a>
   </div>
@@ -105,7 +106,7 @@
      ============================================================ -->
 <section class="hero-canvas grain relative overflow-hidden text-eye-cream pt-28 pb-20 lg:pt-48 lg:pb-28">
   <div class="absolute inset-0" aria-hidden="true">
-    <img src="assets/images/hero/hero-chauffeur.jpg" alt="" class="w-full h-full object-cover" style="object-position: center 35%;">
+    <img src="assets/images/hero/b75add541dd799171f7d412715b48057.jpg" alt="Executive hospitality and logistics support" class="w-full h-full object-cover" style="object-position: center 35%;" fetchpriority="high">
   </div>
   <div class="absolute inset-0 bg-gradient-to-t from-eye-charcoal via-eye-charcoal/70 to-eye-charcoal/45"></div>
   <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
@@ -120,188 +121,210 @@
 </section>
 
 <!-- ============================================================
-     SERVICES DETAIL
+     SERVICES OVERVIEW - interactive selector
      ============================================================ -->
 <section class="py-28 lg:py-32">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="max-w-2xl">
+      <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-eye-blue mb-4">Our Services</p>
+      <h2 class="font-display text-4xl sm:text-5xl leading-tight tracking-tight">Nine service lines, each with its own way of working.</h2>
+      <p class="mt-5 text-eye-charcoal/70 leading-relaxed">Select a service to see exactly what it covers, how it works, and how to get started.</p>
+    </div>
 
-    <div class="reveal-stagger grid gap-6">
+    <div class="mt-16 grid lg:grid-cols-[320px_1fr] gap-6 lg:gap-10 items-start">
 
-      <!-- 01 Tours & Travel -->
-      <article id="tours-travel" class="service-detail-card group relative overflow-hidden rounded-2xl bg-white p-9 lg:p-12 grid lg:grid-cols-[auto_1fr_auto] gap-8 items-start">
-        <div class="icon-badge h-16 w-16 rounded-full p-[2px] bg-gradient-to-br from-eye-green-light to-eye-blue-light shrink-0">
-          <div class="h-full w-full rounded-full bg-white flex items-center justify-center">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0EA55A" stroke-width="1.5"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="9"/></svg>
-          </div>
-        </div>
-        <div>
-          <span class="font-mono text-[11px] text-eye-charcoal/30 tracking-widest">01</span>
-          <h3 class="font-display text-2xl sm:text-3xl tracking-tight mt-1 mb-3">Tours &amp; Travel</h3>
-          <p class="text-eye-charcoal/60 leading-relaxed max-w-xl">Personalized itineraries and curated excursions built around how you actually want to travel, not a fixed package.</p>
-        </div>
-        <ul class="font-mono text-[11px] uppercase tracking-wider text-eye-charcoal/50 space-y-2.5 lg:text-right shrink-0">
-          <li>Custom itinerary planning</li>
-          <li>Excursion &amp; activity booking</li>
-          <li>Local guide coordination</li>
-        </ul>
-      </article>
+      <!-- Service selector list -->
+      <div class="flex lg:flex-col gap-2.5 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0 -mx-6 px-6 lg:mx-0 lg:px-0" role="tablist" aria-label="Service selector">
 
-      <!-- 02 Hospitality Support -->
-      <article id="hospitality-support" class="service-detail-card group relative overflow-hidden rounded-2xl bg-white p-9 lg:p-12 grid lg:grid-cols-[auto_1fr_auto] gap-8 items-start">
-        <div class="icon-badge h-16 w-16 rounded-full p-[2px] bg-gradient-to-br from-eye-blue-light to-eye-green-light shrink-0">
-          <div class="h-full w-full rounded-full bg-white flex items-center justify-center">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0B84B0" stroke-width="1.5"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-8h6v8"/></svg>
-          </div>
-        </div>
-        <div>
-          <span class="font-mono text-[11px] text-eye-charcoal/30 tracking-widest">02</span>
-          <h3 class="font-display text-2xl sm:text-3xl tracking-tight mt-1 mb-3">Hospitality Support</h3>
-          <p class="text-eye-charcoal/60 leading-relaxed max-w-xl">Hotel bookings, restaurant reservations, and guest experiences handled with genuine care from first message to check-out.</p>
-        </div>
-        <ul class="font-mono text-[11px] uppercase tracking-wider text-eye-charcoal/50 space-y-2.5 lg:text-right shrink-0">
-          <li>Hotel &amp; accommodation booking</li>
-          <li>Restaurant reservations</li>
-          <li>Guest experience coordination</li>
-        </ul>
-      </article>
+        <button type="button" class="service-option is-active flex items-center gap-3 rounded-2xl border border-eye-gray-line bg-white px-5 py-4 text-left transition flex-shrink-0 w-[240px] lg:w-full" id="tours-travel" data-service="tours-travel" role="tab" aria-selected="true" aria-controls="service-panel-tours-travel">
+          <span class="service-option-icon h-10 w-10 rounded-full bg-eye-gray flex items-center justify-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0EA55A" stroke-width="1.5"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="9"/></svg></span>
+          <span class="font-display text-[15px] text-eye-charcoal">Tours &amp; Travel</span>
+        </button>
 
-      <!-- 03 Airport Transfers -->
-      <article id="airport-transfers" class="service-detail-card group relative overflow-hidden rounded-2xl bg-white p-9 lg:p-12 grid lg:grid-cols-[auto_1fr_auto] gap-8 items-start">
-        <div class="icon-badge h-16 w-16 rounded-full p-[2px] bg-gradient-to-br from-eye-green-light to-eye-blue-light shrink-0">
-          <div class="h-full w-full rounded-full bg-white flex items-center justify-center">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0EA55A" stroke-width="1.5"><path d="M3 12h4l2-8 4 16 2-8h6"/></svg>
-          </div>
-        </div>
-        <div>
-          <span class="font-mono text-[11px] text-eye-charcoal/30 tracking-widest">03</span>
-          <h3 class="font-display text-2xl sm:text-3xl tracking-tight mt-1 mb-3">Airport Transfers</h3>
-          <p class="text-eye-charcoal/60 leading-relaxed max-w-xl">Reliable, comfortable pickups and drop-offs timed precisely around your itinerary, so you're never rushed.</p>
-        </div>
-        <ul class="font-mono text-[11px] uppercase tracking-wider text-eye-charcoal/50 space-y-2.5 lg:text-right shrink-0">
-          <li>Meet &amp; greet service</li>
-          <li>Live flight tracking</li>
-          <li>Executive &amp; standard vehicles</li>
-        </ul>
-      </article>
+        <button type="button" class="service-option flex items-center gap-3 rounded-2xl border border-eye-gray-line bg-white px-5 py-4 text-left transition flex-shrink-0 w-[240px] lg:w-full" id="hospitality-support" data-service="hospitality-support" role="tab" aria-selected="false" aria-controls="service-panel-hospitality-support">
+          <span class="service-option-icon h-10 w-10 rounded-full bg-eye-gray flex items-center justify-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B84B0" stroke-width="1.5"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-8h6v8"/></svg></span>
+          <span class="font-display text-[15px] text-eye-charcoal">Hospitality Support</span>
+        </button>
 
-      <!-- 04 Visa Assistance -->
-      <article id="visa-assistance" class="service-detail-card group relative overflow-hidden rounded-2xl bg-white p-9 lg:p-12 grid lg:grid-cols-[auto_1fr_auto] gap-8 items-start">
-        <div class="icon-badge h-16 w-16 rounded-full p-[2px] bg-gradient-to-br from-eye-blue-light to-eye-green-light shrink-0">
-          <div class="h-full w-full rounded-full bg-white flex items-center justify-center">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0B84B0" stroke-width="1.5"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h4"/></svg>
-          </div>
-        </div>
-        <div>
-          <span class="font-mono text-[11px] text-eye-charcoal/30 tracking-widest">04</span>
-          <h3 class="font-display text-2xl sm:text-3xl tracking-tight mt-1 mb-3">Visa Assistance</h3>
-          <p class="text-eye-charcoal/60 leading-relaxed max-w-xl">Documentation and application support that removes the guesswork from crossing borders, covering over 20 destinations including the UK, UAE, Qatar, Turkey, and across Africa and Asia, plus international passport renewal and fresh applications.</p>
-        </div>
-        <ul class="font-mono text-[11px] uppercase tracking-wider text-eye-charcoal/50 space-y-2.5 lg:text-right shrink-0">
-          <li>Visa on arrival &amp; embassy applications</li>
-          <li>Passport renewal &amp; fresh applications</li>
-          <li>Visa extensions &amp; lost document cases</li>
-        </ul>
-      </article>
+        <button type="button" class="service-option flex items-center gap-3 rounded-2xl border border-eye-gray-line bg-white px-5 py-4 text-left transition flex-shrink-0 w-[240px] lg:w-full" id="airport-transfers" data-service="airport-transfers" role="tab" aria-selected="false" aria-controls="service-panel-airport-transfers">
+          <span class="service-option-icon h-10 w-10 rounded-full bg-eye-gray flex items-center justify-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0EA55A" stroke-width="1.5"><path d="M3 12h4l2-8 4 16 2-8h6"/></svg></span>
+          <span class="font-display text-[15px] text-eye-charcoal">Airport Transfers</span>
+        </button>
 
-      <!-- 05 Corporate Travel -->
-      <article id="corporate-travel" class="service-detail-card group relative overflow-hidden rounded-2xl bg-white p-9 lg:p-12 grid lg:grid-cols-[auto_1fr_auto] gap-8 items-start">
-        <div class="icon-badge h-16 w-16 rounded-full p-[2px] bg-gradient-to-br from-eye-green-light to-eye-blue-light shrink-0">
-          <div class="h-full w-full rounded-full bg-white flex items-center justify-center">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0EA55A" stroke-width="1.5"><rect x="2" y="7" width="20" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
-          </div>
-        </div>
-        <div>
-          <span class="font-mono text-[11px] text-eye-charcoal/30 tracking-widest">05</span>
-          <h3 class="font-display text-2xl sm:text-3xl tracking-tight mt-1 mb-3">Corporate Travel</h3>
-          <p class="text-eye-charcoal/60 leading-relaxed max-w-xl">Coordinated travel programs for teams that need consistency across every trip, every traveler, every city.</p>
-        </div>
-        <ul class="font-mono text-[11px] uppercase tracking-wider text-eye-charcoal/50 space-y-2.5 lg:text-right shrink-0">
-          <li>Multi-traveler itineraries</li>
-          <li>Policy-aligned bookings</li>
-          <li>Centralized billing &amp; reporting</li>
-        </ul>
-      </article>
+        <button type="button" class="service-option flex items-center gap-3 rounded-2xl border border-eye-gray-line bg-white px-5 py-4 text-left transition flex-shrink-0 w-[240px] lg:w-full" id="visa-assistance" data-service="visa-assistance" role="tab" aria-selected="false" aria-controls="service-panel-visa-assistance">
+          <span class="service-option-icon h-10 w-10 rounded-full bg-eye-gray flex items-center justify-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B84B0" stroke-width="1.5"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h4"/></svg></span>
+          <span class="font-display text-[15px] text-eye-charcoal">Visa Assistance</span>
+        </button>
 
-      <!-- 06 Logistics & Errands -->
-      <article id="logistics-errands" class="service-detail-card group relative overflow-hidden rounded-2xl bg-white p-9 lg:p-12 grid lg:grid-cols-[auto_1fr_auto] gap-8 items-start">
-        <div class="icon-badge h-16 w-16 rounded-full p-[2px] bg-gradient-to-br from-eye-blue-light to-eye-green-light shrink-0">
-          <div class="h-full w-full rounded-full bg-white flex items-center justify-center">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0B84B0" stroke-width="1.5"><rect x="1" y="7" width="15" height="10" rx="1.5"/><path d="M16 10h4l3 3v4h-7z"/><circle cx="6" cy="19" r="1.6"/><circle cx="18" cy="19" r="1.6"/></svg>
-          </div>
-        </div>
-        <div>
-          <span class="font-mono text-[11px] text-eye-charcoal/30 tracking-widest">06</span>
-          <h3 class="font-display text-2xl sm:text-3xl tracking-tight mt-1 mb-3">Logistics &amp; Errands</h3>
-          <p class="text-eye-charcoal/60 leading-relaxed max-w-xl">Courier services, pick-ups, bill payments, and the everyday tasks that eat your calendar.</p>
-        </div>
-        <ul class="font-mono text-[11px] uppercase tracking-wider text-eye-charcoal/50 space-y-2.5 lg:text-right shrink-0">
-          <li>Courier &amp; delivery coordination</li>
-          <li>Bill payments &amp; errands</li>
-          <li>Document &amp; package pickup</li>
-        </ul>
-      </article>
+        <button type="button" class="service-option flex items-center gap-3 rounded-2xl border border-eye-gray-line bg-white px-5 py-4 text-left transition flex-shrink-0 w-[240px] lg:w-full" id="corporate-travel" data-service="corporate-travel" role="tab" aria-selected="false" aria-controls="service-panel-corporate-travel">
+          <span class="service-option-icon h-10 w-10 rounded-full bg-eye-gray flex items-center justify-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0EA55A" stroke-width="1.5"><rect x="2" y="7" width="20" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></span>
+          <span class="font-display text-[15px] text-eye-charcoal">Corporate Travel</span>
+        </button>
 
-      <!-- 07 Event & Retreat Planning -->
-      <article id="event-retreat-planning" class="service-detail-card group relative overflow-hidden rounded-2xl bg-white p-9 lg:p-12 grid lg:grid-cols-[auto_1fr_auto] gap-8 items-start">
-        <div class="icon-badge h-16 w-16 rounded-full p-[2px] bg-gradient-to-br from-eye-green-light to-eye-blue-light shrink-0">
-          <div class="h-full w-full rounded-full bg-white flex items-center justify-center">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0EA55A" stroke-width="1.5"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>
-          </div>
-        </div>
-        <div>
-          <span class="font-mono text-[11px] text-eye-charcoal/30 tracking-widest">07</span>
-          <h3 class="font-display text-2xl sm:text-3xl tracking-tight mt-1 mb-3">Event &amp; Retreat Planning</h3>
-          <p class="text-eye-charcoal/60 leading-relaxed max-w-xl">Corporate retreats, team offsites, and private events planned end-to-end, from venue sourcing to on-the-ground logistics.</p>
-        </div>
-        <ul class="font-mono text-[11px] uppercase tracking-wider text-eye-charcoal/50 space-y-2.5 lg:text-right shrink-0">
-          <li>Venue sourcing &amp; booking</li>
-          <li>Group travel coordination</li>
-          <li>On-the-ground event support</li>
-        </ul>
-      </article>
+        <button type="button" class="service-option flex items-center gap-3 rounded-2xl border border-eye-gray-line bg-white px-5 py-4 text-left transition flex-shrink-0 w-[240px] lg:w-full" id="logistics-errands" data-service="logistics-errands" role="tab" aria-selected="false" aria-controls="service-panel-logistics-errands">
+          <span class="service-option-icon h-10 w-10 rounded-full bg-eye-gray flex items-center justify-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B84B0" stroke-width="1.5"><rect x="1" y="7" width="15" height="10" rx="1.5"/><path d="M16 10h4l3 3v4h-7z"/><circle cx="6" cy="19" r="1.6"/><circle cx="18" cy="19" r="1.6"/></svg></span>
+          <span class="font-display text-[15px] text-eye-charcoal">Logistics &amp; Errands</span>
+        </button>
 
-      <!-- 08 Concierge Shopping & Personal Errands -->
-      <article id="concierge-shopping" class="service-detail-card group relative overflow-hidden rounded-2xl bg-white p-9 lg:p-12 grid lg:grid-cols-[auto_1fr_auto] gap-8 items-start">
-        <div class="icon-badge h-16 w-16 rounded-full p-[2px] bg-gradient-to-br from-eye-blue-light to-eye-green-light shrink-0">
-          <div class="h-full w-full rounded-full bg-white flex items-center justify-center">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0B84B0" stroke-width="1.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M9 10a3 3 0 0 0 6 0"/></svg>
-          </div>
-        </div>
-        <div>
-          <span class="font-mono text-[11px] text-eye-charcoal/30 tracking-widest">08</span>
-          <h3 class="font-display text-2xl sm:text-3xl tracking-tight mt-1 mb-3">Concierge Shopping &amp; Personal Errands</h3>
-          <p class="text-eye-charcoal/60 leading-relaxed max-w-xl">Personal shopping, gift sourcing, and day-to-day errands handled discreetly on your behalf.</p>
-        </div>
-        <ul class="font-mono text-[11px] uppercase tracking-wider text-eye-charcoal/50 space-y-2.5 lg:text-right shrink-0">
-          <li>Personal shopping requests</li>
-          <li>Gift sourcing &amp; delivery</li>
-          <li>Recurring errand management</li>
-        </ul>
-      </article>
+        <button type="button" class="service-option flex items-center gap-3 rounded-2xl border border-eye-gray-line bg-white px-5 py-4 text-left transition flex-shrink-0 w-[240px] lg:w-full" id="event-retreat-planning" data-service="event-retreat-planning" role="tab" aria-selected="false" aria-controls="service-panel-event-retreat-planning">
+          <span class="service-option-icon h-10 w-10 rounded-full bg-eye-gray flex items-center justify-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0EA55A" stroke-width="1.5"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></span>
+          <span class="font-display text-[15px] text-eye-charcoal">Event &amp; Retreat Planning</span>
+        </button>
 
-      <!-- 09 Relocation & Settling-In Support -->
-      <article id="relocation-support" class="service-detail-card group relative overflow-hidden rounded-2xl bg-white p-9 lg:p-12 grid lg:grid-cols-[auto_1fr_auto] gap-8 items-start">
-        <div class="icon-badge h-16 w-16 rounded-full p-[2px] bg-gradient-to-br from-eye-green-light to-eye-blue-light shrink-0">
-          <div class="h-full w-full rounded-full bg-white flex items-center justify-center">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0EA55A" stroke-width="1.5"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>
-          </div>
-        </div>
-        <div>
-          <span class="font-mono text-[11px] text-eye-charcoal/30 tracking-widest">09</span>
-          <h3 class="font-display text-2xl sm:text-3xl tracking-tight mt-1 mb-3">Relocation &amp; Settling-In Support</h3>
-          <p class="text-eye-charcoal/60 leading-relaxed max-w-xl">Practical support for individuals and teams relocating across Kenya, Nigeria, and South Africa.</p>
-        </div>
-        <ul class="font-mono text-[11px] uppercase tracking-wider text-eye-charcoal/50 space-y-2.5 lg:text-right shrink-0">
-          <li>Housing search assistance</li>
-          <li>Local orientation &amp; setup</li>
-          <li>Ongoing relocation support</li>
-        </ul>
-      </article>
+        <button type="button" class="service-option flex items-center gap-3 rounded-2xl border border-eye-gray-line bg-white px-5 py-4 text-left transition flex-shrink-0 w-[240px] lg:w-full" id="concierge-shopping" data-service="concierge-shopping" role="tab" aria-selected="false" aria-controls="service-panel-concierge-shopping">
+          <span class="service-option-icon h-10 w-10 rounded-full bg-eye-gray flex items-center justify-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B84B0" stroke-width="1.5"><path d="M6 8V6a6 6 0 0 1 12 0v2"/><rect x="3" y="8" width="18" height="13" rx="2"/></svg></span>
+          <span class="font-display text-[15px] text-eye-charcoal">Concierge Shopping</span>
+        </button>
 
+        <button type="button" class="service-option flex items-center gap-3 rounded-2xl border border-eye-gray-line bg-white px-5 py-4 text-left transition flex-shrink-0 w-[240px] lg:w-full" id="relocation-support" data-service="relocation-support" role="tab" aria-selected="false" aria-controls="service-panel-relocation-support">
+          <span class="service-option-icon h-10 w-10 rounded-full bg-eye-gray flex items-center justify-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0EA55A" stroke-width="1.5"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></span>
+          <span class="font-display text-[15px] text-eye-charcoal">Relocation Support</span>
+        </button>
+
+      </div>
+
+      <!-- Service detail panels -->
+      <div class="service-detail-panels rounded-[28px] border border-eye-gray-line bg-white p-8 sm:p-10 shadow-[0_20px_80px_-48px_rgba(18,24,26,0.22)]">
+
+        <div id="service-panel-tours-travel" class="service-detail-panel is-active is-visible" aria-hidden="false" role="tabpanel">
+          <p class="font-mono text-[11px] uppercase tracking-[0.18em] text-eye-green mb-3">Tours &amp; Travel</p>
+          <h3 class="font-display text-2xl sm:text-[32px] leading-tight text-eye-charcoal mb-4">Journeys built around how you actually want to move.</h3>
+          <p class="text-eye-charcoal/65 leading-relaxed mb-4">Every itinerary starts with a conversation, not a template. We map out where you're going, how much time you actually have between meetings or flights, and the pace that keeps a trip enjoyable instead of exhausting. From weekend getaways along the coast to multi-city circuits spanning Kenya, Nigeria, and South Africa, our travel desk builds the route, books the stays, and lines up the excursions so nothing collides with anything else on your calendar.</p>
+          <p class="text-eye-charcoal/65 leading-relaxed mb-6">We work with vetted local guides and operators who know the terrain and the small details that turn a good trip into a memorable one, whether that's a sunrise game drive or a quiet afternoon at a site most guidebooks miss. If plans shift mid-trip, a delayed flight, a closed road, a change of heart, we adjust bookings in real time. Payment is arranged only after you approve the full plan, with every quote itemized upfront.</p>
+          <ul class="space-y-2 text-sm text-eye-charcoal/70 mb-8">
+            <li>• Custom itineraries built around your actual schedule</li>
+            <li>• Vetted local guides and excursion operators</li>
+            <li>• Real-time rebooking if plans change mid-trip</li>
+            <li>• Coverage across Kenya, Nigeria, and South Africa</li>
+            <li>• Itemized, pre-approved quotes with no surprise costs</li>
+          </ul>
+          <a href="mailto:info@errandeye.com?subject=Tours%20%26%20Travel%20Enquiry&body=Hi%20Errand%20Eye%2C%0A%0AI%27d%20like%20help%20planning%3A%0A%0ADestination%3A%20%0ADates%3A%20%0ANumber%20of%20travelers%3A%20%0A%0AThanks!" class="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold btn-primary">Plan My Trip</a>
+        </div>
+
+        <div id="service-panel-hospitality-support" class="service-detail-panel" aria-hidden="true" role="tabpanel">
+          <p class="font-mono text-[11px] uppercase tracking-[0.18em] text-eye-blue mb-3">Hospitality Support</p>
+          <h3 class="font-display text-2xl sm:text-[32px] leading-tight text-eye-charcoal mb-4">Guest experiences handled before your guests notice a gap.</h3>
+          <p class="text-eye-charcoal/65 leading-relaxed mb-4">Hospitality support covers everything that happens between booking a room and actually feeling welcome in it. We secure accommodation and restaurant reservations that match the occasion, negotiate on availability during peak periods, and confirm details directly with venues so nothing is left to a booking engine's best guess.</p>
+          <p class="text-eye-charcoal/65 leading-relaxed mb-6">For visiting executives, family events, or milestone celebrations, we coordinate welcome arrangements, dietary requirements, and special requests in advance. When something goes sideways at check-in, an overbooked hotel, a missed dietary note, we're already on the phone resolving it before the guest has to raise it. We also handle the smaller touches: welcome gifts, transport between venues, and briefing on-the-ground contacts.</p>
+          <ul class="space-y-2 text-sm text-eye-charcoal/70 mb-8">
+            <li>• Direct-to-venue reservation confirmation, not just booking-engine holds</li>
+            <li>• Dietary, accessibility, and special-occasion coordination</li>
+            <li>• On-the-ground issue resolution before guests notice a problem</li>
+            <li>• Welcome gifts and arrival touches arranged in advance</li>
+            <li>• Multi-stop hosting coordination for visiting groups</li>
+          </ul>
+          <a href="mailto:info@errandeye.com?subject=Hospitality%20Support%20Enquiry&body=Hi%20Errand%20Eye%2C%0A%0AI%27d%20like%20help%20arranging%3A%0A%0AOccasion%3A%20%0ADates%3A%20%0AGuest%20count%3A%20%0A%0AThanks!" class="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold btn-primary">Arrange Guest Care</a>
+        </div>
+
+        <div id="service-panel-airport-transfers" class="service-detail-panel" aria-hidden="true" role="tabpanel">
+          <p class="font-mono text-[11px] uppercase tracking-[0.18em] text-eye-green mb-3">Airport Transfers</p>
+          <h3 class="font-display text-2xl sm:text-[32px] leading-tight text-eye-charcoal mb-4">Pickups timed to your flight, not the clock.</h3>
+          <p class="text-eye-charcoal/65 leading-relaxed mb-4">Airport transfers sound simple until a flight lands two hours late and there's no one tracking it. We monitor live flight status for every pickup, so drivers arrive when you actually land, not when the original schedule said you would. Vehicles are matched to the trip, executive cars for business travel, larger vehicles for families with luggage.</p>
+          <p class="text-eye-charcoal/65 leading-relaxed mb-6">Meet-and-greet service is available at arrivals for travelers who'd rather not navigate an unfamiliar terminal alone. Departures get the same precision: pickup times are calculated backward from check-in and security windows, with buffer built in for traffic. For recurring travelers, we set up standing arrangements so bookings don't need re-confirming trip by trip.</p>
+          <ul class="space-y-2 text-sm text-eye-charcoal/70 mb-8">
+            <li>• Live flight tracking for accurate pickup timing</li>
+            <li>• Meet-and-greet service at arrivals</li>
+            <li>• Vehicle selection matched to trip type and group size</li>
+            <li>• Departure timing calculated for traffic and security windows</li>
+            <li>• Standing arrangements available for recurring travelers</li>
+          </ul>
+          <a href="mailto:info@errandeye.com?subject=Airport%20Transfer%20Booking&body=Hi%20Errand%20Eye%2C%0A%0AI%27d%20like%20to%20book%20a%20transfer%3A%0A%0AFlight%20number%3A%20%0ADate%2FTime%3A%20%0APickup%2FDrop-off%3A%20%0A%0AThanks!" class="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold btn-primary">Book a Transfer</a>
+        </div>
+
+        <div id="service-panel-visa-assistance" class="service-detail-panel" aria-hidden="true" role="tabpanel">
+          <p class="font-mono text-[11px] uppercase tracking-[0.18em] text-eye-blue mb-3">Visa Assistance</p>
+          <h3 class="font-display text-2xl sm:text-[32px] leading-tight text-eye-charcoal mb-4">Documentation handled with someone checking the fine print.</h3>
+          <p class="text-eye-charcoal/65 leading-relaxed mb-4">Visa and travel document requirements change often and vary by nationality, destination, and purpose of travel, and getting a detail wrong can mean a rejected application or a missed departure date. We review what's actually required, gather supporting documentation, and complete applications correctly the first time.</p>
+          <p class="text-eye-charcoal/65 leading-relaxed mb-6">Passport renewals are handled with the same care, particularly useful when an expiring passport turns up close to a departure date. If a document is lost or stolen while traveling, we coordinate emergency replacement with the relevant embassy. We also track visa validity windows for frequent travelers, flagging renewals before they become urgent.</p>
+          <ul class="space-y-2 text-sm text-eye-charcoal/70 mb-8">
+            <li>• Destination-specific visa requirement review</li>
+            <li>• Embassy appointment and application coordination</li>
+            <li>• Expedited passport renewal support</li>
+            <li>• Lost or stolen document emergency assistance</li>
+            <li>• Ongoing visa validity tracking for frequent travelers</li>
+          </ul>
+          <a href="mailto:info@errandeye.com?subject=Visa%20Assistance%20Enquiry&body=Hi%20Errand%20Eye%2C%0A%0AI%27d%20like%20help%20with%3A%0A%0ANationality%3A%20%0ADestination%3A%20%0ATravel%20date%3A%20%0A%0AThanks!" class="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold btn-primary">Start My Application</a>
+        </div>
+
+        <div id="service-panel-corporate-travel" class="service-detail-panel" aria-hidden="true" role="tabpanel">
+          <p class="font-mono text-[11px] uppercase tracking-[0.18em] text-eye-green mb-3">Corporate Travel</p>
+          <h3 class="font-display text-2xl sm:text-[32px] leading-tight text-eye-charcoal mb-4">One coordinated program instead of ten individual bookings.</h3>
+          <p class="text-eye-charcoal/65 leading-relaxed mb-4">Corporate travel gets complicated fast once more than one traveler is involved, different itineraries, cost centers, and approval chains, all needing to stay consistent with company policy. We manage travel programs as a single coordinated effort, tracking every traveler's itinerary, accommodation, and transport from one point of contact.</p>
+          <p class="text-eye-charcoal/65 leading-relaxed mb-6">Bookings follow your company's policy on budget, preferred vendors, and approvals, and centralized itinerary management means anyone on your team can get a status update without chasing emails. For conferences, offsites, and client visits, we sequence bookings and flag conflicts before they become problems, with reporting available for finance and compliance teams.</p>
+          <ul class="space-y-2 text-sm text-eye-charcoal/70 mb-8">
+            <li>• Centralized management across multi-traveler itineraries</li>
+            <li>• Company travel policy and vendor compliance</li>
+            <li>• Conflict detection across overlapping schedules</li>
+            <li>• Consolidated reporting for finance and compliance</li>
+            <li>• One point of contact for the entire travel program</li>
+          </ul>
+          <a href="mailto:info@errandeye.com?subject=Corporate%20Travel%20Program%20Enquiry&body=Hi%20Errand%20Eye%2C%0A%0AWe%27d%20like%20to%20set%20up%20a%20travel%20program%3A%0A%0ACompany%3A%20%0ATeam%20size%3A%20%0ATypical%20trip%20needs%3A%20%0A%0AThanks!" class="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold btn-primary">Set Up Our Program</a>
+        </div>
+
+        <div id="service-panel-logistics-errands" class="service-detail-panel" aria-hidden="true" role="tabpanel">
+          <p class="font-mono text-[11px] uppercase tracking-[0.18em] text-eye-blue mb-3">Logistics &amp; Errands</p>
+          <h3 class="font-display text-2xl sm:text-[32px] leading-tight text-eye-charcoal mb-4">The tasks that eat your day, handled by someone who follows through.</h3>
+          <p class="text-eye-charcoal/65 leading-relaxed mb-4">Some tasks don't need a specialist, they just need someone reliable to actually do them and confirm they're done. Logistics and errand support covers courier runs, document pickups and drop-offs, bill payments, and the small obligations that pile up when there's no time to run them yourself.</p>
+          <p class="text-eye-charcoal/65 leading-relaxed mb-6">Requests can be one-off, an urgent document that needs to cross town today, or a standing weekly arrangement for a business. Every task is confirmed on completion, with proof of delivery when relevant, so there's no ambiguity about whether it actually got done. Same-day service is available, and we're upfront about what's realistically achievable in a given window.</p>
+          <ul class="space-y-2 text-sm text-eye-charcoal/70 mb-8">
+            <li>• Same-day courier and document handling</li>
+            <li>• Bill payments and routine task management</li>
+            <li>• Recurring or standing errand arrangements for businesses</li>
+            <li>• Completion confirmation with proof of delivery</li>
+            <li>• No task minimum, small requests are welcome</li>
+          </ul>
+          <a href="mailto:info@errandeye.com?subject=Logistics%20%26%20Errand%20Request&body=Hi%20Errand%20Eye%2C%0A%0AI%27d%20like%20help%20with%20this%20task%3A%0A%0ATask%20details%3A%20%0ADeadline%3A%20%0A%0AThanks!" class="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold btn-primary">Hand Off a Task</a>
+        </div>
+
+        <div id="service-panel-event-retreat-planning" class="service-detail-panel" aria-hidden="true" role="tabpanel">
+          <p class="font-mono text-[11px] uppercase tracking-[0.18em] text-eye-green mb-3">Event &amp; Retreat Planning</p>
+          <h3 class="font-display text-2xl sm:text-[32px] leading-tight text-eye-charcoal mb-4">Group logistics managed so the event feels effortless on the day.</h3>
+          <p class="text-eye-charcoal/65 leading-relaxed mb-4">Planning something for a group, a corporate retreat, a family celebration, a team offsite, means coordinating venues, catering, transport, and timing across everyone attending, and a single missed detail can throw off the whole day. We handle venue sourcing based on your group size, budget, and tone, negotiate rates, and confirm every detail directly with the venue.</p>
+          <p class="text-eye-charcoal/65 leading-relaxed mb-6">Group movement is coordinated end to end: arrivals, transport between venues, and departures are scheduled so no one is left waiting around. On-site support is available for events that need someone managing logistics in real time, checking guests in and troubleshooting vendor issues, so the host can actually participate instead of running the event themselves.</p>
+          <ul class="space-y-2 text-sm text-eye-charcoal/70 mb-8">
+            <li>• Venue sourcing matched to group size and budget</li>
+            <li>• End-to-end group transport and arrival coordination</li>
+            <li>• On-site logistics support during the event</li>
+            <li>• Vendor negotiation and direct venue confirmation</li>
+            <li>• Scaled for both small retreats and large gatherings</li>
+          </ul>
+          <a href="mailto:info@errandeye.com?subject=Event%20%26%20Retreat%20Planning%20Enquiry&body=Hi%20Errand%20Eye%2C%0A%0AWe%27d%20like%20help%20planning%20an%20event%3A%0A%0AEvent%20type%3A%20%0AGroup%20size%3A%20%0ADates%3A%20%0A%0AThanks!" class="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold btn-primary">Plan Our Event</a>
+        </div>
+
+        <div id="service-panel-concierge-shopping" class="service-detail-panel" aria-hidden="true" role="tabpanel">
+          <p class="font-mono text-[11px] uppercase tracking-[0.18em] text-eye-blue mb-3">Concierge Shopping</p>
+          <h3 class="font-display text-2xl sm:text-[32px] leading-tight text-eye-charcoal mb-4">Personal sourcing handled with discretion and good judgment.</h3>
+          <p class="text-eye-charcoal/65 leading-relaxed mb-4">Concierge shopping is for purchases that need a personal touch, or simply someone else's time: gift sourcing for an occasion that matters, personal shopping for someone who can't get to the shops, or recurring errands easier to hand off than to keep managing. We source gifts based on the occasion, recipient, and budget, handling presentation and delivery so the result feels thoughtful rather than last-minute.</p>
+          <p class="text-eye-charcoal/65 leading-relaxed mb-6">Personal purchases are handled with clear communication throughout, confirming sizing, preferences, and budget before buying anything. Requests involving sensitive or private circumstances are handled with the same discretion we apply across the business. Delivery can go directly to the recipient or back to you, whichever suits the occasion.</p>
+          <ul class="space-y-2 text-sm text-eye-charcoal/70 mb-8">
+            <li>• Occasion-based gift sourcing and presentation</li>
+            <li>• Personal shopping with confirmed sizing and preferences</li>
+            <li>• Discreet handling of private or sensitive requests</li>
+            <li>• Recurring errand arrangements for busy schedules</li>
+            <li>• Delivery direct to recipient or back to you</li>
+          </ul>
+          <a href="mailto:info@errandeye.com?subject=Concierge%20Shopping%20Request&body=Hi%20Errand%20Eye%2C%0A%0AI%27d%20like%20help%20sourcing%3A%0A%0AItem%2Foccasion%3A%20%0ABudget%3A%20%0ADeadline%3A%20%0A%0AThanks!" class="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold btn-primary">Request Personal Shopping</a>
+        </div>
+
+        <div id="service-panel-relocation-support" class="service-detail-panel" aria-hidden="true" role="tabpanel">
+          <p class="font-mono text-[11px] uppercase tracking-[0.18em] text-eye-green mb-3">Relocation Support</p>
+          <h3 class="font-display text-2xl sm:text-[32px] leading-tight text-eye-charcoal mb-4">A steadier landing for people arriving somewhere new.</h3>
+          <p class="text-eye-charcoal/65 leading-relaxed mb-4">Moving to a new city or country involves a long list of unfamiliar decisions, where to live, how the neighborhoods differ, what the first few weeks actually require, made harder by the fact that you're often making them before you've set foot in the place. We help with housing search support, matching neighborhoods to your budget, commute, and lifestyle, and coordinating viewings so you're not judging a new city from photos alone.</p>
+          <p class="text-eye-charcoal/65 leading-relaxed mb-6">Orientation and setup support covers the practical groundwork of a new base: understanding local services and knowing who to call before you actually need to know. During the first few weeks, when small issues tend to surface, we stay available as a point of contact so new arrivals aren't figuring out an unfamiliar system alone.</p>
+          <ul class="space-y-2 text-sm text-eye-charcoal/70 mb-8">
+            <li>• Neighborhood and housing search support</li>
+            <li>• Viewing coordination before and after arrival</li>
+            <li>• Practical orientation for local services and essentials</li>
+            <li>• Ongoing point of contact through the first weeks</li>
+            <li>• Support for individuals, families, and relocating teams</li>
+          </ul>
+          <a href="mailto:info@errandeye.com?subject=Relocation%20Support%20Enquiry&body=Hi%20Errand%20Eye%2C%0A%0AI%27d%20like%20help%20relocating%3A%0A%0AMoving%20to%3A%20%0ADate%3A%20%0AHousehold%20size%3A%20%0A%0AThanks!" class="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold btn-primary">Plan My Relocation</a>
+        </div>
+
+      </div>
     </div>
   </div>
 </section>
-
 <!-- ============================================================
      FINAL CTA
      ============================================================ -->
@@ -313,18 +336,24 @@
       Whatever it is,<br><span class="italic text-gradient-brand">just ask.</span>
     </h2>
     <p class="reveal max-w-xl mx-auto text-eye-cream/70 leading-relaxed mb-12">
-      Reach out today to request a custom quotation or book a consultation. We're only one message away.
+      Send the task, destination, date, and any must-haves. We usually respond within 18 minutes during business hours with the next best step.
     </p>
 
     <div class="reveal flex flex-wrap items-center justify-center gap-4 mb-16">
       <a href="https://wa.me/2348164766193" data-contact="whatsapp-link" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full px-8 py-4 text-[15px] font-medium btn-primary">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.5 0-10 4.5-10 10 0 1.77.46 3.44 1.27 4.89L2 22l5.25-1.28A9.96 9.96 0 0 0 12.04 22c5.5 0 10-4.5 10-10s-4.5-10-10-10zm5.7 14.2c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.13.11-1.83-.12-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.8-4.16-4.94-4.35-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.29.58-.36.78-.36h.56c.18 0 .42-.02.65.5.24.53.8 1.87.87 2 .07.14.11.3.02.48-.09.19-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.06.95 1.96 1.24 2.24 1.38.28.14.44.12.6-.07.16-.19.7-.82.89-1.1.19-.28.37-.23.62-.14.25.09 1.6.75 1.87.89.28.14.46.21.53.32.07.12.07.65-.17 1.32z"/></svg>
-        Chat on WhatsApp
+        Start on WhatsApp
       </a>
       <a href="mailto:info@errandeye.com?subject=Quote%20Request&body=Hi%20Errand%20Eye%2C%0A%0AI%27d%20like%20a%20quote%20for%3A%0A%0AService%20needed%3A%20%0ADetails%3A%20%0A%0AThanks!" class="inline-flex items-center gap-2 rounded-full px-8 py-4 text-[15px] font-medium btn-ghost">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-        Request a Quote
+        Email the Brief
       </a>
+    </div>
+
+    <div class="reveal cta-assurance mx-auto mb-14 max-w-3xl">
+      <span>Quote before payment</span>
+      <span>Confidential handling</span>
+      <span>Kenya, Nigeria &amp; South Africa</span>
     </div>
 
 
@@ -398,11 +427,11 @@
       <div class="lg:col-span-2">
         <p class="footer-col-heading">Services</p>
         <ul class="space-y-2.5">
-          <li><a href="services.html" class="footer-link">Tours &amp; Travel</a></li>
-          <li><a href="services.html" class="footer-link">Hospitality Support</a></li>
-          <li><a href="services.html" class="footer-link">Logistics</a></li>
-          <li><a href="services.html" class="footer-link">Airport Transfers</a></li>
-          <li><a href="services.html" class="footer-link">Visa Assistance</a></li>
+          <li><a href="services.html#tours-travel" class="footer-link">Tours &amp; Travel</a></li>
+          <li><a href="services.html#hospitality-support" class="footer-link">Hospitality Support</a></li>
+          <li><a href="services.html#logistics-errands" class="footer-link">Logistics</a></li>
+          <li><a href="services.html#airport-transfers" class="footer-link">Airport Transfers</a></li>
+          <li><a href="services.html#visa-assistance" class="footer-link">Visa Assistance</a></li>
         </ul>
       </div>
 
@@ -458,7 +487,7 @@
     <div class="pt-8 lg:pt-10 flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-8 text-xs text-eye-cream/45 font-mono text-center lg:text-left">
       <p>&copy; <span id="year"></span> Errand Eye Limited. All rights reserved.</p>
       <div class="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
-        <a href="#" class="hover:text-eye-cream transition-colors">Privacy Policy</a>
+        <a href="about.html#privacy" class="hover:text-eye-cream transition-colors">Privacy Policy</a>
         <a href="about.html#terms" class="hover:text-eye-cream transition-colors">Terms &amp; Conditions</a>
         <span class="footer-credit">Designed by <a href="https://tobyknows.github.io" target="_blank" rel="noopener noreferrer" class="footer-credit-link">TBKNS HUB</a></span>
       </div>

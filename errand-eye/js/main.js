@@ -100,6 +100,50 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /* ---------------- Service selector: show one service detail at a time ---------------- */
+  const serviceButtons = document.querySelectorAll('.service-option');
+  const servicePanels = document.querySelectorAll('.service-detail-panel');
+
+  if (serviceButtons.length && servicePanels.length) {
+    const activateService = (button) => {
+      const target = button.dataset.service;
+
+      serviceButtons.forEach((item) => {
+        const isActive = item === button;
+        item.classList.toggle('is-active', isActive);
+        item.setAttribute('aria-selected', String(isActive));
+      });
+
+      servicePanels.forEach((panel) => {
+        const isActive = panel.id === `service-panel-${target}`;
+        if (isActive) {
+          panel.classList.remove('is-visible');
+          panel.classList.add('is-active');
+          panel.setAttribute('aria-hidden', 'false');
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => panel.classList.add('is-visible'));
+          });
+        } else {
+          panel.classList.remove('is-active', 'is-visible');
+          panel.setAttribute('aria-hidden', 'true');
+        }
+      });
+    };
+
+    serviceButtons.forEach((button) => {
+      button.addEventListener('click', () => activateService(button));
+    });
+
+    const hashTarget = window.location.hash.replace('#', '');
+    const hashButton = hashTarget && Array.from(serviceButtons).find((item) => item.dataset.service === hashTarget);
+    if (hashButton) {
+      activateService(hashButton);
+      window.requestAnimationFrame(() => {
+        hashButton.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
+  }
+
   /* ---------------- Sticky FAB stack: hide on scroll down, show on scroll up ---------------- */
   const fabStack = document.getElementById('fab-stack');
   let lastFabY = window.scrollY;
