@@ -737,36 +737,40 @@ h3 {
 }
 .gallery-item:hover .gallery-veil { opacity: 0.15; }
 
-/* Caption scrim + label, revealed on hover for an editorial/luxury feel */
+/* Caption scrim + label, kept readable without stacking on top of the existing card copy */
 .gallery-item::before {
   content: "";
   position: absolute;
   inset: auto 0 0 0;
-  height: 55%;
+  height: 62%;
   background: linear-gradient(180deg, transparent, rgba(18,24,26,0.82));
   opacity: 0;
   transform: translateY(6px);
   transition: opacity 0.5s var(--ease-signature), transform 0.5s var(--ease-signature);
   pointer-events: none;
 }
-.gallery-item::after {
-  content: attr(data-caption);
+.gallery-item > div:not(.gallery-veil) {
   position: absolute;
-  left: 1.25rem;
-  right: 1.25rem;
-  bottom: 1.1rem;
-  color: var(--eye-cream);
-  font-family: 'Manrope', sans-serif;
-  font-weight: 600;
-  font-size: 0.8rem;
-  letter-spacing: 0.02em;
-  opacity: 0;
-  transform: translateY(8px);
-  transition: opacity 0.5s var(--ease-signature) 0.05s, transform 0.5s var(--ease-signature) 0.05s;
-  pointer-events: none;
+  inset-inline: 1rem;
+  bottom: 1rem;
+  padding: 0.85rem 0.95rem;
+  border-radius: 0.95rem;
+  background: linear-gradient(180deg, rgba(18,24,26,0.18), rgba(18,24,26,0.82));
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 10px 24px -16px rgba(0,0,0,0.45);
+  z-index: 1;
 }
-.gallery-item:hover::before,
-.gallery-item:hover::after {
+.gallery-item > div:not(.gallery-veil) p {
+  line-height: 1.5;
+  text-wrap: balance;
+  max-width: 100%;
+  font-size: 0.9rem;
+}
+.gallery-item::after {
+  content: none;
+}
+.gallery-item:hover::before {
   opacity: 1;
   transform: translateY(0);
 }
