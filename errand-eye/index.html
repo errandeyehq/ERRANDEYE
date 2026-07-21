@@ -13,7 +13,7 @@
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="assets/images/logo-mark.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
-<link rel="preload" as="image" href="assets/images/hero/hero-aircraft-sunset.jpg" fetchpriority="high">
+<link rel="preload" as="video" href="assets/videos/video1.MP4" type="video/mp4" fetchpriority="high">
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -104,28 +104,23 @@
 <!-- ============================================================
      HERO
      ============================================================ -->
-<section id="hero" class="hero-canvas grain relative min-h-[78vh] sm:min-h-screen flex items-end overflow-hidden text-eye-cream">
+<section id="hero" class="hero-canvas grain relative min-h-screen flex items-end overflow-hidden text-eye-cream">
 
-  <div id="hero-parallax" class="hero-image-stack absolute inset-0" aria-hidden="true">
-    <img class="hero-slide is-active" src="assets/images/hero/hero-aircraft-sunset.jpg" alt="" style="object-position: center 60%;" fetchpriority="high">
-
-    <img class="hero-slide" src="assets/images/hero/0da077556d9c6a3a051782d8f7d0fadb.jpg" alt="" style="object-position: center 35%;">
-
-    <img class="hero-slide" src="assets/images/hero/1ee9c1e7c32af2b642f038b9e7885226.jpg" alt="" style="object-position: center 30%;">
-
-    <img class="hero-slide" src="assets/images/hero/39be13a46c0e4d7d2a5b0ee116c44946.jpg" alt="" style="object-position: center 40%;">
-
-    <img class="hero-slide" src="assets/images/hero/4e3902952d2e7a61c5bd49ea150e6012.jpg" alt="" style="object-position: center 55%;">
-
-    <img class="hero-slide" src="assets/images/hero/hero-chauffeur.jpg" alt="" style="object-position: center 50%;">
+  <div id="hero-parallax" class="hero-video-stack absolute inset-0" aria-hidden="true">
+    <video class="hero-film is-active" data-hero-film autoplay muted loop playsinline webkit-playsinline preload="auto" poster="assets/images/hero/hero-aircraft-sunset.jpg">
+      <source src="assets/videos/video1.MP4" type="video/mp4">
+    </video>
+    <video class="hero-film" data-hero-film muted playsinline webkit-playsinline preload="auto" poster="assets/images/hero/hero-aircraft-sunset.jpg">
+      <source src="assets/videos/video2.MP4" type="video/mp4">
+    </video>
   </div>
-  <div class="absolute inset-0 bg-gradient-to-t from-eye-charcoal via-eye-charcoal/60 to-eye-charcoal/35"></div>
-  <div class="absolute inset-0 bg-eye-charcoal/25"></div>
+  <div class="absolute inset-0 bg-gradient-to-t from-eye-charcoal via-eye-charcoal/58 to-eye-charcoal/30"></div>
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_18%_72%,rgba(14,165,90,0.22),transparent_34%),linear-gradient(90deg,rgba(18,24,26,0.72),rgba(18,24,26,0.18)_58%,rgba(18,24,26,0.42))]"></div>
   <div class="hero-sheen absolute inset-x-0 top-0 h-40" aria-hidden="true"></div>
 
-  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 pt-32 pb-24 lg:pb-28 w-full">
-    <div class="mb-8 flex flex-col gap-2.5 sm:gap-2 sm:block">
-      <div class="flex flex-wrap items-center gap-x-2 gap-y-1.5 font-mono text-[11px] sm:text-[13px] uppercase tracking-[0.16em] sm:tracking-[0.2em] text-eye-cream/70">
+  <div class="hero-content relative z-10 max-w-7xl mx-auto px-6 lg:px-10 pt-32 pb-20 sm:pb-24 lg:pb-28 w-full">
+    <div class="hero-kicker mb-7 sm:mb-8 flex flex-col gap-2.5 sm:gap-2 sm:block">
+      <div class="flex flex-wrap items-center gap-x-2 gap-y-1.5 font-mono text-[10px] sm:text-[13px] uppercase tracking-[0.15em] sm:tracking-[0.2em] text-eye-cream/72">
         <span>Tours &amp; Travel</span>
         <span class="text-eye-cream/30">·</span>
         <span>Hospitality</span>
@@ -134,7 +129,7 @@
         <span class="text-eye-cream/30">·</span>
         <span>Concierge</span>
       </div>
-      <div class="flex flex-wrap items-center gap-x-2 gap-y-1.5 font-mono text-[11px] sm:text-[13px] uppercase tracking-[0.16em] sm:tracking-[0.2em]">
+      <div class="flex flex-wrap items-center gap-x-2 gap-y-1.5 font-mono text-[10px] sm:text-[13px] uppercase tracking-[0.15em] sm:tracking-[0.2em]">
         <span class="text-eye-green-light">Kenya</span>
         <span class="text-eye-cream/30">·</span>
         <span class="text-eye-blue-light">Nigeria</span>
@@ -143,18 +138,18 @@
       </div>
     </div>
 
-    <h1 class="hero-headline font-display font-normal leading-[0.98] text-[15vw] sm:text-[9vw] lg:text-[6.4vw] tracking-tight max-w-5xl">
+    <h1 class="hero-headline hero-title font-display font-normal leading-[0.9] text-[17vw] sm:text-[9vw] lg:text-[6.4vw] tracking-tight max-w-5xl">
       <span class="word" style="animation-delay:0.05s">Any</span>
       <span class="word" style="animation-delay:0.15s">task.</span>
       <span class="word text-gradient-brand italic" style="animation-delay:0.28s">Just</span>
       <span class="word text-gradient-brand italic" style="animation-delay:0.38s">ask.</span>
     </h1>
 
-    <p class="hero-headline mt-10 sm:mt-12 max-w-xl text-lg sm:text-xl text-eye-cream/75 leading-[1.7] font-light word" style="animation-delay:0.55s">
+    <p class="hero-copy hero-headline mt-8 sm:mt-12 max-w-xl text-base sm:text-xl text-eye-cream/78 leading-[1.65] sm:leading-[1.7] font-light word" style="animation-delay:0.55s">
       Premium travel, hospitality, and logistics support for teams, travelers, and busy professionals across Africa. Send one brief, get a clear quote, and let us coordinate the details.
     </p>
 
-    <div class="hero-headline mt-9 sm:mt-10 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 word" style="animation-delay:0.68s">
+    <div class="hero-actions hero-headline mt-8 sm:mt-10 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 word" style="animation-delay:0.68s">
       <a href="#contact" class="group inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 text-[15px] font-medium btn-primary">
         Get a Quote
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" class="transition-transform duration-300 group-hover:translate-x-1"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
@@ -164,7 +159,7 @@
       </a>
     </div>
 
-    <div class="hero-headline mt-8 sm:mt-12 pt-6 sm:pt-0 border-t border-eye-cream/10 sm:border-0 flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-3 word" style="animation-delay:0.8s">
+    <div class="hero-audience hero-headline mt-7 sm:mt-12 pt-5 sm:pt-0 border-t border-eye-cream/10 sm:border-0 flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-3 word" style="animation-delay:0.8s">
       <span class="font-mono text-[11px] uppercase tracking-[0.18em] text-eye-cream/50 sm:mr-1">For</span>
       <div class="flex flex-wrap gap-2.5 sm:gap-3">
         <span class="hero-chip">Corporate teams</span>
@@ -173,14 +168,6 @@
         <span class="hero-chip">Founders &amp; executives</span>
       </div>
     </div>
-  </div>
-
-  <div id="hero-dots" class="absolute bottom-9 left-6 lg:left-10 z-10 flex items-center gap-2" aria-label="Hero image slides">
-    <button class="hero-dot is-active" type="button" data-slide="0" aria-label="Show hero image 1"></button>
-    <button class="hero-dot" type="button" data-slide="1" aria-label="Show hero image 2"></button>
-    <button class="hero-dot" type="button" data-slide="2" aria-label="Show hero image 3"></button>
-    <button class="hero-dot" type="button" data-slide="3" aria-label="Show hero image 4"></button>
-    <button class="hero-dot" type="button" data-slide="4" aria-label="Show hero image 5"></button>
   </div>
 
   <a href="#stats" class="scroll-indicator absolute bottom-8 right-6 lg:right-10 z-10 hidden sm:flex flex-col items-center gap-3 text-eye-cream/55" aria-label="Scroll to explore">
@@ -262,16 +249,21 @@
     <div class="services-glow services-glow-b"></div>
   </div>
   <div class="relative max-w-7xl mx-auto px-6 lg:px-10">
-    <div class="reveal flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-20">
-      <div class="max-w-2xl">
+    <div class="reveal services-intro-grid grid lg:grid-cols-12 gap-8 lg:gap-12 lg:items-end mb-20">
+      <div class="lg:col-span-7 max-w-2xl">
         <p class="font-mono text-[12px] uppercase tracking-[0.2em] text-eye-blue mb-4">What We Handle</p>
         <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.12] tracking-tight">
           Nine service lines. <span class="italic text-eye-green">One point of contact.</span>
         </h2>
       </div>
-      <p class="max-w-sm text-eye-charcoal/55 leading-[1.75]">
-        Every request, however small or complex, moves through the same trusted channel. You ask once. We coordinate everything else.
-      </p>
+      <div class="lg:col-span-5 services-intro-media">
+        <p class="max-w-sm text-eye-charcoal/55 leading-[1.75] mb-5">
+          Every request, however small or complex, moves through the same trusted channel. You ask once. We coordinate everything else.
+        </p>
+        <figure class="services-intro-image relative overflow-hidden">
+          <img src="assets/images/hero/hero-terminal.jpg" alt="Premium airport and travel coordination" class="w-full h-full object-cover" loading="lazy">
+        </figure>
+      </div>
     </div>
 
     <div class="reveal-stagger grid sm:grid-cols-2 lg:grid-cols-3 gap-6">

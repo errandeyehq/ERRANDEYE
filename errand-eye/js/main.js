@@ -28,34 +28,78 @@ document.addEventListener('DOMContentLoaded', () => {
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  /* ---------------- Hero image slider ---------------- */
-  const heroSlides = [...document.querySelectorAll('.hero-slide')];
-  const heroDots = [...document.querySelectorAll('.hero-dot')];
-  let heroSlideIndex = 0;
-  let heroSlideTimer;
+  /* ---------------- Hero cinematic video handoff ---------------- */
+  const heroFilms = [...document.querySelectorAll('[data-hero-film]')];
+  let activeHeroFilm = 0;
+  let heroFilmTransitioning = false;
 
-  function showHeroSlide(index) {
-    if (!heroSlides.length) return;
-    heroSlideIndex = (index + heroSlides.length) % heroSlides.length;
-    heroSlides.forEach((slide, i) => slide.classList.toggle('is-active', i === heroSlideIndex));
-    heroDots.forEach((dot, i) => dot.classList.toggle('is-active', i === heroSlideIndex));
-  }
+  const playVideo = (video) => {
+    if (!video) return;
+    video.muted = true;
+    video.playsInline = true;
+    video.setAttribute('playsinline', '');
+    video.setAttribute('webkit-playsinline', '');
+    const playPromise = video.play();
+    if (playPromise && typeof playPromise.catch === 'function') {
+      playPromise.catch(() => {});
+    }
+  };
 
-  if (heroSlides.length) {
-    const startHeroSlides = () => {
-      clearInterval(heroSlideTimer);
-      heroSlideTimer = setInterval(() => showHeroSlide(heroSlideIndex + 1), 5500);
-    };
+  const resetVideoToStart = (video) => {
+    if (!video) return;
+    try {
+      video.currentTime = 0.01;
+    } catch (error) {
+      video.addEventListener('loadedmetadata', () => {
+        try { video.currentTime = 0.01; } catch (_) {}
+      }, { once: true });
+    }
+  };
 
-    heroDots.forEach(dot => {
-      dot.addEventListener('click', () => {
-        showHeroSlide(Number(dot.dataset.slide || 0));
-        startHeroSlides();
+  const activateHeroFilm = (nextIndex) => {
+    if (heroFilmTransitioning || !heroFilms.length) return;
+    heroFilmTransitioning = true;
+
+    const current = heroFilms[activeHeroFilm];
+    const next = heroFilms[nextIndex % heroFilms.length];
+    if (!current || !next || current === next) {
+      heroFilmTransitioning = false;
+      return;
+    }
+
+    resetVideoToStart(next);
+    playVideo(next);
+    next.classList.add('is-active');
+
+    window.setTimeout(() => {
+      current.classList.remove('is-active');
+      window.setTimeout(() => {
+        current.pause();
+        resetVideoToStart(current);
+        activeHeroFilm = nextIndex % heroFilms.length;
+        heroFilmTransitioning = false;
+      }, 900);
+    }, 120);
+  };
+
+  if (heroFilms.length) {
+    heroFilms.forEach((film, index) => {
+      film.loop = heroFilms.length === 1;
+      film.muted = true;
+      film.playsInline = true;
+      film.addEventListener('timeupdate', () => {
+        const remaining = film.duration - film.currentTime;
+        if (index === activeHeroFilm && Number.isFinite(remaining) && remaining <= 1.35) {
+          activateHeroFilm(activeHeroFilm + 1);
+        }
+      });
+      film.addEventListener('ended', () => {
+        if (index === activeHeroFilm) activateHeroFilm(activeHeroFilm + 1);
       });
     });
 
-    showHeroSlide(0);
-    startHeroSlides();
+    heroFilms[0].classList.add('is-active');
+    playVideo(heroFilms[0]);
   }
 
   /* ---------------- Nav: glass state + hide on scroll down ---------------- */
