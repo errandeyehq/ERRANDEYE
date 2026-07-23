@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------------- Hero cinematic video handoff ---------------- */
   const heroFilms = [...document.querySelectorAll('[data-hero-film]')];
+  const heroDots = [...document.querySelectorAll('[data-hero-dot]')];
   let activeHeroFilm = 0;
   let heroFilmTransitioning = false;
 
@@ -56,30 +57,46 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+  const setActiveHeroDot = (index) => {
+    heroDots.forEach((dot, i) => dot.classList.toggle('is-active', i === index));
+  };
+
   const activateHeroFilm = (nextIndex) => {
     if (heroFilmTransitioning || !heroFilms.length) return;
     heroFilmTransitioning = true;
 
     const current = heroFilms[activeHeroFilm];
-    const next = heroFilms[nextIndex % heroFilms.length];
+    const resolvedIndex = nextIndex % heroFilms.length;
+    const next = heroFilms[resolvedIndex];
     if (!current || !next || current === next) {
       heroFilmTransitioning = false;
       return;
     }
 
+    let settled = false;
+    const finishTransition = () => {
+      if (settled) return;
+      settled = true;
+      current.removeEventListener('transitionend', onCurrentFadeOut);
+      current.pause();
+      resetVideoToStart(current);
+      activeHeroFilm = resolvedIndex;
+      setActiveHeroDot(activeHeroFilm);
+      heroFilmTransitioning = false;
+    };
+
+    const onCurrentFadeOut = (event) => {
+      if (event.target === current && event.propertyName === 'opacity') finishTransition();
+    };
+
+    // Fallback in case the transitionend event never fires (e.g. tab backgrounded).
+    window.setTimeout(finishTransition, 1800);
+
     resetVideoToStart(next);
     playVideo(next);
+    current.addEventListener('transitionend', onCurrentFadeOut);
     next.classList.add('is-active');
-
-    window.setTimeout(() => {
-      current.classList.remove('is-active');
-      window.setTimeout(() => {
-        current.pause();
-        resetVideoToStart(current);
-        activeHeroFilm = nextIndex % heroFilms.length;
-        heroFilmTransitioning = false;
-      }, 900);
-    }, 120);
+    current.classList.remove('is-active');
   };
 
   if (heroFilms.length) {
@@ -99,6 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     heroFilms[0].classList.add('is-active');
+    setActiveHeroDot(0);
     playVideo(heroFilms[0]);
   }
 
