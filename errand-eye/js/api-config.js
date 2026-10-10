@@ -1,7 +1,5 @@
 /* ============================================================
    ERRAND EYE - API CONFIG
-   Single place to point the site at the Django admin backend.
-   The same Django app serves both this frontend and /api/, so a
-   same-origin relative path works wherever it's deployed.
+   Single place to point the static site at the Django backend.
    ============================================================ */
-window.ERRAND_EYE_API_BASE = '/api';
+window.ERRAND_EYE_API_BASE = 'https://errandeye-production.up.railway.app/api';

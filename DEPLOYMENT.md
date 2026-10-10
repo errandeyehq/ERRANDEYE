@@ -1,84 +1,32 @@
 # Errand Eye Deployment Guide
 
-This guide prepares the Errand Eye project for deployment on ListedHosting (Python Shared Hosting).
+The frontend is a static site in `errand-eye/`; the Django API and admin live in `backend/`. GitHub Actions deploys the static site to GitHub Pages, while Railway continues to host Django.
 
-## Project structure
+## GitHub Pages frontend
 
-- `errand-eye/` — static frontend files
-- `backend/` — Django backend API and admin
+The workflow at `.github/workflows/deploy-pages.yml` publishes the contents of `errand-eye/` whenever a commit is pushed to `main`.
 
-Recommended live setup:
-- `www.errandeye.com` → frontend static site
-- `api.errandeye.com` → Django backend API
+1. In the GitHub repository, open **Settings > Pages**.
+2. Set the Pages build and deployment source to **GitHub Actions**.
+3. Push to `main`, or run **Deploy frontend to GitHub Pages** from the **Actions** tab.
+4. The project site will be available at `https://errandeyehq.github.io/ERRANDEYE/`.
 
-## 1. Update the frontend API target
+The static pages use relative paths for their local assets and links, so they work from the repository's project-site path.
 
-In `errand-eye/js/api-config.js`, set the live API endpoint before deployment:
-```js
-window.ERRAND_EYE_API_BASE = 'https://api.errandeye.com/api';
-```
+## Railway backend
 
-## 2. Prepare backend configuration
+The frontend API target is configured in `errand-eye/js/api-config.js` as `https://errandeye-production.up.railway.app/api`. If the Railway service uses a different public domain, update that URL and deploy the frontend again.
 
-Copy `.env.example` to `.env` inside `backend/` and set production values:
-- `DJANGO_SECRET_KEY` should be a secure random value
+In the Railway service's Django environment variables, set:
+
 - `DJANGO_DEBUG=False`
-- `DJANGO_ALLOWED_HOSTS=www.errandeye.com,api.errandeye.com`
-- `DB_NAME=<your-db-name>`
-- `DB_USER=<your-db-user>`
-- `DB_PASSWORD=<your-db-password>`
-- `DB_HOST=<your-db-host>`
-- `DB_PORT=<your-db-port>`
-- `CORS_ALLOWED_ORIGINS=https://www.errandeye.com`
+- `DJANGO_ALLOWED_HOSTS` to include the Railway public hostname
+- `CORS_ALLOWED_ORIGINS=https://errandeyehq.github.io`
 
-## 3. Upload files to the hosting account
+The CORS origin is the site origin only: do not add the `/ERRANDEYE/` path or a trailing slash. If `CORS_ALLOWED_ORIGINS` is already set in Railway, it overrides the default in Django settings, so make sure the GitHub Pages origin is included in that value.
 
-### Static frontend
-Upload the `errand-eye/` folder to the public document root of `www.errandeye.com`.
-
-### Django backend
-Upload the `backend/` folder to the Python application directory for `api.errandeye.com`.
-
-## 4. Configure the Python app in cPanel
-
-1. Open **Setup Python App**.
-2. Create a Python 3.13 app in the correct directory.
-3. Set the application entry point to `config.wsgi:application` if requested.
-4. Install requirements:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-## 5. Create the database
-
-1. Open **MySQL Databases**.
-2. Create a new database and user.
-3. Grant the user full privileges on the new database.
-4. Use those credentials in `backend/.env`.
-
-## 6. Run Django deployment commands
-
-Use the Python app terminal or SSH in the app directory:
-```bash
-cd /path/to/backend
-python manage.py migrate
-python manage.py collectstatic --noinput
-python manage.py createsuperuser
-```
-
-## 7. Verify live URLs
-
-- `https://www.errandeye.com/` — static frontend
-- `https://api.errandeye.com/api/site-content/` — backend API
-- `https://api.errandeye.com/api/leads/` — lead form endpoint
-
-## 8. Final checks
-
-- SSL must be enabled for both domains
-- `DJANGO_DEBUG` must be `False`
-- `CORS_ALLOWED_ORIGINS` should include `https://www.errandeye.com`
-- `errand-eye/js/api-config.js` must point at the live API
+Railway should continue to use the existing `railway.json` deployment command, which runs migrations and starts Gunicorn. Confirm the backend is reachable at `https://errandeye-production.up.railway.app/api/site-content/`.
 
 ## Notes
 
-If you want the frontend and backend on a single domain, host the frontend under the root domain and the Django app under a subdomain or addon domain. In that case, update `api-config.js` accordingly.
+If the Railway API is unavailable, GitHub Pages will still serve the static frontend. Dynamic content from Django will not load; the frontend keeps its built-in static fallback content. The Django admin and API remain dependent on Railway.
