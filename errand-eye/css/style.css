@@ -15,7 +15,16 @@
   --eye-gray: #E9E7E2;
   --eye-gray-line: #DAD7CF;
   --ease-signature: cubic-bezier(0.16, 1, 0.3, 1);
+  --brand-gradient: linear-gradient(100deg, var(--eye-green-light) 0%, var(--eye-blue-light) 100%);
+  --radius-card: 22px;
+  --shadow-soft: 0 1px 2px rgba(18,24,26,0.04), 0 24px 48px -32px rgba(18,24,26,0.22);
+  --shadow-lift: 0 2px 4px rgba(18,24,26,0.05), 0 40px 70px -34px rgba(18,24,26,0.32);
 }
+
+/* Cross-page fade between about / services / home (supported browsers) */
+@view-transition { navigation: auto; }
+::view-transition-old(root),
+::view-transition-new(root) { animation-duration: 0.35s; }
 
 * { scroll-behavior: smooth; }
 
@@ -28,12 +37,16 @@
   }
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; }
+
+h1, h2, h3 { text-wrap: balance; }
+p { text-wrap: pretty; }
+section[id], [id].service-option { scroll-margin-top: 5.5rem; }
 
 body {
   background: var(--eye-cream);
   color: var(--eye-charcoal);
-  font-family: "Poppins", sans-serif;
+  font-family: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.8;
@@ -281,12 +294,6 @@ h3 {
   .hero-audience {
     max-width: 21rem;
   }
-
-  .hero-chip {
-    min-height: 2rem;
-    padding-inline: 0.8rem;
-    font-size: 0.78rem;
-  }
 }
 
 .hero-slide {
@@ -350,19 +357,58 @@ h3 {
   mix-blend-mode: soft-light;
 }
 
-.hero-chip {
-  display: inline-flex;
+.hero-audience {
+  width: min(100%, 35rem);
+}
+
+.hero-audience-label {
+  margin-bottom: 0.85rem;
+  color: rgba(250,250,247,0.52);
+  font-family: var(--font-mono, monospace);
+  font-size: 0.67rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.hero-audience-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hero-audience-item {
+  display: flex;
+  min-width: 0;
   align-items: center;
-  min-height: 36px;
-  padding: 0 1rem;
-  border: 1px solid rgba(250,250,247,0.25);
-  border-radius: 999px;
+  gap: 0.65rem;
   color: rgba(250,250,247,0.88);
-  background: rgba(18,24,26,0.22);
-  backdrop-filter: blur(12px) saturate(150%);
-  -webkit-backdrop-filter: blur(12px) saturate(150%);
-  font-size: 0.875rem;
-  line-height: 1;
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+
+.hero-audience-item::before {
+  width: 0.38rem;
+  height: 0.38rem;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #71c49b;
+  content: '';
+}
+
+@media (max-width: 640px) {
+  .hero-audience-list {
+    gap: 0.75rem 0.8rem;
+  }
+
+  .hero-audience-item {
+    gap: 0.5rem;
+    font-size: 0.78rem;
+  }
 }
 
 .hero-dot {
@@ -447,6 +493,9 @@ h3 {
 .reveal-stagger.is-visible > *:nth-child(4) { transition-delay: 0.32s; }
 .reveal-stagger.is-visible > *:nth-child(5) { transition-delay: 0.41s; }
 .reveal-stagger.is-visible > *:nth-child(6) { transition-delay: 0.5s; }
+.reveal-stagger.is-visible > *:nth-child(7) { transition-delay: 0.58s; }
+.reveal-stagger.is-visible > *:nth-child(8) { transition-delay: 0.66s; }
+.reveal-stagger.is-visible > *:nth-child(9) { transition-delay: 0.74s; }
 
 /* ---------------- Buttons ---------------- */
 .btn-primary {
@@ -1318,7 +1367,7 @@ textarea:focus-visible {
   transition: max-height 0.55s var(--ease-signature), opacity 0.35s ease, visibility 0s linear 0.55s;
 }
 .lead-form-wrap.is-open {
-  max-height: 900px;
+  max-height: 1200px;
   opacity: 1;
   visibility: visible;
   transition: max-height 0.55s var(--ease-signature), opacity 0.4s ease;
@@ -1328,6 +1377,20 @@ textarea:focus-visible {
   border: 1px solid rgba(250, 250, 247, 0.12);
   background: rgba(250, 250, 247, 0.03);
   padding: 28px;
+}
+.lead-step-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: rgba(250, 250, 247, 0.88);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.lead-step-heading span {
+  color: var(--eye-green-light);
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
 }
 .lead-field label {
   display: block;
@@ -1372,3 +1435,225 @@ textarea:focus-visible {
 }
 #lead-form-status.is-success { color: var(--eye-green-light); }
 #lead-form-status.is-error { color: #ff8a8a; }
+.lead-field-error {
+  margin-top: 0.45rem;
+  color: #ff9d9d;
+  font-size: 0.75rem;
+  line-height: 1.45;
+}
+.lead-field [aria-invalid="true"] {
+  border-color: #ff8a8a;
+}
+.lead-form-success {
+  text-align: center;
+  padding-block: 3rem;
+}
+.lead-success-mark {
+  display: grid;
+  width: 3rem;
+  height: 3rem;
+  place-items: center;
+  margin: 0 auto 1.25rem;
+  border: 1px solid rgba(18, 193, 104, 0.45);
+  border-radius: 50%;
+  color: var(--eye-green-light);
+  background: rgba(18, 193, 104, 0.1);
+  font-size: 1.4rem;
+}
+.lead-form [hidden] {
+  display: none;
+}
+@media (max-width: 640px) {
+  .lead-form { padding: 1.25rem; }
+}
+
+/* ============================================================
+   MODERNIZATION LAYER
+   Scroll progress, spotlight cards, coverage strip, FAQ, polish.
+   ============================================================ */
+
+/* ---------------- Scroll progress bar (CSS scroll-driven, progressive) ---------------- */
+.scroll-progress {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  z-index: 70;
+  background: var(--brand-gradient);
+  transform-origin: left;
+  transform: scaleX(0);
+  pointer-events: none;
+}
+@supports (animation-timeline: scroll()) {
+  .scroll-progress {
+    animation: progress-grow linear both;
+    animation-timeline: scroll(root block);
+  }
+  @keyframes progress-grow { to { transform: scaleX(1); } }
+}
+
+/* ---------------- Spotlight hover on cards (pointer position set by JS) ---------------- */
+.service-card,
+.award-card,
+.policy-card,
+.faq-item {
+  --mx: 50%;
+  --my: 0%;
+}
+.service-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(420px circle at var(--mx) var(--my), rgba(18,193,104,0.12), rgba(11,165,214,0.08) 40%, transparent 70%);
+  transition: opacity 0.5s var(--ease-signature);
+}
+.service-card:hover::after { opacity: 1; }
+.service-card { border-radius: var(--radius-card); }
+
+/* ---------------- Coverage / capability marquee strip ---------------- */
+.coverage-strip {
+  background: var(--eye-charcoal);
+  color: rgba(250,250,247,0.72);
+  border-top: 1px solid rgba(250,250,247,0.08);
+  border-bottom: 1px solid rgba(250,250,247,0.08);
+  overflow: hidden;
+}
+.coverage-track {
+  display: flex;
+  width: max-content;
+  gap: 3rem;
+  padding: 1.1rem 0;
+  animation: marquee 38s linear infinite;
+}
+.coverage-track:hover { animation-play-state: paused; }
+.coverage-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 3rem;
+  font-family: 'Manrope', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.coverage-item::after {
+  content: "";
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--brand-gradient);
+  flex: 0 0 auto;
+}
+
+/* ---------------- FAQ accordion (native <details>) ---------------- */
+.faq-item {
+  position: relative;
+  border: 1px solid var(--eye-gray-line);
+  background: rgba(255,255,255,0.78);
+  border-radius: 18px;
+  transition: box-shadow 0.4s var(--ease-signature), border-color 0.3s, background 0.3s;
+}
+.faq-item:hover { box-shadow: var(--shadow-soft); }
+.faq-item[open] {
+  background: #fff;
+  border-color: rgba(14,165,90,0.35);
+  box-shadow: var(--shadow-soft);
+}
+.faq-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 1.25rem 1.5rem;
+  cursor: pointer;
+  list-style: none;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "";
+  flex: 0 0 auto;
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--eye-gray-line);
+  background:
+    linear-gradient(var(--eye-charcoal), var(--eye-charcoal)) center / 12px 1.5px no-repeat,
+    linear-gradient(var(--eye-charcoal), var(--eye-charcoal)) center / 1.5px 12px no-repeat;
+  transition: transform 0.4s var(--ease-signature), background-color 0.3s;
+}
+.faq-item[open] summary::after {
+  transform: rotate(135deg);
+  background-color: var(--eye-gray);
+}
+.faq-item .faq-answer {
+  padding: 0 1.5rem 1.4rem;
+  color: rgba(18,24,26,0.65);
+  font-size: 15px;
+  line-height: 1.8;
+  max-width: 62ch;
+}
+
+/* ---------------- Section eyebrow accent ---------------- */
+.eyebrow-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.eyebrow-line::before {
+  content: "";
+  width: 28px; height: 2px;
+  border-radius: 2px;
+  background: var(--brand-gradient);
+}
+
+/* ---------------- Stats polish ---------------- */
+#stats .stat-num {
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+#stats .font-display { font-size: clamp(2.6rem, 6vw, 4rem); line-height: 1; }
+
+/* ---------------- Glass cards on light sections get a soft edge-light ---------------- */
+.trust-proof {
+  transition: transform 0.45s var(--ease-signature), box-shadow 0.45s var(--ease-signature), background 0.3s;
+}
+.trust-proof:hover {
+  transform: translateY(-4px);
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+}
+
+/* ---------------- Policy cards ---------------- */
+.policy-card { border-radius: var(--radius-card); transition: transform 0.45s var(--ease-signature), box-shadow 0.45s var(--ease-signature); }
+.policy-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lift); }
+
+/* ---------------- Better touch targets & focus ---------------- */
+.btn-primary, .btn-ghost { min-height: 44px; }
+.btn-primary:focus-visible, .btn-ghost:focus-visible {
+  outline: 3px solid rgba(255,255,255,0.85);
+  outline-offset: 3px;
+}
+@media (hover: none) {
+  .service-card:hover, .award-card:hover, .trust-proof:hover, .policy-card:hover { transform: none; }
+}
+
+/* ---------------- Tablet refinements for reveal-heavy sections ---------------- */
+@media (max-width: 640px) {
+  .faq-item summary { font-size: 1.15rem; padding: 1.05rem 1.15rem; }
+  .faq-item .faq-answer { padding: 0 1.15rem 1.15rem; }
+  .coverage-item { gap: 2rem; font-size: 11px; }
+  .coverage-track { gap: 2rem; }
+}
+
+/* ---------------- Print ---------------- */
+@media print {
+  .nav-glass, .fab-stack, .scroll-progress, .coverage-strip { display: none !important; }
+  body { background: #fff; }
+}

@@ -28,6 +28,135 @@ document.addEventListener('DOMContentLoaded', () => {
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  /* ---------------- Quote request form ---------------- */
+  const quoteToggle = document.getElementById('quote-form-toggle');
+  const quoteWrap = document.getElementById('quote-form-wrap');
+  const quoteForm = document.getElementById('quote-form');
+  const quoteSuccess = document.getElementById('quote-form-success');
+
+  if (quoteToggle && quoteWrap && quoteForm && quoteSuccess) {
+    const quoteClose = document.getElementById('quote-form-close');
+    const quoteAgain = document.getElementById('quote-form-again');
+    const submitButton = document.getElementById('quote-form-submit');
+    const status = document.getElementById('lead-form-status');
+    const messageField = document.getElementById('lead-message');
+    const messageCount = document.getElementById('lead-message-count');
+    const quoteFields = [...quoteForm.querySelectorAll('input, select, textarea')];
+
+    const setQuoteFormOpen = (isOpen) => {
+      quoteWrap.classList.toggle('is-open', isOpen);
+      quoteWrap.setAttribute('aria-hidden', String(!isOpen));
+      quoteToggle.setAttribute('aria-expanded', String(isOpen));
+      quoteToggle.textContent = isOpen ? 'Close quote form' : 'Request a quote';
+    };
+
+    const validateQuoteField = (field) => {
+      const error = document.getElementById(`${field.id}-error`);
+      if (!error) return field.validity.valid;
+
+      let message = '';
+      if (field.validity.valueMissing) {
+        message = 'This field is required.';
+      } else if (field.validity.typeMismatch && field.type === 'email') {
+        message = 'Enter a valid email address.';
+      } else if (field.validity.tooShort) {
+        message = `Please enter at least ${field.minLength} characters.`;
+      } else if (field.validity.tooLong) {
+        message = `Please keep this to ${field.maxLength} characters or fewer.`;
+      }
+
+      error.textContent = message;
+      error.hidden = !message;
+      field.setAttribute('aria-invalid', String(Boolean(message)));
+      return !message;
+    };
+
+    quoteToggle.addEventListener('click', () => {
+      const isOpen = quoteToggle.getAttribute('aria-expanded') !== 'true';
+      setQuoteFormOpen(isOpen);
+      if (isOpen) {
+        window.setTimeout(() => document.getElementById('lead-name')?.focus(), 350);
+      }
+    });
+
+    quoteClose?.addEventListener('click', () => setQuoteFormOpen(false));
+
+    quoteFields.forEach((field) => {
+      field.addEventListener('blur', () => validateQuoteField(field));
+      field.addEventListener('input', () => {
+        if (field.getAttribute('aria-invalid') === 'true') validateQuoteField(field);
+        if (field === messageField && messageCount) messageCount.textContent = String(field.value.length);
+      });
+      field.addEventListener('change', () => validateQuoteField(field));
+    });
+
+    quoteForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const invalidFields = quoteFields.filter((field) => !validateQuoteField(field));
+      if (invalidFields.length) {
+        invalidFields[0].focus();
+        status.textContent = 'Check the highlighted fields and try again.';
+        status.className = 'mt-5 text-sm is-error';
+        return;
+      }
+
+      const apiBase = window.ERRAND_EYE_API_BASE;
+      if (!apiBase) {
+        status.textContent = 'Online requests are temporarily unavailable. Please contact us by WhatsApp or email.';
+        status.className = 'mt-5 text-sm is-error';
+        return;
+      }
+
+      const originalButtonText = submitButton.textContent;
+      submitButton.disabled = true;
+      submitButton.textContent = 'Sending request...';
+      status.textContent = '';
+      status.className = 'mt-5 text-sm';
+
+      const formData = new FormData(quoteForm);
+      const payload = Object.fromEntries(formData.entries());
+
+      try {
+        const response = await fetch(`${apiBase.replace(/\/$/, '')}/leads/`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        const result = await response.json().catch(() => ({}));
+        if (!response.ok) throw new Error(result.error || 'We could not send your request. Please try again.');
+
+        quoteForm.hidden = true;
+        quoteSuccess.hidden = false;
+        quoteSuccess.focus();
+      } catch (error) {
+        status.textContent = error.message.includes('Failed to fetch')
+          ? 'We could not reach the request service. Please try WhatsApp or email instead.'
+          : error.message;
+        status.className = 'mt-5 text-sm is-error';
+      } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = originalButtonText;
+      }
+    });
+
+    quoteAgain?.addEventListener('click', () => {
+      quoteForm.reset();
+      quoteFields.forEach((field) => {
+        field.removeAttribute('aria-invalid');
+        const error = document.getElementById(`${field.id}-error`);
+        if (error) {
+          error.textContent = '';
+          error.hidden = true;
+        }
+      });
+      if (messageCount) messageCount.textContent = '0';
+      status.textContent = '';
+      quoteSuccess.hidden = true;
+      quoteForm.hidden = false;
+      document.getElementById('lead-name')?.focus();
+    });
+  }
+
   /* ---------------- Hero cinematic video handoff ---------------- */
   const heroFilms = [...document.querySelectorAll('[data-hero-film]')];
   const heroDots = [...document.querySelectorAll('[data-hero-dot]')];
