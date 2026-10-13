@@ -838,9 +838,9 @@
       </a>
     </div>
 
-    <div id="quote-form-wrap" class="lead-form-wrap max-w-3xl mx-auto mb-14 text-left" aria-hidden="true">
+    <div id="quote-form-wrap" class="lead-form-wrap max-w-5xl mx-auto mb-14 text-left" aria-hidden="true">
       <form id="quote-form" class="lead-form" novalidate>
-        <div class="flex flex-wrap items-start justify-between gap-4 mb-8">
+        <div class="lead-form-heading flex flex-wrap items-start justify-between gap-4 mb-8">
           <div>
             <p class="font-mono text-[11px] uppercase tracking-[0.16em] text-eye-green-light mb-2">A few quick details</p>
             <h3 class="font-display text-3xl sm:text-4xl leading-tight">Tell us what you need.</h3>
@@ -900,18 +900,21 @@
         </fieldset>
 
         <div class="flex flex-col sm:flex-row sm:items-center gap-4 mt-8">
-          <button id="quote-form-submit" type="submit" class="inline-flex items-center justify-center rounded-full px-7 py-3.5 text-sm font-semibold btn-primary">Send request</button>
+          <button id="quote-form-submit" type="submit" class="inline-flex items-center justify-center rounded-full px-7 py-3.5 text-sm font-semibold btn-primary">Continue to WhatsApp</button>
           <p class="text-xs text-eye-cream/45">Your details are only used to respond to this request.</p>
         </div>
         <p id="lead-form-status" class="mt-5 text-sm" role="status" aria-live="polite"></p>
       </form>
 
-      <div id="quote-form-success" class="lead-form lead-form-success" role="status" aria-live="polite" hidden>
+      <div id="quote-form-success" class="lead-form lead-form-success" role="status" aria-live="polite" tabindex="-1" hidden>
         <span class="lead-success-mark" aria-hidden="true">✓</span>
-        <p class="font-mono text-[11px] uppercase tracking-[0.16em] text-eye-green-light mb-2">Request received</p>
-        <h3 class="font-display text-3xl sm:text-4xl leading-tight mb-3">We’ll take it from here.</h3>
-        <p class="text-sm text-eye-cream/65 mb-6">Thanks for sharing the details. Our team will review your request and get back to you.</p>
-        <button id="quote-form-again" type="button" class="text-sm font-semibold text-eye-cream underline underline-offset-4 decoration-eye-green-light hover:text-eye-green-light transition-colors">Send another request</button>
+        <p class="font-mono text-[11px] uppercase tracking-[0.16em] text-eye-green-light mb-2">Almost there</p>
+        <h3 class="font-display text-3xl sm:text-4xl leading-tight mb-3">Finish your request in WhatsApp.</h3>
+        <p class="text-sm text-eye-cream/65 mb-6">Your details are ready in a WhatsApp message. Tap Send there to submit your request. If WhatsApp did not open, use the link below.</p>
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a id="quote-whatsapp-link" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full px-7 py-3.5 text-sm font-semibold btn-primary" hidden>Open WhatsApp message</a>
+          <button id="quote-form-again" type="button" class="text-sm font-semibold text-eye-cream underline underline-offset-4 decoration-eye-green-light hover:text-eye-green-light transition-colors">Send another request</button>
+        </div>
       </div>
     </div>
 

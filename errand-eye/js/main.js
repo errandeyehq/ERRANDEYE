@@ -37,10 +37,11 @@ document.addEventListener('DOMContentLoaded', () => {
   if (quoteToggle && quoteWrap && quoteForm && quoteSuccess) {
     const quoteClose = document.getElementById('quote-form-close');
     const quoteAgain = document.getElementById('quote-form-again');
-    const submitButton = document.getElementById('quote-form-submit');
     const status = document.getElementById('lead-form-status');
     const messageField = document.getElementById('lead-message');
     const messageCount = document.getElementById('lead-message-count');
+    const whatsappContact = document.querySelector('[data-contact="whatsapp-link"]');
+    const whatsappFallback = document.getElementById('quote-whatsapp-link');
     const quoteFields = [...quoteForm.querySelectorAll('input, select, textarea')];
 
     const setQuoteFormOpen = (isOpen) => {
@@ -90,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
       field.addEventListener('change', () => validateQuoteField(field));
     });
 
-    quoteForm.addEventListener('submit', async (event) => {
+    quoteForm.addEventListener('submit', (event) => {
       event.preventDefault();
       const invalidFields = quoteFields.filter((field) => !validateQuoteField(field));
       if (invalidFields.length) {
@@ -100,43 +101,45 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      const apiBase = window.ERRAND_EYE_API_BASE;
-      if (!apiBase) {
-        status.textContent = 'Online requests are temporarily unavailable. Please contact us by WhatsApp or email.';
-        status.className = 'mt-5 text-sm is-error';
-        return;
-      }
-
-      const originalButtonText = submitButton.textContent;
-      submitButton.disabled = true;
-      submitButton.textContent = 'Sending request...';
-      status.textContent = '';
-      status.className = 'mt-5 text-sm';
-
       const formData = new FormData(quoteForm);
       const payload = Object.fromEntries(formData.entries());
+      const contactHref = whatsappContact?.getAttribute('href') || 'https://wa.me/2348164766193';
+      let whatsappNumber = '2348164766193';
 
       try {
-        const response = await fetch(`${apiBase.replace(/\/$/, '')}/leads/`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload),
-        });
-        const result = await response.json().catch(() => ({}));
-        if (!response.ok) throw new Error(result.error || 'We could not send your request. Please try again.');
-
-        quoteForm.hidden = true;
-        quoteSuccess.hidden = false;
-        quoteSuccess.focus();
-      } catch (error) {
-        status.textContent = error.message.includes('Failed to fetch')
-          ? 'We could not reach the request service. Please try WhatsApp or email instead.'
-          : error.message;
-        status.className = 'mt-5 text-sm is-error';
-      } finally {
-        submitButton.disabled = false;
-        submitButton.textContent = originalButtonText;
+        const contactUrl = new URL(contactHref, window.location.href);
+        const numberFromUrl = contactUrl.pathname.split('/').filter(Boolean)[0] || '';
+        if (contactUrl.hostname === 'wa.me' && /^\d{7,15}$/.test(numberFromUrl)) {
+          whatsappNumber = numberFromUrl;
+        }
+      } catch (_) {
+        // Keep the configured site WhatsApp number as a fallback.
       }
+
+      const message = [
+        'Hello Errand Eye, I would like to request a quote.',
+        '',
+        `Name: ${payload.name}`,
+        `Email: ${payload.email}`,
+        `Phone / WhatsApp: ${payload.phone || 'Not provided'}`,
+        `Service: ${payload.service || 'Not specified'}`,
+        '',
+        'Request details:',
+        payload.message,
+      ].join('\n');
+      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+      if (whatsappFallback) {
+        whatsappFallback.href = whatsappUrl;
+        whatsappFallback.hidden = false;
+      }
+
+      // Open synchronously from the submit gesture so browsers allow the new tab.
+      // The confirmation screen keeps a link available if the browser blocks it.
+      window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+      quoteForm.hidden = true;
+      quoteSuccess.hidden = false;
+      quoteSuccess.focus();
     });
 
     quoteAgain?.addEventListener('click', () => {

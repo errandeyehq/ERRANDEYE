@@ -153,3 +153,7 @@ CORS_ALLOWED_ORIGINS = env_list(
     'CORS_ALLOWED_ORIGINS',
     'http://127.0.0.1:3000,http://localhost:3000,https://errandeyehq.github.io',
 )
+CORS_ALLOWED_ORIGINS = list(dict.fromkeys([
+    *CORS_ALLOWED_ORIGINS,
+    'https://errandeyehq.github.io',
+]))
